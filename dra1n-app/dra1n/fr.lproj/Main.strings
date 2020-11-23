@@ -1,0 +1,103 @@
+
+/* Class = "UILabel"; text = "Paypal"; ObjectID = "237-8p-QJM"; */
+"237-8p-QJM.text" = "Paypal";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5aO-jI-P9R"; */
+"5aO-jI-P9R.text" = "Label";
+
+/* Class = "UITableViewSection"; footerTitle = "This determines how long the gap is between averages being recorded on the device. Requires respring to take effect."; ObjectID = "9DB-QM-rgx"; */
+"9DB-QM-rgx.footerTitle" = "This determines how long the gap is between averages being recorded on the device. Requires respring to take effect.";
+
+/* Class = "UITableViewSection"; headerTitle = "Average Time"; ObjectID = "9DB-QM-rgx"; */
+"9DB-QM-rgx.headerTitle" = "Average Time";
+
+/* Class = "UIButton"; normalTitle = "Decline"; ObjectID = "9Hd-Mk-0UQ"; */
+"9Hd-Mk-0UQ.normalTitle" = "Decline";
+
+/* Class = "UILabel"; text = "4H"; ObjectID = "A0Z-o7-jY0"; */
+"A0Z-o7-jY0.text" = "4H";
+
+/* Class = "UILabel"; text = "Bruh"; ObjectID = "A4I-4E-Fye"; */
+"A4I-4E-Fye.text" = "Bruh";
+
+/* Class = "UILabel"; text = "@Dra1nApp"; ObjectID = "ASL-j8-KLq"; */
+"ASL-j8-KLq.text" = "@Dra1nApp";
+
+/* Class = "UITabBarItem"; title = "Statistics"; ObjectID = "ED9-nq-PPK"; */
+"ED9-nq-PPK.title" = "Statistics";
+
+//Keep these weird long spaces, it makes it align right :fr:
+/* Class = "UIButton"; normalTitle = "    Export Data"; ObjectID = "ELZ-eT-CBk"; */
+"ELZ-eT-CBk.normalTitle" = "    Export Data";
+
+/* Class = "UILabel"; text = "An update for Dra1n is now available"; ObjectID = "F5g-eX-5cl"; */
+"F5g-eX-5cl.text" = "An update for Dra1n is now available";
+
+/* Class = "UILabel"; text = "@elihweilrahc13"; ObjectID = "Jb1-by-IDr"; */
+"Jb1-by-IDr.text" = "@elihweilrahc13";
+
+/* Class = "UIButton"; normalTitle = "    Clear The Logs"; ObjectID = "Jh5-tl-2K4"; */
+"Jh5-tl-2K4.normalTitle" = "    Clear The Logs";
+
+/* Class = "UIButton"; normalTitle = "Info"; ObjectID = "KgO-3n-1wa"; */
+"KgO-3n-1wa.normalTitle" = "Info";
+
+/* Class = "UIButton"; normalTitle = "Accept"; ObjectID = "Oll-GP-wNb"; */
+"Oll-GP-wNb.normalTitle" = "Accept";
+
+/* Class = "UITabBarItem"; title = "Dra1n"; ObjectID = "Pjb-V7-VKZ"; */
+"Pjb-V7-VKZ.title" = "Dra1n";
+
+/* Class = "UIButton"; normalTitle = "    Apply Changes"; ObjectID = "Rwm-rN-bRF"; */
+"Rwm-rN-bRF.normalTitle" = "    Apply Changes";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "Sm4-Ve-JFT"; */
+"Sm4-Ve-JFT.title" = "Settings";
+
+/* Class = "UITableViewSection"; headerTitle = "Socials "; ObjectID = "UV3-E2-DaQ"; */
+"UV3-E2-DaQ.headerTitle" = "Socials ";
+
+/* Class = "UILabel"; text = "715%"; ObjectID = "VmX-op-i71"; */
+"VmX-op-i71.text" = "715%";
+
+/* Class = "UILabel"; text = "Culprits"; ObjectID = "WJB-di-qq8"; */
+"WJB-di-qq8.text" = "Culprits";
+
+/* Class = "UITableViewSection"; footerTitle = "Clearing the logs will also put your settings back to the default"; ObjectID = "YBo-rI-4SP"; */
+"YBo-rI-4SP.footerTitle" = "Clearing the logs will also put your settings back to the default";
+
+/* Class = "UITableViewSection"; headerTitle = "General"; ObjectID = "YBo-rI-4SP"; */
+"YBo-rI-4SP.headerTitle" = "General";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "co3-AY-o5x"; */
+"co3-AY-o5x.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "d09-pr-WON"; */
+"d09-pr-WON.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "    Privacy Policy"; ObjectID = "fVc-Ic-TYi"; */
+"fVc-Ic-TYi.normalTitle" = "    Privacy Policy";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gli-Pq-0EJ"; */
+"gli-Pq-0EJ.text" = "Label";
+
+/* Class = "UITableViewSection"; footerTitle = "This determines how sensitive the tweak is to changes in battery drain. Requires respring to take effect."; ObjectID = "kAY-I8-wHn"; */
+"kAY-I8-wHn.footerTitle" = "This determines how sensitive the tweak is to changes in battery drain. Requires respring to take effect.";
+
+/* Class = "UITableViewSection"; headerTitle = "Sensitivity"; ObjectID = "kAY-I8-wHn"; */
+"kAY-I8-wHn.headerTitle" = "Sensitivity";
+
+/* Class = "UILabel"; text = "OLED Mode"; ObjectID = "kCh-Rk-AEo"; */
+"kCh-Rk-AEo.text" = "OLED Mode";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "reo-7l-ewP"; */
+"reo-7l-ewP.normalTitle" = "Clear";
+
+/* Class = "UIButton"; normalTitle = "    App Icon"; ObjectID = "smY-nD-lTz"; */
+"smY-nD-lTz.normalTitle" = "    App Icon";
+
+/* Class = "UITextView"; text = "Privacy Policy is loading, ensure you have a good internet connection. If it fails to load, you can always try again from Settings."; ObjectID = "vXX-ni-S8n"; */
+"vXX-ni-S8n.text" = "Privacy Policy is loading, ensure you have a good internet connection. If it fails to load, you can always try again from Settings.";
+
+/* Class = "UILabel"; text = "@omegaluldev"; ObjectID = "zEd-QD-QC7"; */
+"zEd-QD-QC7.text" = "@omegaluldev";

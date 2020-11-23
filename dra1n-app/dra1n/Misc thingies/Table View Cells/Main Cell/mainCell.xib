@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="mainCell" rowHeight="115" id="KGk-i7-Jjw" customClass="mainCell" customModule="Staff" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX7-ev-mhp" customClass="ColourAwareLabel" customModule="Staff" customModuleProvider="target">
+                        <rect key="frame" x="85" y="50" width="120" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udd-b9-c9B" customClass="ColourAwareLabel" customModule="Staff" customModuleProvider="target">
+                        <rect key="frame" x="85" y="15" width="135" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="mgE-0C-Np0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0y-1T-gcI">
+                        <rect key="frame" x="220" y="47" width="85" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="cX7-ev-mhp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="85" id="1Sy-Kw-7YD"/>
+                    <constraint firstAttribute="trailing" secondItem="O0y-1T-gcI" secondAttribute="trailing" constant="15" id="4a1-Uz-BAS"/>
+                    <constraint firstItem="O0y-1T-gcI" firstAttribute="leading" secondItem="cX7-ev-mhp" secondAttribute="trailing" constant="15" id="F5L-he-tST"/>
+                    <constraint firstItem="Udd-b9-c9B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="FXl-FF-dOC"/>
+                    <constraint firstAttribute="trailing" secondItem="Udd-b9-c9B" secondAttribute="trailing" constant="100" id="MTc-Ka-aWk"/>
+                    <constraint firstItem="Udd-b9-c9B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="85" id="RcB-Tf-3iP"/>
+                    <constraint firstItem="O0y-1T-gcI" firstAttribute="leading" secondItem="Udd-b9-c9B" secondAttribute="trailing" id="kAA-Dh-DMX"/>
+                    <constraint firstItem="cX7-ev-mhp" firstAttribute="top" secondItem="Udd-b9-c9B" secondAttribute="bottom" id="um3-cC-GTN"/>
+                    <constraint firstItem="O0y-1T-gcI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zAa-a6-SUw"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                        <integer key="value" value="15"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="descriptionText" destination="cX7-ev-mhp" id="c1p-aQ-ZqJ"/>
+                <outlet property="specificValue" destination="O0y-1T-gcI" id="5qt-Pj-A7e"/>
+                <outlet property="title" destination="Udd-b9-c9B" id="gDf-vu-jM7"/>
+            </connections>
+            <point key="canvasLocation" x="108.69565217391305" y="43.191964285714285"/>
+        </tableViewCell>
+    </objects>
+</document>
