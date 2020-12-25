@@ -1,0 +1,74 @@
+/*
+  Localizable.strings
+  dra1n
+
+  Created by Amy While on 03/08/2020.
+  
+
+*/
+//Glboal
+
+"close" = "Close";
+"great" = "Great";
+"good" = "Good";
+"poor" = "Poor";
+"charge" = "Charge";
+"unknown" = "Unknown";
+"failed" = "Failed";
+"hide" = "Hide";
+"yes" = "Yes";
+"no" = "No";
+"clear" = "Clear";
+"culprits" = "Culprits";
+"clear?" = "Are you sure you want to do this?";
+"cancel" = "Cancel";
+"skip" = "Skip";
+"continue" = "Continue";
+"getStarted" = "Get Started!";
+
+//Dra1n View Controller
+
+"updateAvailable" = "An update is available for Dra1n";
+"discharge" = "Discharge";
+"cycles" = "Cycles";
+"timeLeft" = "Time Left";
+"health" = "Health";
+"drainingFromYourDevice" = "Amount of mA draining from your device.";
+"timesBeenCharged" = "Amount of times your phone has been charged.";
+"estimateTillDeath" = "Estimate of time until your phone will die.";
+"overallHealth" = "The overall health of the battery in your device.";
+"timeTillCharged" = "Estimate of time until your device is charged.";
+"chargingYourDevice" = "Amount of mA charging your device.";
+"unknownState" = "Unknown State";
+"error1" = "Well this is embarrassing, the URL has failed to encode, please let us know about this so we can try to fix it in the future. For reference, the tweak was ";
+"error2" = ", and the URL it should of made is";
+"temperatureDesc" = "The current temperature of your battery";
+"temperature" = "Battery Temperature";
+
+//Analyse View Controller
+
+"hide?" = "Do you want to hide";
+"clearAllLogs" = "Clear all logs";
+//Leave that \n in, it means a new line
+"flagExplanation" = "This table shows tweaks that have potentially been marked as battery draining. An orange circle indicates moderate, red indicates strong. Green is a false positive. \nTapping a row will take you to an online view.";
+"noCulprits" = "No Culprits Right Now";
+
+//Settings View Controller
+"areYouSureRespring" = "Are you sure you want to do this? You will respring after.";
+"respring" = "Restart Springboard";
+
+//Icon Picker
+"original" = "Original";
+"3d" = "3D";
+"white" = "White";
+"rainbow" = "Rainbow";
+"rainbow+" = "Rainbow+";
+"purple" = "Purple";
+"glyph" = "Glyph";
+"error3" = "Sorry about this, but I'm having trouble finding the icon";
+"error4" = "for your device, shoot me a DM at @Dra1nApp so I can take a look :). Full Error:";
+"credit" = "May require a respring to take effect. Credits to @Kutarin_ for all the icons.";
+
+//Graph
+"averageBatteryDrain" = "Average Battery Drain";
+"noAveragesYet" = "No Averages Yet";
