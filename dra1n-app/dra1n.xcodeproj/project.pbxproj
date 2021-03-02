@@ -173,7 +173,6 @@
 		E1D344F725EE973D00EFAECA /* mainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378948324E6EA69001B835B /* mainCell.swift */; };
 		E1D344F825EE973D00EFAECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF11624B9DA6100317E92 /* AppDelegate.swift */; };
 		E1D344F925EE973D00EFAECA /* PreferenceIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DD1250AACB3007B4D54 /* PreferenceIcon.swift */; };
-		E1D344FB25EE973D00EFAECA /* Cephei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53823D2C250809E800275D52 /* Cephei.framework */; };
 		E1D344FE25EE973D00EFAECA /* Dra1nPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E124D9F1D500295AD4 /* Dra1nPurple@3x.png */; };
 		E1D344FF25EE973D00EFAECA /* Rainbow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E724D9F1D500295AD4 /* Rainbow@3x.png */; };
 		E1D3450025EE973D00EFAECA /* mainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5378948424E6EA69001B835B /* mainCell.xib */; };
@@ -349,7 +348,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D344FB25EE973D00EFAECA /* Cephei.framework in Frameworks */,
 				27814F78DC4B74A04C59284E /* Pods_dra1n_jailed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
