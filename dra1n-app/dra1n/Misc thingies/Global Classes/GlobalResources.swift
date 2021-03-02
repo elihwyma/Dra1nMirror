@@ -46,6 +46,3 @@ public var databaseURL: String {
     return "https://\(endpoint()).dra1n.app/V1/tweaks/"
     #endif
 }
-
-var leMtoTheB = false
-var leFishe = false

@@ -30,6 +30,7 @@ struct CulpritObject {
 class analyseViewController: UIViewController {
     
     var counter = 0
+    var shouldRefresh = false
 
     @IBOutlet weak var drainGraphView: drainGraphView!
     @IBOutlet weak var tableView: UITableView!
@@ -60,6 +61,9 @@ class analyseViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: NSNotification.Name(rawValue: "badDateFormat"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(reloadStuff), name: NSNotification.Name(rawValue: "OledModeChange"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(organiseTheData), name: NSNotification.Name(rawValue: "DatabaseLoad"), object: nil)
+        NotificationCenter.default.addObserver(forName: .GraphRefresh, object: nil, queue: nil, using: { _ in
+            self.shouldRefresh = true
+        })
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -93,6 +97,10 @@ class analyseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        if self.shouldRefresh {
+            play(withDelay: 0)
+            self.shouldRefresh = false
+        }
         
     }
     
@@ -103,12 +111,7 @@ class analyseViewController: UIViewController {
         
 
     private func play(withDelay: TimeInterval) {
-        if (leMtoTheB && leFishe) {
-            drainGraphView.backgroundColor = UIColor(patternImage: UIImage(named: "MToTheB")!)
-        } else {
-            drainGraphView.backgroundColor = .clear
-        }
-        
+        drainGraphView.backgroundColor = .clear
         drainGraphView.play()
     }
     

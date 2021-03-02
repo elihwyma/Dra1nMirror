@@ -36,15 +36,16 @@ NSString* bundleIdentifier;
 }
 
 -(void)checkDefaults {
+
   def = [[HBPreferences alloc] initWithIdentifier :@"com.megadev.dra1n"];
-    if(![def objectForKey: @"increaseSinceLastCheck"]) { [def setBool: NO  forKey: @"increaseSinceLastCheck"]; }
-    if(![def objectForKey: @"DailyReport"]) { [def setBool: YES  forKey: @"DailyReport"]; }
+  if(![def objectForKey: @"increaseSinceLastCheck"]) { [def setBool: NO  forKey: @"increaseSinceLastCheck"]; }
+  if(![def objectForKey: @"DailyReport"]) { [def setBool: YES  forKey: @"DailyReport"]; }
 
   //The arrays
   if(![def objectForKey: @"CulpritLog"]) { [def setObject: [[NSMutableArray alloc] init]  forKey: @"CulpritLog"]; }
   if(![def objectForKey: @"DrainAvarageLog"]) { [def setObject: [[NSMutableArray alloc] init]  forKey: @"DrainAvarageLog"]; }
   if(![def objectForKey: @"DrainLog"]) { [def setObject: [[NSMutableArray alloc] init] forKey: @"DrainLog"]; }
-  if(![def objectForKey: @"arrayOfGoodness"]) { [def setObject: [[NSMutableArray alloc] init]  forKey: @"arrayOfGoodness"]; }
+  
 
   //The ints
   if(![def objectForKey: @"AverageTime"]) { [def setInteger: 21600  forKey: @"AverageTime"]; }
@@ -470,7 +471,6 @@ NSArray *args = [NSArray arrayWithObjects:@"--get-selections",nil];
 [list setArguments:args];
 
 
-
 NSPipe * out = [NSPipe pipe];
 [list setStandardOutput:out];
 
@@ -574,124 +574,3 @@ if([tweaklistArray count] < [TweakListOld count]){
 
 
 %end
-
-
-@implementation dra1nServer
-
-+(void)load
-{
-	[self sharedInstance];
-}
-
-+(instancetype)sharedInstance
-{
-	static dispatch_once_t onceToken = 0;
-	__strong static dra1nServer* sharedInstance = nil;
-	dispatch_once(&onceToken, ^{
-		sharedInstance = [[self alloc] init];
-	});
-	return sharedInstance;
-}
-
--(instancetype)init
-{
-	if ((self = [super init]))
-	{
-		_center = [CPDistributedMessagingCenter centerNamed:@"com.dra1n.dra1nServer"];
-		rocketbootstrap_distributedmessagingcenter_apply(_center);
-		[_center runServerOnCurrentThread];
-
-		[_center registerForMessageName:@"getTheDra1n" target:self selector:@selector(getTheDra1n)];
-    [_center registerForMessageName:@"nuke" target:self selector:@selector(nuke)];
-    [_center registerForMessageName:@"respring" target:self selector:@selector(respring)];
-    /*
-    [_center registerForMessageName:@"set" target:self selector:@selector(set)];
-    [_center registerForMessageName:@"getInt" target:self selector:@selector(getInt)];
-    [_center registerForMessageName:@"getBool" target:self selector:@selector(getBool)];
-    [_center registerForMessageName:@"getObject" target:self selector:@selector(getObject)];
-		*/
-		def = [[HBPreferences alloc] initWithIdentifier:@"com.megadev.dra1n"];
-	}
-	return self;
-}
-
--(NSDictionary *)getTheDra1n {
-	io_service_t powerSource = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching("IOPMPowerSource"));
-	if (powerSource) {
-		CFMutableDictionaryRef batteryDictionaryRef = NULL;
-		kern_return_t retVal = IORegistryEntryCreateCFProperties(powerSource, &batteryDictionaryRef, 0, 0);
-
-		if (retVal == KERN_SUCCESS) {
-
-			int dischargeCurrent = 0;
-			int cycles = 0;
-			int designCapacity = 0;
-			int MaxCapacity = 0;
-			int CurrentCapacity = 0;
-			int temperature = 0;
-			int voltage = 0;
-		
-			CFNumberRef dischargeCurrentRef = (CFNumberRef)IORegistryEntryCreateCFProperty(powerSource, CFSTR("InstantAmperage"), kCFAllocatorDefault, 0);
-			CFNumberGetValue(dischargeCurrentRef, kCFNumberIntType, &dischargeCurrent);
-			CFRelease(dischargeCurrentRef);
-
-			CFNumberRef cycleCurrentRef = (CFNumberRef)IORegistryEntryCreateCFProperty(powerSource, CFSTR("CycleCount"), kCFAllocatorDefault, 0);
-        	CFNumberGetValue(cycleCurrentRef, kCFNumberIntType, &cycles);
-        	CFRelease(cycleCurrentRef);
-
-			CFNumberRef MaxCapacityRef = (CFNumberRef)IORegistryEntryCreateCFProperty(powerSource, CFSTR("AppleRawMaxCapacity"), kCFAllocatorDefault, 0);
-        	CFNumberGetValue(MaxCapacityRef, kCFNumberIntType, &MaxCapacity);
-        	CFRelease(MaxCapacityRef);
-    
-			CFNumberRef CurrentCapacityRef = (CFNumberRef)IORegistryEntryCreateCFProperty(powerSource, CFSTR("AppleRawCurrentCapacity"), kCFAllocatorDefault, 0);
-        	CFNumberGetValue(CurrentCapacityRef, kCFNumberIntType, &CurrentCapacity);
-        	CFRelease(CurrentCapacityRef);
-
-			CFNumberRef designCapacityNum = (CFNumberRef)IORegistryEntryCreateCFProperty(powerSource, CFSTR("DesignCapacity"), kCFAllocatorDefault, 0);
-        	CFNumberGetValue(designCapacityNum, kCFNumberIntType, &designCapacity);
-        	CFRelease(designCapacityNum);
-
-			CFNumberRef temperatureNum = (CFNumberRef)IORegistryEntryCreateCFProperty(powerSource, CFSTR("Temperature"), kCFAllocatorDefault, 0);
-        	CFNumberGetValue(temperatureNum, kCFNumberIntType, &temperature);
-        	CFRelease(temperatureNum);
-
-			CFNumberRef voltageNum = (CFNumberRef)IORegistryEntryCreateCFProperty(powerSource, CFSTR("Voltage"), kCFAllocatorDefault, 0);
-        	CFNumberGetValue(voltageNum, kCFNumberIntType, &voltage);
-        	CFRelease(voltageNum);
-	
-			NSDictionary *arrayOfItems = @{ @"dischargeCurrent" : [NSNumber numberWithInt: dischargeCurrent], @"cycles" : [NSNumber numberWithInt: cycles], @"designCapacity" : [NSNumber numberWithInt: designCapacity], @"maxCapacity" : [NSNumber numberWithInt: MaxCapacity], @"currentCapacity" : [NSNumber numberWithInt: CurrentCapacity], @"temperature" : [NSNumber numberWithInt: temperature], @"voltage" : [NSNumber numberWithInt: voltage]};
-			return arrayOfItems;
-		} 
-	}
-	return nil;
-}
-
--(void)respring {
-  NSTask *task = [[NSTask alloc] init];
-  [task setLaunchPath:@"/usr/bin/killall"];
-  [task setArguments:@[ @"backboardd"]];
-  [task launch];
-}
-
--(void)nuke {
-  [def removeAllObjects];
-}
-
-/*
--(void)set:(NSString *)ignore userInfo:(NSDictionary *)userInfo {
-  [def setObject:userInfo[@"object"] forKey:userInfo[@"key"]];
-}
-
--(NSDictionary *)getBool:(NSString *)ignore userInfo:(NSDictionary *)userInfo {
-  return @{@"bool" : [NSNumber numberWithBool: [def boolForKey: userInfo[@"key"]]]};
-}
-
--(NSDictionary *)getObject:(NSString *)ignore userInfo:(NSDictionary *)userInfo {
-  return @{@"object" : [def objectForKey: userInfo[@"key"]]};
-}
-
--(NSDictionary *)getInt:(NSString *)ignore userInfo:(NSDictionary *)userInfo {
-  return @{@"int" : [NSNumber numberWithInt: [def integerForKey: userInfo[@"key"]]]};
-}
-*/
-@end

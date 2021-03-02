@@ -10,19 +10,43 @@
         <true/>
         <key>com.apple.private.skip-library-validation</key>
         <true/>
-        <key>com.apple.private.iokit.batterydata</key>
-        <true/>
-        <key>com.apple.private.iokit.powerlogging</key>
-        <true/>
-        <key>com.apple.system.diagnostics.iokit-properties</key>
-        <true/>
-        <key>com.apple.iokit.powerdxpc</key>
-        <true/>
-        <key>com.apple.private.security.no-sandbox</key>
-        <true/>
-        <key>com.apple.private.security.system-application</key>
-        <true/>
-        <key>get-task-allow</key>
-        <true/>
+	<key>com.apple.private.security.system-application</key>
+    	<true/>
+	<key>com.apple.managedconfiguration.profiled-access</key>
+    	<true/>
+	<key>com.apple.private.security.no-sandbox</key>
+    	<true/>
+    	<key>dynamic-codesigning</key>
+    	<true/>
+	<key>aps-environment</key>
+	<string>development</string>
+	<key>get-task-allow</key>
+	<true/>
+        <key>com.apple.security.iokit-user-client-class</key>
+        <array>
+                <string>AGXCommandQueue</string>
+                <string>AGXDevice</string>
+                <string>AGXDeviceUserClient</string>
+                <string>AGXSharedUserClient</string>
+                <string>AppleCredentialManagerUserClient</string>
+                <string>AppleJPEGDriverUserClient</string>
+                <string>ApplePPMUserClient</string>
+                <string>AppleSPUHIDDeviceUserClient</string>
+                <string>AppleSPUHIDDriverUserClient</string>
+                <string>IOAccelContext</string>
+                <string>IOAccelContext2</string>
+                <string>IOAccelDevice</string>
+                <string>IOAccelDevice2</string>
+                <string>IOAccelSharedUserClient</string>
+                <string>IOAccelSharedUserClient2</string>
+                <string>IOAccelSubmitter2</string>
+                <string>IOHIDEventServiceFastPathUserClient</string>
+                <string>IOHIDLibUserClient</string>
+                <string>IOMobileFramebufferUserClient</string>
+                <string>IOReportUserClient</string>
+                <string>IOSurfaceAcceleratorClient</string>
+                <string>IOSurfaceRootUserClient</string>
+                <string>RootDomainUserClient</string>
+        </array>
     </dict>
 </plist>
