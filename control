@@ -1,4 +1,4 @@
-Package: com.megadev.dra1n
+Package: com.amywhile.dra1n
 Name: Dra1n
 Depends: mobilesubstrate, firmware(>=12.2) | org.swift.libswift (>=5.0),ws.hbang.common,preferenceloader,com.cokepokes.libnotifications (>= 0.2-2), com.rpetrich.rocketbootstrap (>= 1.0.2)
 Architecture: iphoneos-arm
