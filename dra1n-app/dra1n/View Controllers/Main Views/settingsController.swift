@@ -73,20 +73,14 @@ class settingsController: UITableViewController {
 
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("clear", comment: ""))", style: .destructive, handler: { action in
             
-            let onboarding = CepheiController.shared.getBool(key: "onboarding")
-            let hasAsked = CepheiController.shared.getBool(key: "NewHasAsked")
-            let privacy = CepheiController.shared.getBool(key: "privacyPolicy")
-            let TweakPost = CepheiController.shared.getBool(key: "TweakPost")
+            let c = CepheiController.shared
+            c.set(key: "CulpritLog", object: [[String : Any]]())
+            c.set(key: "DrainAvarageLog", object: [[String : Any]]())
+            c.set(key: "DrainLog", object: [[String : Any]]())
+            c.set(key: "UpdatedNewTweaks", object: [[String : Any]]())
+            c.set(key: "increaseSinceLastCheck", object: false)
             
-            Dra1nController.sharedServer.nuke()
-            
-            CepheiController.shared.set(key: "onboarding", object: onboarding)
-            CepheiController.shared.set(key: "NewHasAsked", object: hasAsked)
-            CepheiController.shared.set(key: "privacyPolicy", object: privacy)
-            CepheiController.shared.set(key: "TweakPost", object: TweakPost)
-            
-            Dra1nController.sharedServer.respring()
-            
+            Dra1nController.shared.respring()
         }))
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("cancel", comment: ""))", style: .cancel, handler: nil))
 
@@ -124,6 +118,7 @@ class settingsController: UITableViewController {
         setSliderText()
 
         CepheiController.shared.set(key: "BarCount", object: Int(barCount.value))
+        NotificationCenter.default.post(name: .GraphRefresh, object: nil)
     }
         
     @IBOutlet weak var restartSpringboard: UIButton!
@@ -132,7 +127,6 @@ class settingsController: UITableViewController {
 
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("yes", comment: ""))", style: .destructive, handler: { action in
             Dra1nController.shared.respring()
-            
         }))
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("cancel", comment: ""))", style: .cancel, handler: nil))
 
@@ -173,4 +167,8 @@ class settingsController: UITableViewController {
     }
         
     @IBOutlet weak var appIcon: UIButton!
+}
+
+extension NSNotification.Name {
+    static let GraphRefresh = Notification.Name("GraphRefresh")
 }

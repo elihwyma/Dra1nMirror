@@ -5,7 +5,8 @@
 //  Created by Amy While on 09/09/2020.
 //
 
-import UIKit
+import Foundation
+import IOKit
 
 class Dra1nController {
     static let shared = Dra1nController()
@@ -23,14 +24,12 @@ class Dra1nController {
     
     func respring() {
         let task = NSTask()
-        
-        task.setLaunchPath("/usr/bin/killall")
-        task.arguments = ["backboardd"]
+        task.setLaunchPath("/usr/bin/sbreload")
         task.launch()
     }
     
     func BatteryData() -> [String : Int] {
-    
+        
         let freeMemory = Dra1nController.sharedServer.freeMemory() as? Int ?? 0
         let dict = Dra1nController.sharedServer.batteryData() as? [String : Int] ?? [String : Int]()
         
@@ -55,4 +54,5 @@ class Dra1nController {
             return false
         }
     }
+
 }

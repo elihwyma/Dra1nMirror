@@ -5,12 +5,13 @@
 //  Created by Amy While on 08/09/2020.
 //
 
-import UIKit
+import Foundation
 
 class CepheiController {
     static let shared = CepheiController()
 
     #if jailed
+    let def = UserDefaults.standard
     #else
     let def = HBPreferences(identifier: "com.megadev.dra1n")
     #endif
