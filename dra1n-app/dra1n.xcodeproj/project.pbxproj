@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1197A196DA0CB51361BB70 /* Pods_dra1n_staff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48171C7B7AB6301527C8E5E /* Pods_dra1n_staff.framework */; };
 		5311781F24E565CA007FCA85 /* GlobalResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DF34A324DAF3BB005D88ED /* GlobalResources.swift */; };
 		531DF11724B9DA6100317E92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF11624B9DA6100317E92 /* AppDelegate.swift */; };
 		531DF11E24B9DA6200317E92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11C24B9DA6200317E92 /* Main.storyboard */; };
@@ -207,6 +208,10 @@
 		53FBF26424E5C76A00C47C92 /* ColourScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ColourScheme.swift */; };
 		71F404261DA15F886860D3FB /* Pods_dra1n_jailed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69582660BDAD192618ABE954 /* Pods_dra1n_jailed.framework */; };
 		B9D8012837213D2EC05F591C /* Pods_dra1n.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4B8764B69FA9560AA392F4 /* Pods_dra1n.framework */; };
+		E1EFA3C425EC41D800DD45BC /* Cephei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53823D2C250809E800275D52 /* Cephei.framework */; };
+		E1EFA3C525EC41D900DD45BC /* Cephei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53823D2C250809E800275D52 /* Cephei.framework */; };
+		E1EFA3C825EC420B00DD45BC /* librocketbootstrap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 531E5DE3250C1631007B4D54 /* librocketbootstrap.dylib */; };
+		E1EFA3C925EC420D00DD45BC /* librocketbootstrap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 531E5DE3250C1631007B4D54 /* librocketbootstrap.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -323,6 +328,9 @@
 		69582660BDAD192618ABE954 /* Pods_dra1n_jailed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dra1n_jailed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		924193825A00A01FDBE78B3D /* Pods-dra1n.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n.debug.xcconfig"; path = "Target Support Files/Pods-dra1n/Pods-dra1n.debug.xcconfig"; sourceTree = "<group>"; };
 		CF9DC27BE000C56338F3A331 /* Pods-dra1n.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n.release.xcconfig"; path = "Target Support Files/Pods-dra1n/Pods-dra1n.release.xcconfig"; sourceTree = "<group>"; };
+		D1C367A9E4D69C9B3D0D28B1 /* Pods-dra1n-staff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-staff.release.xcconfig"; path = "Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff.release.xcconfig"; sourceTree = "<group>"; };
+		D48171C7B7AB6301527C8E5E /* Pods_dra1n_staff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dra1n_staff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE8848CB6690D959AC31C41 /* Pods-dra1n-staff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-staff.debug.xcconfig"; path = "Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +349,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EFA3C825EC420B00DD45BC /* librocketbootstrap.dylib in Frameworks */,
+				E1EFA3C425EC41D800DD45BC /* Cephei.framework in Frameworks */,
 				71F404261DA15F886860D3FB /* Pods_dra1n_jailed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +359,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EFA3C925EC420D00DD45BC /* librocketbootstrap.dylib in Frameworks */,
+				E1EFA3C525EC41D900DD45BC /* Cephei.framework in Frameworks */,
+				2C1197A196DA0CB51361BB70 /* Pods_dra1n_staff.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +468,7 @@
 				5328CD1724F3DA74007AE2E6 /* librocketbootstrap.dylib */,
 				69582660BDAD192618ABE954 /* Pods_dra1n_jailed.framework */,
 				1F4B8764B69FA9560AA392F4 /* Pods_dra1n.framework */,
+				D48171C7B7AB6301527C8E5E /* Pods_dra1n_staff.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -685,6 +699,8 @@
 				07956B783003C107AFD140BB /* Pods-dra1n-jailed.release.xcconfig */,
 				924193825A00A01FDBE78B3D /* Pods-dra1n.debug.xcconfig */,
 				CF9DC27BE000C56338F3A331 /* Pods-dra1n.release.xcconfig */,
+				DAE8848CB6690D959AC31C41 /* Pods-dra1n-staff.debug.xcconfig */,
+				D1C367A9E4D69C9B3D0D28B1 /* Pods-dra1n-staff.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -735,10 +751,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 536787C024FED2850034F4A7 /* Build configuration list for PBXNativeTarget "dra1n-staff" */;
 			buildPhases = (
+				ACBB5952028978A399F97919 /* [CP] Check Pods Manifest.lock */,
 				5367877F24FED2850034F4A7 /* Sources */,
 				5367879624FED2850034F4A7 /* Frameworks */,
 				5367879B24FED2850034F4A7 /* Resources */,
 				536787BF24FED2850034F4A7 /* Embed Libraries */,
+				BDFC2E2BA531AB203BE779A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -988,6 +1006,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dra1n/Pods-dra1n-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACBB5952028978A399F97919 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dra1n-staff-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDFC2E2BA531AB203BE779A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1304,7 +1361,7 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
-				PRODUCT_BUNDLE_IDENTIFIER = com.megadev.dra1n;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.dra1n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
@@ -1365,7 +1422,7 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
-				PRODUCT_BUNDLE_IDENTIFIER = com.megadev.dra1n;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.dra1n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
@@ -1397,6 +1454,7 @@
 					"$(THEOS_LIBRARY_PATH)",
 					"$(THEOS_VENDOR_LIBRARY_PATH)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1419,6 +1477,7 @@
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
+					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 				);
 				MARKETING_VERSION = 1.3;
@@ -1465,6 +1524,7 @@
 					"$(THEOS_LIBRARY_PATH)",
 					"$(THEOS_VENDOR_LIBRARY_PATH)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1487,6 +1547,7 @@
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
+					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 				);
 				MARKETING_VERSION = 1.3;
@@ -1511,6 +1572,7 @@
 		};
 		536787C124FED2850034F4A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE8848CB6690D959AC31C41 /* Pods-dra1n-staff.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1530,6 +1592,7 @@
 					"$(THEOS_LIBRARY_PATH)",
 					"$(THEOS_VENDOR_LIBRARY_PATH)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1553,6 +1616,7 @@
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
+					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 				);
 				MARKETING_VERSION = 1.3.2;
 				OTHER_CFLAGS = "";
@@ -1564,7 +1628,7 @@
 					"\"SWXMLHash\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D staff";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.megadev.dra1n-staff";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-staff";
 				PRODUCT_NAME = Staff;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
@@ -1579,6 +1643,7 @@
 		};
 		536787C224FED2850034F4A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1C367A9E4D69C9B3D0D28B1 /* Pods-dra1n-staff.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1598,6 +1663,7 @@
 					"$(THEOS_LIBRARY_PATH)",
 					"$(THEOS_VENDOR_LIBRARY_PATH)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1621,6 +1687,7 @@
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
+					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 				);
 				MARKETING_VERSION = 1.3.2;
 				OTHER_CFLAGS = "";
@@ -1632,7 +1699,7 @@
 					"\"SWXMLHash\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D staff";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.megadev.dra1n-staff";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-staff";
 				PRODUCT_NAME = Staff;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";

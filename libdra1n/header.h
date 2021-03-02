@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <IOKit/IOKitLib.h>
 #import <Cephei/HBPreferences.h>
+#import <UIKit/UIKit.h>
 #import "rocketbootstrap.h"
 
 @interface Dra1nManager : NSObject
