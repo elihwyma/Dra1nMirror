@@ -77,7 +77,15 @@ class infoViewController: UIViewController {
             DispatchQueue.global(qos: .utility).async {
                 ParcilityParser.shared.grabStruct(bundleID: le.Bundleid ?? "Error", completion: { (index, success) -> Void in
                     if (success) {
-                        self.tableData[0][0] = ("Info"); self.tableData[1][0] = ("This tweak's author is \(Dra1nApiParser.shared.database[index].author ?? "Error")"); self.tableData[3][0] = (Dra1nApiParser.shared.database[index].name ?? "Error")
+                        self.tableData[0][0] = ("Info")
+                        if let author = Dra1nApiParser.shared.database[index].author, let name = Dra1nApiParser.shared.database[index].name {
+                            self.tableData[1][0] = "This tweak's author is \(author)"
+                            self.tableData[3][0] = name
+                        }
+                        else {
+                            self.tableData[1][0] = "Parcility has no data for this tweak"
+                            self.tableData[3][0] = "Error"
+                        }
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                         }
@@ -85,9 +93,16 @@ class infoViewController: UIViewController {
                 })
             }
         } else {
-            self.tableData[0][0] = ("Info"); self.tableData[1][0] = ("This tweak's author is \(le.author ?? "Error")"); self.tableData[3][0] = (le.name ?? "Error")
+            self.tableData[0][0] = ("Info")
+            if let author = le.author, let name = le.name {
+                self.tableData[1][0] = "This tweak's author is \(author)"
+                self.tableData[3][0] = name
+            }
+            else {
+                self.tableData[1][0] = "Parcility has no data for this tweak"
+                self.tableData[3][0] = "Error"
+            }
         }
-        
         self.tableView.reloadData()
     }
     

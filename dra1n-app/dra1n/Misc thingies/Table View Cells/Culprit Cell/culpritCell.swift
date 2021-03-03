@@ -69,12 +69,6 @@ class culpritCell: UITableViewCell {
             self.tweakIcon.image = UIImage(named: "tweakIcon")
         }
                 
-        if (((self.le.Bundleid ?? "Error").lowercased()) == "le fishe") {
-            self.textView.text = "𝓵𝓮 𝓯𝓲𝓼𝓱𝓮"
-        } else if (((self.le.Bundleid ?? "Error").lowercased()) == "m to the b") {
-            self.textView.text = "𝓶 𝓽𝓸 𝓽𝓱𝓮 𝓫 𝓼𝓪𝔂𝓼 𝓼𝓽𝓮𝓹 𝓲𝓷 𝓵𝓲𝓷𝓮"
-        }
-        
         self.textView.sizeToFit()
     }
  

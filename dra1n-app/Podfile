@@ -11,7 +11,7 @@ target 'dra1n' do
   pod 'SwiftyOnboard'
 end
 
-target 'dra1n-jailed' do
+target 'dra1n-staff' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -22,3 +22,12 @@ target 'dra1n-jailed' do
 end
 
 
+target 'dra1n-jailed' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for dra1n
+  pod "Macaw", "0.9.6"
+  pod 'SwiftyMarkdown'
+  pod 'SwiftyOnboard'
+end

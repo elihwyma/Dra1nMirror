@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  dra1n
 //
-//  Created by Amy While on 11/07/2020.
+//  Created by Charlie While on 11/07/2020.
 //
 
 import UIKit

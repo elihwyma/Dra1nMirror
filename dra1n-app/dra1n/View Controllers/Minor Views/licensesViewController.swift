@@ -21,8 +21,8 @@ class licensesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     let credits = [
-        ["Macaw", "SwiftyMarkdown", "SwiftyOnboard", "SAConfettiView"],
-        ["https://github.com/exyte/Macaw/blob/master/LICENSE", "https://github.com/SimonFairbairn/SwiftyMarkdown/blob/master/LICENSE", "https://github.com/juanpablofernandez/SwiftyOnboard/blob/master/LICENSE", "https://github.com/sudeepag/SAConfettiView/blob/master/LICENSE"]
+        ["Macaw", "SwiftyMarkdown", "SwiftyOnboard"],
+        ["https://github.com/exyte/Macaw/blob/master/LICENSE", "https://github.com/SimonFairbairn/SwiftyMarkdown/blob/master/LICENSE", "https://github.com/juanpablofernandez/SwiftyOnboard/blob/master/LICENSE"]
     ]
     
     override func viewDidLoad() {

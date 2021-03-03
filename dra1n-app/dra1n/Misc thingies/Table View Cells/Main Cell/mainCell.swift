@@ -39,7 +39,6 @@ class mainCell: UITableViewCell {
         specificValue.adjustsFontSizeToFitWidth = true
         descriptionText.adjustsFontSizeToFitWidth = true
         descriptionText.sizeToFit()
-        
         self.backgroundColor = customGray5
         self.specificValue.textColor = .red
     }
