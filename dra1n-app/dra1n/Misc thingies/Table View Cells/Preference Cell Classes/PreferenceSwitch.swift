@@ -14,12 +14,12 @@ class PreferenceSwitch: UISwitch {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-         self.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
-        
+        self.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
+        #if !jailed
         if !prefsName.isEmpty {
             self.isOn = CepheiController.shared.def.bool(forKey: prefsName, default: self.isOn)
         }
+        #endif
     }
     
     @objc func switchChanged() {

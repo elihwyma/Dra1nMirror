@@ -41,11 +41,8 @@ func endpoint() -> String {
 
 public var databaseURL: String {
     #if staff
-    return "https://<redacted>/v1/all/tweaks"
+    return "https://\(endpoint()).dra1n.app/v1/all/tweaks"
     #else
-    return "https://<redacted>/V1/tweaks/"
+    return "https://\(endpoint()).dra1n.app/V1/tweaks/"
     #endif
 }
-
-var leMtoTheB = false
-var leFishe = false

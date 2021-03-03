@@ -19,7 +19,7 @@ struct DatabaseObject {
     var hide: Bool?
     var time: Date?
     var name: String?
-
+    
     init(image: UIImage? = nil,
          goodImage: Bool? = nil,
          badImage: Bool? = nil,
@@ -30,7 +30,7 @@ struct DatabaseObject {
          hide: Bool? = nil,
          time: Date? = nil,
          name: String? = nil) {
-
+        
         self.image = image
         self.goodImage = goodImage
         self.badImage = badImage
@@ -45,7 +45,7 @@ struct DatabaseObject {
 }
 
 class Dra1nApiParser {
-
+    
     let disallowedBundles = [
         "com.hackyouriphone",
         "ru.rj",
@@ -57,19 +57,19 @@ class Dra1nApiParser {
         "cydown",
         "cracktool"
     ]
-
+    
     var database = [DatabaseObject]()
     var tweakNames = [String]()
     var randomIndexes = [Int]()
 
     var isFucked = false
-
+    
     static let shared = Dra1nApiParser()
-
+    
     func register() {
         NotificationCenter.default.addObserver(self, selector: #selector(setup), name: NSNotification.Name(rawValue: "PrivacyPolicy"), object: nil)
     }
-
+    
     @objc func setup() {
         if Dra1nController.shared.privacyPolicy {
             DispatchQueue.global(qos: .utility).async {
@@ -79,7 +79,7 @@ class Dra1nApiParser {
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DatabaseLoad"), object: nil)
                     })
                 }
-
+                
                 self.checkForUpdate()
                 self.postCulprits()
                 self.preCulpriting()
@@ -87,8 +87,8 @@ class Dra1nApiParser {
             }
         }
     }
-
-
+    
+    
     typealias refreshCompletion = (_ success: Bool) -> Void
     func refresh(completion: @escaping refreshCompletion) {
         if (!Dra1nController.shared.privacyPolicy) { return }
@@ -99,10 +99,10 @@ class Dra1nApiParser {
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
                 if let data = data {
                     do {
-
+                        
                         let uwu = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String : Any]] ?? [[String : Any]]()
                         let owo = (uwu as NSArray).sortedArray(using: [NSSortDescriptor(key: "warns", ascending: false)]) as? [[String : Any]] ?? [[String : Any]]()
-
+                        
                         #if staff
                         for tweak in owo {
                             let le = DatabaseObject(Bundleid: (tweak["Bundleid"] as? String ?? "Error"), flag: (tweak["flag"] as? Int ?? 0), warns: (tweak["warns"] as? Int ?? 0))
@@ -119,7 +119,7 @@ class Dra1nApiParser {
                         }
                         #endif
 
-
+                        
                         var tempArray = [String]()
                         while (tempArray.count != 10) {
                             let tempName = self.tweakNames.randomElement() ?? ""
@@ -127,45 +127,45 @@ class Dra1nApiParser {
                                 tempArray.append(tempName)
                                 let index = self.tweakNames.firstIndex(of: tempName) ?? 0
                                 self.randomIndexes.append(index)
-
+                           
                             }
                         }
 
                         completion(true)
-
+               
                     } catch { completion(false) }
-
+                    
                 }
             }
             task.resume()
         }
     }
-
+    
     #if staff
     func generateRandomDate(daysBack: Int)-> Date?{
             let day = arc4random_uniform(UInt32(daysBack))+1
             let hour = arc4random_uniform(23)
             let minute = arc4random_uniform(59)
-
+            
             let today = Date(timeIntervalSinceNow: 0)
             let gregorian  = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
             var offsetComponents = DateComponents()
             offsetComponents.day = -1 * Int(day - 1)
             offsetComponents.hour = -1 * Int(hour)
             offsetComponents.minute = -1 * Int(minute)
-
+            
             let randomDate = gregorian?.date(byAdding: offsetComponents, to: today, options: .init(rawValue: 0) )
             return randomDate
     }
     #endif
-
+    
     func checkForUpdate() {
         var update = false
         var text = "An update is available for Dra1n"
         var icon = "icloud.and.arrow.down"
         var link = "cydia://url/https://cydia.saurik.com/api/share#?package=com.megadev.dra1n"
-
-        if let url = URL(string: "https://<redacted>/v1/update") {
+        
+        if let url = URL(string: "https://\(endpoint()).dra1n.app/v1/update") {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
@@ -175,37 +175,37 @@ class Dra1nApiParser {
                     if let json = try? decoder.decode(UpdateResponse.self, from: data) {
                         if ((json.UpdateAvailable != Dra1nController.shared.installedVersion) || (json.isAnnouncement == 1)) { update = true }
                         if !update { return }
-
+                        
                         if ((json.UpdateAvailable != Dra1nController.shared.installedVersion)) { CepheiController.shared.set(key: "Update", object: true) }
                         if (json.UpdateText != nil) { text = json.UpdateText }
                         if (json.UpdateImage != nil) { icon = json.UpdateImage }
                         if (json.url != nil) { link = json.url }
-
+                       
                         let dict: [String : Any] = [
                             "text" : text,
                             "icon" : icon,
                             "link" : link
                         ]
-
-                        NotificationCenter.default.post(name: .updateBanner, object: nil, userInfo: dict)
+                        
+                        NotificationCenter.default.post(name: .updateBanner, object: nil, userInfo: dict) 
                     }
                 }
             }
             task.resume()
         }
     }
-
+    
     func postCulprits() {
         if (Dra1nController.shared.privacyPolicy) {
             var array = CepheiController.shared.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
             for (index, element) in array.enumerated() {
-
+                
                 let tweak = element["culrpit"] as? String ?? "Unknown Cause"
                 for item in self.disallowedBundles { if tweak.contains(item) { return } }
                 let posted = element["posted"] as? Int ?? 0
-
+       
                 if (((tweak != "Unknown Cause") || (tweak != "")) && (posted == 0)) {
-                    let url = "https://<redacted>/v1/post/\(tweak)"
+                    let url = "https://\(endpoint()).dra1n.app/v1/post/\(tweak)"
                     let noTPlease = url.replacingOccurrences(of: "\t", with: "")
                     let encoded = noTPlease.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
                     if let url = URL(string: encoded ?? "") {
@@ -233,11 +233,11 @@ class Dra1nApiParser {
             }
         }
     }
-
+    
     func preCulpriting() {
         if (!Dra1nController.shared.privacyPolicy || !CepheiController.shared.getBool(key: "hasOnboardedPost")) { return }
-        if let url = URL(string: "https://<redacted>/V1/tweaks/") {
-
+        if let url = URL(string: "https://\(endpoint()).dra1n.app/V1/tweaks/") {
+            
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
@@ -248,14 +248,14 @@ class Dra1nApiParser {
                         let tweakList = CepheiController.shared.getObject(key: "TweakList") as? [String] ?? [String]()
                         var whoops = [String]()
                         var culpritList = CepheiController.shared.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
-
+                        
                         for yeet in tweakList {
                             if (!yeet.contains("gsc.")) {
                                 let noTPlease = yeet.replacingOccurrences(of: "\t", with: "")
                                 whoops.append(noTPlease)
                             }
                         }
-
+                        
                         for tweak in jsonObj {
                             let checkingCulprit = tweak["Bundleid"] as? String ?? ""
                             let flag = tweak["flag"] as? Int ?? 0
@@ -269,29 +269,29 @@ class Dra1nApiParser {
                                 }
                             }
                         }
-
+                        
                         CepheiController.shared.set(key: "hasOnboardedPost", object: true)
                         CepheiController.shared.set(key: "CulpritLog", object: culpritList)
                     } catch { return }
-
+                    
                 }
             }
             task.resume()
         }
-
+        
     }
-
+    
     func tweakListPosting() {
-
+        
         var listToPost = [String]()
-
+        
         if (!CepheiController.shared.getBool(key: "TweakPost")) {
             let tweakList = CepheiController.shared.getObject(key: "TweakList") as? [String] ?? [String]()
             for tweak in tweakList {
                 listToPost.append(tweak.replacingOccurrences(of: "\t", with: ""))
             }
         }
-
+        
         var newTweakList = CepheiController.shared.getObject(key: "UpdatedNewTweaks") as? [[String : Any]] ?? [[String : Any]]()
         for (index, tweak) in newTweakList.enumerated() {
             if !(tweak["posted"] as? Bool ?? false) {
@@ -299,14 +299,14 @@ class Dra1nApiParser {
                 newTweakList[index]["posted"] = true
             }
         }
-
+        
         if !listToPost.isEmpty {
             guard let data = try? JSONSerialization.data(withJSONObject: listToPost, options: []) else {
                 return
             }
             let json = String(data: data, encoding: String.Encoding.utf8)
-
-            if let url = URL(string: "https://<redacted>/v1/tweaklist/") {
+            
+            if let url = URL(string: "https://\(endpoint()).dra1n.app/v1/tweaklist/") {
                 var request = URLRequest(url: url)
                 request.httpMethod = "GET"
                 request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")

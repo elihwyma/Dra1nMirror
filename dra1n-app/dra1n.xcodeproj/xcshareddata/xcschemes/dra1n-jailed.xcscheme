@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "533B5B1824D597FA00CE458A"
+               BlueprintIdentifier = "E1D344D825EE973D00EFAECA"
                BuildableName = "dra1n-jailed.app"
                BlueprintName = "dra1n-jailed"
                ReferencedContainer = "container:dra1n.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "533B5B1824D597FA00CE458A"
+            BlueprintIdentifier = "E1D344D825EE973D00EFAECA"
             BuildableName = "dra1n-jailed.app"
             BlueprintName = "dra1n-jailed"
             ReferencedContainer = "container:dra1n.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "533B5B1824D597FA00CE458A"
+            BlueprintIdentifier = "E1D344D825EE973D00EFAECA"
             BuildableName = "dra1n-jailed.app"
             BlueprintName = "dra1n-jailed"
             ReferencedContainer = "container:dra1n.xcodeproj">

@@ -83,23 +83,14 @@ class searchViewController: UIViewController {
             let le = DatabaseObject(image: UIImage(named: "tweakIcon"), goodImage: true, badImage: false, Bundleid: "Privacy Policy Disabled", flag: 0, warns: 0)
             shownTweaks.append(le)
         } else {
-            if (searchText.lowercased() == "le fishe") {
-                let le = DatabaseObject(image: UIImage(named: "lefishe"), goodImage: true, badImage: false, Bundleid: "Le fishe", flag: 5, warns: 420)
-                shownTweaks.append(le)
-            } else if searchText.lowercased() == "m to the b" {
-                let le = DatabaseObject(image: UIImage(named: "MToTheB"), goodImage: true, badImage: false, Bundleid: "m to the b", flag: 5, warns: 420)
-                shownTweaks.append(le)
-                
+            if (searchText == "") {
+                for index in Dra1nApiParser.shared.randomIndexes {
+                    shownTweaks.append(Dra1nApiParser.shared.database[index])
+                }
             } else {
-                if (searchText == "") {
-                    for index in Dra1nApiParser.shared.randomIndexes {
-                        shownTweaks.append(Dra1nApiParser.shared.database[index])
-                    }
-                } else {
-                    for tweak in Dra1nApiParser.shared.database {
-                        if (tweak.Bundleid ?? "Error").range(of: searchText, options: .caseInsensitive) != nil {
-                            shownTweaks.append(tweak)
-                        }
+                for tweak in Dra1nApiParser.shared.database {
+                    if (tweak.Bundleid ?? "Error").range(of: searchText, options: .caseInsensitive) != nil {
+                        shownTweaks.append(tweak)
                     }
                 }
             }
@@ -137,20 +128,8 @@ extension searchViewController: UISearchBarDelegate {
 extension searchViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if shownTweaks[indexPath.row].Bundleid == "Privacy Policy Disabled" { return }
-        if ((self.searchBar.text?.lowercased() ?? "") == "le fishe") {
-            let url = URL(string: "https://www.youtube.com/watch?v=3blg4-jRHS0")
-            leFishe = true
-  
-            UIApplication.shared.open(url!)
-        } else if ((self.searchBar.text?.lowercased() ?? "") == "m to the b") {
-            let url = URL(string: "https://www.youtube.com/watch?v=06K54cUSlwk")
-            leMtoTheB = true
-            
-            UIApplication.shared.open(url!)
-        } else {
-            performSegue(withIdentifier: "showTheDetail", sender: nil)
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        performSegue(withIdentifier: "showTheDetail", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
