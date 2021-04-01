@@ -1321,9 +1321,6 @@
 					"$(inherited)",
 					"$(THEOS_LIBRARY_PATH)",
 					"$(THEOS_VENDOR_LIBRARY_PATH)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 				);
 				MARKETING_VERSION = 1.4;
 				OTHER_CFLAGS = "";
@@ -1333,7 +1330,7 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.dra1n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
@@ -1382,9 +1379,6 @@
 					"$(inherited)",
 					"$(THEOS_LIBRARY_PATH)",
 					"$(THEOS_VENDOR_LIBRARY_PATH)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 				);
 				MARKETING_VERSION = 1.4;
 				OTHER_CFLAGS = "";
@@ -1394,7 +1388,7 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.dra1n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
