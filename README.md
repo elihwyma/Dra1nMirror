@@ -18,7 +18,7 @@ make package install
 ```
 
 ## Credits
-- [Myself, app/tweak developer](https://github.com/CharlieWhile13)
+- [Myself, app/tweak developer](https://github.com/elihwyma)
 - [MegaDeviOS, tweak/backend developer](https://github.com/MegaDevIOS)
 - [Cephei](https://github.com/hbang/libcephei)
 - [Macaw](https://github.com/exyte/Macaw)
