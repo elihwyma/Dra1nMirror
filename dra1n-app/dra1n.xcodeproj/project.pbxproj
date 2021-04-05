@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142AAB9AEDC64B45A2A71C72 /* libPods-dra1n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 775CAB049D6515B9F49C0B1E /* libPods-dra1n.a */; };
 		27814F78DC4B74A04C59284E /* Pods_dra1n_jailed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8A07C9E05B62DDEFC6DDAB /* Pods_dra1n_jailed.framework */; };
 		2C1197A196DA0CB51361BB70 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		531DF11724B9DA6100317E92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF11624B9DA6100317E92 /* AppDelegate.swift */; };
@@ -141,7 +142,6 @@
 		53F648AE250EBAEB00DFC41D /* HeaderCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */; };
 		53F648B0250EBAEB00DFC41D /* HeaderCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */; };
 		53FBF26324E5C76A00C47C92 /* ColourScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ColourScheme.swift */; };
-		DF0916169D6EA7EF1054B6FA /* Pods_dra1n.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C7336F75A8E08E396BCD65 /* Pods_dra1n.framework */; };
 		E1D344DB25EE973D00EFAECA /* ColourScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ColourScheme.swift */; };
 		E1D344DC25EE973D00EFAECA /* appIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3D24E728220055E11E /* appIconCell.swift */; };
 		E1D344DD25EE973D00EFAECA /* PreferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648A9250EB45F00DFC41D /* PreferenceCell.swift */; };
@@ -237,7 +237,6 @@
 /* Begin PBXFileReference section */
 		19BFEA8E89FA80067947BF16 /* Pods-dra1n-jailed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-jailed.debug.xcconfig"; path = "Target Support Files/Pods-dra1n-jailed/Pods-dra1n-jailed.debug.xcconfig"; sourceTree = "<group>"; };
 		3D8A07C9E05B62DDEFC6DDAB /* Pods_dra1n_jailed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dra1n_jailed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42C7336F75A8E08E396BCD65 /* Pods_dra1n.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dra1n.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DAD9F12CE624441E28F423 /* Pods-dra1n.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n.release.xcconfig"; path = "Target Support Files/Pods-dra1n/Pods-dra1n.release.xcconfig"; sourceTree = "<group>"; };
 		531DF11324B9DA6100317E92 /* dra1n.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dra1n.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		531DF11624B9DA6100317E92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +315,7 @@
 		53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellButton.swift; sourceTree = "<group>"; };
 		53FBF26224E5C76900C47C92 /* ColourScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourScheme.swift; sourceTree = "<group>"; };
 		7424984E28DDEDC3DFB1D7BE /* Pods-dra1n-staff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-staff.release.xcconfig"; path = "Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff.release.xcconfig"; sourceTree = "<group>"; };
+		775CAB049D6515B9F49C0B1E /* libPods-dra1n.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dra1n.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0F37A93DDF8406B334B31C /* Pods-dra1n.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n.debug.xcconfig"; path = "Target Support Files/Pods-dra1n/Pods-dra1n.debug.xcconfig"; sourceTree = "<group>"; };
 		9AECE26FE686E6E4CE7D727E /* Pods-dra1n-jailed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-jailed.release.xcconfig"; path = "Target Support Files/Pods-dra1n-jailed/Pods-dra1n-jailed.release.xcconfig"; sourceTree = "<group>"; };
 		9EAF7EC7FCA1816DB1881C3C /* Pods_dra1n_staff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dra1n_staff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -330,7 +330,7 @@
 			files = (
 				53823D2D250809E900275D52 /* Cephei.framework in Frameworks */,
 				53823D3425095B5100275D52 /* IOKit.framework in Frameworks */,
-				DF0916169D6EA7EF1054B6FA /* Pods_dra1n.framework in Frameworks */,
+				142AAB9AEDC64B45A2A71C72 /* libPods-dra1n.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,9 +438,9 @@
 			isa = PBXGroup;
 			children = (
 				53B4484824FF22BF0066D2B8 /* IOKit.framework */,
-				42C7336F75A8E08E396BCD65 /* Pods_dra1n.framework */,
 				3D8A07C9E05B62DDEFC6DDAB /* Pods_dra1n_jailed.framework */,
 				9EAF7EC7FCA1816DB1881C3C /* Pods_dra1n_staff.framework */,
+				775CAB049D6515B9F49C0B1E /* libPods-dra1n.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -688,7 +688,6 @@
 				531DF10F24B9DA6100317E92 /* Sources */,
 				531DF11024B9DA6100317E92 /* Frameworks */,
 				531DF11124B9DA6100317E92 /* Resources */,
-				0D39611D0F2B94109021C312 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -902,23 +901,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D39611D0F2B94109021C312 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dra1n/Pods-dra1n-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dra1n/Pods-dra1n-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dra1n/Pods-dra1n-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		17F9FF28A36325BB7B8E9E32 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1325,8 +1307,8 @@
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 				);
-				MARKETING_VERSION = 1.4;
-				OTHER_CFLAGS = "";
+				MARKETING_VERSION = 1.4.1;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-framework",
 					IOKit,
@@ -1358,7 +1340,7 @@
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 7J8FJX4SRX;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1386,8 +1368,8 @@
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
 				);
-				MARKETING_VERSION = 1.4;
-				OTHER_CFLAGS = "";
+				MARKETING_VERSION = 1.4.1;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-framework",
 					IOKit,

@@ -1,10 +1,10 @@
-Package: com.amywhile.dra1n
+Package: com.amymega.dra1n
 Name: Dra1n
 Depends: mobilesubstrate, firmware(>=12.2) | org.swift.libswift (>=5.0), ws.hbang.common,preferenceloader, com.cokepokes.libnotifications (>= 0.2-2)
+Conflicts: com.megadev.dra1n, com.amywhile.dra1n 
 Architecture: iphoneos-arm
 Description: Find out which packages are dra1ning your battery!
 Maintainer: MegaDev & Amy While
 Author: MegaDev & Amy While 
 Section: Tweaks
-Version: 1.4
-
+Version: 1.4.1
