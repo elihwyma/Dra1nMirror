@@ -4,7 +4,7 @@
 //
 //  Created by Amy While on 31/07/2020.
 //
-
+/*
 import UIKit
 import SwiftyOnboard
 
@@ -128,3 +128,4 @@ class onboardingViewController: UIViewController {
             }
         }
     }
+*/

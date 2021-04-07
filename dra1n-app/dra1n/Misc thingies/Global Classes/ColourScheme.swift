@@ -57,5 +57,6 @@ public var textColour: UIColor {
     }
 }
 
-
-
+public var dra1nColour: UIColor {
+    UIColor(red: 0.753, green: 0.537, blue: 0.855, alpha: 1)
+}

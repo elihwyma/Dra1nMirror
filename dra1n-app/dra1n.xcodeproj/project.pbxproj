@@ -3,13 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		142AAB9AEDC64B45A2A71C72 /* libPods-dra1n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 775CAB049D6515B9F49C0B1E /* libPods-dra1n.a */; };
-		27814F78DC4B74A04C59284E /* Pods_dra1n_jailed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8A07C9E05B62DDEFC6DDAB /* Pods_dra1n_jailed.framework */; };
-		2C1197A196DA0CB51361BB70 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		531DF11724B9DA6100317E92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF11624B9DA6100317E92 /* AppDelegate.swift */; };
 		531DF11E24B9DA6200317E92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11C24B9DA6200317E92 /* Main.storyboard */; };
 		531DF12024B9DA7000317E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11F24B9DA7000317E92 /* Assets.xcassets */; };
@@ -117,7 +114,6 @@
 		53823D2D250809E900275D52 /* Cephei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53823D2C250809E800275D52 /* Cephei.framework */; };
 		53823D31250948D800275D52 /* Dra1nController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53823D30250948D700275D52 /* Dra1nController.swift */; };
 		53823D33250948D800275D52 /* Dra1nController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53823D30250948D700275D52 /* Dra1nController.swift */; };
-		53823D3425095B5100275D52 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B4484824FF22BF0066D2B8 /* IOKit.framework */; };
 		5383134C24F41D8D00697673 /* Dra1nApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5383134B24F41D8D00697673 /* Dra1nApiParser.swift */; };
 		53889B5B24C3851400CA8F56 /* drainGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889B5A24C3851400CA8F56 /* drainGraphView.swift */; };
 		53AA1B3D24C8713E00A9B459 /* dra1nViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA1B3C24C8713E00A9B459 /* dra1nViewController.swift */; };
@@ -142,73 +138,83 @@
 		53F648AE250EBAEB00DFC41D /* HeaderCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */; };
 		53F648B0250EBAEB00DFC41D /* HeaderCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */; };
 		53FBF26324E5C76A00C47C92 /* ColourScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ColourScheme.swift */; };
-		E1D344DB25EE973D00EFAECA /* ColourScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ColourScheme.swift */; };
-		E1D344DC25EE973D00EFAECA /* appIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3D24E728220055E11E /* appIconCell.swift */; };
-		E1D344DD25EE973D00EFAECA /* PreferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648A9250EB45F00DFC41D /* PreferenceCell.swift */; };
-		E1D344DE25EE973D00EFAECA /* CepheiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* CepheiController.swift */; };
-		E1D344DF25EE973D00EFAECA /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EEE36B24DCB44900402784 /* searchViewController.swift */; };
-		E1D344E025EE973D00EFAECA /* privacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EBDCAB24CB6FBA00E6E981 /* privacyPolicyViewController.swift */; };
-		E1D344E125EE973D00EFAECA /* culpritCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5D0DB24E71DFA00AE6878 /* culpritCell.swift */; };
-		E1D344E225EE973D00EFAECA /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EEE36824DCB37600402784 /* infoViewController.swift */; };
-		E1D344E325EE973D00EFAECA /* settingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5359D58524C85EA200BBEC79 /* settingsController.swift */; };
-		E1D344E425EE973D00EFAECA /* dra1nViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA1B3C24C8713E00A9B459 /* dra1nViewController.swift */; };
-		E1D344E525EE973D00EFAECA /* onboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C0460524D4AE5600F23E5E /* onboardingViewController.swift */; };
-		E1D344E625EE973D00EFAECA /* analyseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D903824C23F7A006A2157 /* analyseViewController.swift */; };
-		E1D344E725EE973D00EFAECA /* tabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF12B24B9E79E00317E92 /* tabViewController.swift */; };
-		E1D344E825EE973D00EFAECA /* GlobalResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DF34A324DAF3BB005D88ED /* GlobalResources.swift */; };
-		E1D344E925EE973D00EFAECA /* ParcilityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EEE36E24DCB6BD00402784 /* ParcilityParser.swift */; };
-		E1D344EA25EE973D00EFAECA /* iconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53240DD624D4E4620098DBDE /* iconPicker.swift */; };
-		E1D344EB25EE973D00EFAECA /* PreferenceSocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DD6250AB29B007B4D54 /* PreferenceSocialCell.swift */; };
-		E1D344EC25EE973D00EFAECA /* ColourAwareLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DDA250ABCFD007B4D54 /* ColourAwareLabel.swift */; };
-		E1D344ED25EE973D00EFAECA /* PreferenceSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BE6250804CF00A571B7 /* PreferenceSwitch.swift */; };
-		E1D344EE25EE973D00EFAECA /* licensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378A51324E4478300DE2D1D /* licensesViewController.swift */; };
-		E1D344EF25EE973D00EFAECA /* Dra1nController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53823D30250948D700275D52 /* Dra1nController.swift */; };
-		E1D344F025EE973D00EFAECA /* HeaderCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */; };
-		E1D344F125EE973D00EFAECA /* Dra1nApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5383134B24F41D8D00697673 /* Dra1nApiParser.swift */; };
-		E1D344F225EE973D00EFAECA /* Dra1nServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */; };
-		E1D344F325EE973D00EFAECA /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3624E724D90055E11E /* headerCell.swift */; };
-		E1D344F425EE973D00EFAECA /* drainGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889B5A24C3851400CA8F56 /* drainGraphView.swift */; };
-		E1D344F525EE973D00EFAECA /* ColourAwareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DDE250ABF78007B4D54 /* ColourAwareButton.swift */; };
-		E1D344F625EE973D00EFAECA /* ColourAwareTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648A5250E897900DFC41D /* ColourAwareTextView.swift */; };
-		E1D344F725EE973D00EFAECA /* mainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378948324E6EA69001B835B /* mainCell.swift */; };
-		E1D344F825EE973D00EFAECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF11624B9DA6100317E92 /* AppDelegate.swift */; };
-		E1D344F925EE973D00EFAECA /* PreferenceIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DD1250AACB3007B4D54 /* PreferenceIcon.swift */; };
-		E1D344FE25EE973D00EFAECA /* Dra1nPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E124D9F1D500295AD4 /* Dra1nPurple@3x.png */; };
-		E1D344FF25EE973D00EFAECA /* Rainbow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E724D9F1D500295AD4 /* Rainbow@3x.png */; };
-		E1D3450025EE973D00EFAECA /* mainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5378948424E6EA69001B835B /* mainCell.xib */; };
-		E1D3450125EE973D00EFAECA /* 3DBattery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D724D9F1D500295AD4 /* 3DBattery@3x.png */; };
-		E1D3450225EE973D00EFAECA /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460924D4B56700F23E5E /* Lato-Heavy.ttf */; };
-		E1D3450325EE973D00EFAECA /* 3DBattery~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D524D9F1D500295AD4 /* 3DBattery~ipad@3x.png */; };
-		E1D3450425EE973D00EFAECA /* Dra1nWhite~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CE24D9F1D500295AD4 /* Dra1nWhite~ipad@2x.png */; };
-		E1D3450525EE973D00EFAECA /* 3DBattery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D824D9F1D500295AD4 /* 3DBattery@2x.png */; };
-		E1D3450625EE973D00EFAECA /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460A24D4B56800F23E5E /* Lato-Regular.ttf */; };
-		E1D3450725EE973D00EFAECA /* Dra1nGlyph~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DD24D9F1D500295AD4 /* Dra1nGlyph~ipad@2x.png */; };
-		E1D3450825EE973D00EFAECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF12124B9DA7000317E92 /* LaunchScreen.storyboard */; };
-		E1D3450925EE973D00EFAECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11F24B9DA7000317E92 /* Assets.xcassets */; };
-		E1D3450A25EE973D00EFAECA /* Rainbow~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E424D9F1D500295AD4 /* Rainbow~ipad@2x.png */; };
-		E1D3450B25EE973D00EFAECA /* RainbowForeground~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D324D9F1D500295AD4 /* RainbowForeground~ipad@3x.png */; };
-		E1D3450C25EE973D00EFAECA /* RainbowForeground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D124D9F1D500295AD4 /* RainbowForeground@2x.png */; };
-		E1D3450D25EE973D00EFAECA /* Dra1nGlyph~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DA24D9F1D500295AD4 /* Dra1nGlyph~ipad@3x.png */; };
-		E1D3450E25EE973D00EFAECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11C24B9DA6200317E92 /* Main.storyboard */; };
-		E1D3450F25EE973D00EFAECA /* Dra1nWhite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CC24D9F1D500295AD4 /* Dra1nWhite@3x.png */; };
-		E1D3451025EE973D00EFAECA /* Dra1nPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E224D9F1D500295AD4 /* Dra1nPurple@2x.png */; };
-		E1D3451125EE973D00EFAECA /* 3DBattery~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D624D9F1D500295AD4 /* 3DBattery~ipad@2x.png */; };
-		E1D3451225EE973D00EFAECA /* Dra1nWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CB24D9F1D500295AD4 /* Dra1nWhite@2x.png */; };
-		E1D3451325EE973D00EFAECA /* Dra1nWhite~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CD24D9F1D500295AD4 /* Dra1nWhite~ipad@3x.png */; };
-		E1D3451425EE973D00EFAECA /* culpritCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B5D0DC24E71DFA00AE6878 /* culpritCell.xib */; };
-		E1D3451525EE973D00EFAECA /* Dra1nPurple~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E024D9F1D500295AD4 /* Dra1nPurple~ipad@3x.png */; };
-		E1D3451625EE973D00EFAECA /* Dra1nGlyph@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DB24D9F1D500295AD4 /* Dra1nGlyph@3x.png */; };
-		E1D3451725EE973D00EFAECA /* Rainbow~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E524D9F1D500295AD4 /* Rainbow~ipad@3x.png */; };
-		E1D3451825EE973D00EFAECA /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460B24D4B56800F23E5E /* Lato-Bold.ttf */; };
-		E1D3451925EE973D00EFAECA /* RainbowForeground~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D224D9F1D500295AD4 /* RainbowForeground~ipad@2x.png */; };
-		E1D3451A25EE973D00EFAECA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5350857424D8BA6600E45F8B /* Localizable.strings */; };
-		E1D3451B25EE973D00EFAECA /* Dra1nGlyph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DC24D9F1D500295AD4 /* Dra1nGlyph@2x.png */; };
-		E1D3451C25EE973D00EFAECA /* appIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C26A3E24E728220055E11E /* appIconCell.xib */; };
-		E1D3451D25EE973D00EFAECA /* Rainbow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E624D9F1D500295AD4 /* Rainbow@2x.png */; };
-		E1D3451E25EE973D00EFAECA /* Dra1nPurple~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DF24D9F1D500295AD4 /* Dra1nPurple~ipad@2x.png */; };
-		E1D3451F25EE973D00EFAECA /* RainbowForeground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D024D9F1D500295AD4 /* RainbowForeground@3x.png */; };
+		E10111BB261E090E00DB4DB8 /* OnBoardingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */; };
+		E153A1C2261E13FB00A155FD /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = E153A1C1261E13FB00A155FD /* Macaw */; };
+		E153A1C4261E13FF00A155FD /* SwiftyMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = E153A1C3261E13FF00A155FD /* SwiftyMarkdown */; };
+		E153A1C5261E140400A155FD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B4484824FF22BF0066D2B8 /* IOKit.framework */; };
+		E153A1C6261E140900A155FD /* OnBoardingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */; };
+		E153A1D3261E14F700A155FD /* ColourScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ColourScheme.swift */; };
+		E153A1D4261E14F700A155FD /* appIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3D24E728220055E11E /* appIconCell.swift */; };
+		E153A1D5261E14F700A155FD /* PreferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648A9250EB45F00DFC41D /* PreferenceCell.swift */; };
+		E153A1D6261E14F700A155FD /* CepheiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* CepheiController.swift */; };
+		E153A1D7261E14F700A155FD /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EEE36B24DCB44900402784 /* searchViewController.swift */; };
+		E153A1D8261E14F700A155FD /* privacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EBDCAB24CB6FBA00E6E981 /* privacyPolicyViewController.swift */; };
+		E153A1D9261E14F700A155FD /* culpritCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5D0DB24E71DFA00AE6878 /* culpritCell.swift */; };
+		E153A1DA261E14F700A155FD /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EEE36824DCB37600402784 /* infoViewController.swift */; };
+		E153A1DB261E14F700A155FD /* settingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5359D58524C85EA200BBEC79 /* settingsController.swift */; };
+		E153A1DC261E14F700A155FD /* dra1nViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA1B3C24C8713E00A9B459 /* dra1nViewController.swift */; };
+		E153A1DD261E14F700A155FD /* onboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C0460524D4AE5600F23E5E /* onboardingViewController.swift */; };
+		E153A1DE261E14F700A155FD /* analyseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D903824C23F7A006A2157 /* analyseViewController.swift */; };
+		E153A1DF261E14F700A155FD /* tabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF12B24B9E79E00317E92 /* tabViewController.swift */; };
+		E153A1E0261E14F700A155FD /* GlobalResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DF34A324DAF3BB005D88ED /* GlobalResources.swift */; };
+		E153A1E1261E14F700A155FD /* ParcilityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EEE36E24DCB6BD00402784 /* ParcilityParser.swift */; };
+		E153A1E2261E14F700A155FD /* iconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53240DD624D4E4620098DBDE /* iconPicker.swift */; };
+		E153A1E3261E14F700A155FD /* PreferenceSocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DD6250AB29B007B4D54 /* PreferenceSocialCell.swift */; };
+		E153A1E4261E14F700A155FD /* ColourAwareLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DDA250ABCFD007B4D54 /* ColourAwareLabel.swift */; };
+		E153A1E5261E14F700A155FD /* PreferenceSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BE6250804CF00A571B7 /* PreferenceSwitch.swift */; };
+		E153A1E6261E14F700A155FD /* licensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378A51324E4478300DE2D1D /* licensesViewController.swift */; };
+		E153A1E7261E14F700A155FD /* Dra1nController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53823D30250948D700275D52 /* Dra1nController.swift */; };
+		E153A1E8261E14F700A155FD /* HeaderCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */; };
+		E153A1E9261E14F700A155FD /* Dra1nApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5383134B24F41D8D00697673 /* Dra1nApiParser.swift */; };
+		E153A1EA261E14F700A155FD /* Dra1nServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */; };
+		E153A1EB261E14F700A155FD /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3624E724D90055E11E /* headerCell.swift */; };
+		E153A1EC261E14F700A155FD /* drainGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889B5A24C3851400CA8F56 /* drainGraphView.swift */; };
+		E153A1ED261E14F700A155FD /* ColourAwareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DDE250ABF78007B4D54 /* ColourAwareButton.swift */; };
+		E153A1EE261E14F700A155FD /* ColourAwareTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648A5250E897900DFC41D /* ColourAwareTextView.swift */; };
+		E153A1EF261E14F700A155FD /* mainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378948324E6EA69001B835B /* mainCell.swift */; };
+		E153A1F0261E14F700A155FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF11624B9DA6100317E92 /* AppDelegate.swift */; };
+		E153A1F1261E14F700A155FD /* PreferenceIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DD1250AACB3007B4D54 /* PreferenceIcon.swift */; };
+		E153A1F4261E14F700A155FD /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = E153A1CE261E14F700A155FD /* Macaw */; };
+		E153A1F5261E14F700A155FD /* OnBoardingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */; };
+		E153A1F7261E14F700A155FD /* SwiftyMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = E153A1D0261E14F700A155FD /* SwiftyMarkdown */; };
+		E153A1F9261E14F700A155FD /* Dra1nPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E124D9F1D500295AD4 /* Dra1nPurple@3x.png */; };
+		E153A1FA261E14F700A155FD /* Rainbow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E724D9F1D500295AD4 /* Rainbow@3x.png */; };
+		E153A1FB261E14F700A155FD /* mainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5378948424E6EA69001B835B /* mainCell.xib */; };
+		E153A1FC261E14F700A155FD /* 3DBattery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D724D9F1D500295AD4 /* 3DBattery@3x.png */; };
+		E153A1FD261E14F700A155FD /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460924D4B56700F23E5E /* Lato-Heavy.ttf */; };
+		E153A1FE261E14F700A155FD /* 3DBattery~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D524D9F1D500295AD4 /* 3DBattery~ipad@3x.png */; };
+		E153A1FF261E14F700A155FD /* Dra1nWhite~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CE24D9F1D500295AD4 /* Dra1nWhite~ipad@2x.png */; };
+		E153A200261E14F700A155FD /* 3DBattery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D824D9F1D500295AD4 /* 3DBattery@2x.png */; };
+		E153A201261E14F700A155FD /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460A24D4B56800F23E5E /* Lato-Regular.ttf */; };
+		E153A202261E14F700A155FD /* Dra1nGlyph~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DD24D9F1D500295AD4 /* Dra1nGlyph~ipad@2x.png */; };
+		E153A203261E14F700A155FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF12124B9DA7000317E92 /* LaunchScreen.storyboard */; };
+		E153A204261E14F700A155FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11F24B9DA7000317E92 /* Assets.xcassets */; };
+		E153A205261E14F700A155FD /* Rainbow~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E424D9F1D500295AD4 /* Rainbow~ipad@2x.png */; };
+		E153A206261E14F700A155FD /* RainbowForeground~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D324D9F1D500295AD4 /* RainbowForeground~ipad@3x.png */; };
+		E153A207261E14F700A155FD /* RainbowForeground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D124D9F1D500295AD4 /* RainbowForeground@2x.png */; };
+		E153A208261E14F700A155FD /* Dra1nGlyph~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DA24D9F1D500295AD4 /* Dra1nGlyph~ipad@3x.png */; };
+		E153A209261E14F700A155FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11C24B9DA6200317E92 /* Main.storyboard */; };
+		E153A20A261E14F700A155FD /* Dra1nWhite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CC24D9F1D500295AD4 /* Dra1nWhite@3x.png */; };
+		E153A20B261E14F700A155FD /* Dra1nPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E224D9F1D500295AD4 /* Dra1nPurple@2x.png */; };
+		E153A20C261E14F700A155FD /* 3DBattery~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D624D9F1D500295AD4 /* 3DBattery~ipad@2x.png */; };
+		E153A20D261E14F700A155FD /* Dra1nWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CB24D9F1D500295AD4 /* Dra1nWhite@2x.png */; };
+		E153A20E261E14F700A155FD /* Dra1nWhite~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CD24D9F1D500295AD4 /* Dra1nWhite~ipad@3x.png */; };
+		E153A20F261E14F700A155FD /* culpritCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B5D0DC24E71DFA00AE6878 /* culpritCell.xib */; };
+		E153A210261E14F700A155FD /* Dra1nPurple~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E024D9F1D500295AD4 /* Dra1nPurple~ipad@3x.png */; };
+		E153A211261E14F700A155FD /* Dra1nGlyph@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DB24D9F1D500295AD4 /* Dra1nGlyph@3x.png */; };
+		E153A212261E14F700A155FD /* Rainbow~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E524D9F1D500295AD4 /* Rainbow~ipad@3x.png */; };
+		E153A213261E14F700A155FD /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460B24D4B56800F23E5E /* Lato-Bold.ttf */; };
+		E153A214261E14F700A155FD /* RainbowForeground~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D224D9F1D500295AD4 /* RainbowForeground~ipad@2x.png */; };
+		E153A215261E14F700A155FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5350857424D8BA6600E45F8B /* Localizable.strings */; };
+		E153A216261E14F700A155FD /* Dra1nGlyph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DC24D9F1D500295AD4 /* Dra1nGlyph@2x.png */; };
+		E153A217261E14F700A155FD /* appIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C26A3E24E728220055E11E /* appIconCell.xib */; };
+		E153A218261E14F700A155FD /* Rainbow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E624D9F1D500295AD4 /* Rainbow@2x.png */; };
+		E153A219261E14F700A155FD /* Dra1nPurple~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DF24D9F1D500295AD4 /* Dra1nPurple~ipad@2x.png */; };
+		E153A21A261E14F700A155FD /* RainbowForeground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D024D9F1D500295AD4 /* RainbowForeground@3x.png */; };
 		E1EFA3C525EC41D900DD45BC /* Cephei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53823D2C250809E800275D52 /* Cephei.framework */; };
-		F5B2015A7B0802BD1CDD47A1 /* Pods_dra1n_staff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAF7EC7FCA1816DB1881C3C /* Pods_dra1n_staff.framework */; };
+		E1F39D8D261E114100DC3068 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = E1F39D8C261E114100DC3068 /* Macaw */; };
+		E1F39D90261E117300DC3068 /* SwiftyMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = E1F39D8F261E117300DC3068 /* SwiftyMarkdown */; };
+		E1F39D9B261E12E600DC3068 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B4484824FF22BF0066D2B8 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -222,22 +228,9 @@
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D3452025EE973D00EFAECA /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		19BFEA8E89FA80067947BF16 /* Pods-dra1n-jailed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-jailed.debug.xcconfig"; path = "Target Support Files/Pods-dra1n-jailed/Pods-dra1n-jailed.debug.xcconfig"; sourceTree = "<group>"; };
-		3D8A07C9E05B62DDEFC6DDAB /* Pods_dra1n_jailed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dra1n_jailed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44DAD9F12CE624441E28F423 /* Pods-dra1n.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n.release.xcconfig"; path = "Target Support Files/Pods-dra1n/Pods-dra1n.release.xcconfig"; sourceTree = "<group>"; };
 		531DF11324B9DA6100317E92 /* dra1n.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dra1n.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		531DF11624B9DA6100317E92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		531DF11D24B9DA6200317E92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -314,13 +307,9 @@
 		53F648A9250EB45F00DFC41D /* PreferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceCell.swift; sourceTree = "<group>"; };
 		53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellButton.swift; sourceTree = "<group>"; };
 		53FBF26224E5C76900C47C92 /* ColourScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourScheme.swift; sourceTree = "<group>"; };
-		7424984E28DDEDC3DFB1D7BE /* Pods-dra1n-staff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-staff.release.xcconfig"; path = "Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff.release.xcconfig"; sourceTree = "<group>"; };
-		775CAB049D6515B9F49C0B1E /* libPods-dra1n.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dra1n.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A0F37A93DDF8406B334B31C /* Pods-dra1n.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n.debug.xcconfig"; path = "Target Support Files/Pods-dra1n/Pods-dra1n.debug.xcconfig"; sourceTree = "<group>"; };
-		9AECE26FE686E6E4CE7D727E /* Pods-dra1n-jailed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-jailed.release.xcconfig"; path = "Target Support Files/Pods-dra1n-jailed/Pods-dra1n-jailed.release.xcconfig"; sourceTree = "<group>"; };
-		9EAF7EC7FCA1816DB1881C3C /* Pods_dra1n_staff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dra1n_staff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEFC712D4622201458C605E6 /* Pods-dra1n-staff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-staff.debug.xcconfig"; path = "Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff.debug.xcconfig"; sourceTree = "<group>"; };
-		E1D3452525EE973D00EFAECA /* dra1n-jailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dra1n-jailed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OnBoardingKit.framework; path = System/Library/Frameworks/OnBoardingKit.framework; sourceTree = SDKROOT; };
+		E153A21E261E14F700A155FD /* Jailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E153A21F261E14F700A155FD /* dra1n copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "dra1n copy-Info.plist"; path = "/Users/amy/Documents/GitHub/Dra1nMirror/dra1n-app/dra1n copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,8 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				53823D2D250809E900275D52 /* Cephei.framework in Frameworks */,
-				53823D3425095B5100275D52 /* IOKit.framework in Frameworks */,
-				142AAB9AEDC64B45A2A71C72 /* libPods-dra1n.a in Frameworks */,
+				E1F39D8D261E114100DC3068 /* Macaw in Frameworks */,
+				E10111BB261E090E00DB4DB8 /* OnBoardingKit.framework in Frameworks */,
+				E1F39D9B261E12E600DC3068 /* IOKit.framework in Frameworks */,
+				E1F39D90261E117300DC3068 /* SwiftyMarkdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,17 +329,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E153A1C6261E140900A155FD /* OnBoardingKit.framework in Frameworks */,
+				E153A1C2261E13FB00A155FD /* Macaw in Frameworks */,
 				E1EFA3C525EC41D900DD45BC /* Cephei.framework in Frameworks */,
-				2C1197A196DA0CB51361BB70 /* (null) in Frameworks */,
-				F5B2015A7B0802BD1CDD47A1 /* Pods_dra1n_staff.framework in Frameworks */,
+				E153A1C4261E13FF00A155FD /* SwiftyMarkdown in Frameworks */,
+				E153A1C5261E140400A155FD /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D344FA25EE973D00EFAECA /* Frameworks */ = {
+		E153A1F2261E14F700A155FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27814F78DC4B74A04C59284E /* Pods_dra1n_jailed.framework in Frameworks */,
+				E153A1F4261E14F700A155FD /* Macaw in Frameworks */,
+				E153A1F5261E14F700A155FD /* OnBoardingKit.framework in Frameworks */,
+				E153A1F7261E14F700A155FD /* SwiftyMarkdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +356,7 @@
 				531DF11524B9DA6100317E92 /* dra1n */,
 				531DF11424B9DA6100317E92 /* Products */,
 				53439E0624BDC79100C3E723 /* Frameworks */,
-				B95D2EAA777B680200B2A50B /* Pods */,
+				E153A21F261E14F700A155FD /* dra1n copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -370,7 +365,7 @@
 			children = (
 				531DF11324B9DA6100317E92 /* dra1n.app */,
 				536787C324FED2850034F4A7 /* Staff.app */,
-				E1D3452525EE973D00EFAECA /* dra1n-jailed.app */,
+				E153A21E261E14F700A155FD /* Jailed.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -437,10 +432,8 @@
 		53439E0624BDC79100C3E723 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */,
 				53B4484824FF22BF0066D2B8 /* IOKit.framework */,
-				3D8A07C9E05B62DDEFC6DDAB /* Pods_dra1n_jailed.framework */,
-				9EAF7EC7FCA1816DB1881C3C /* Pods_dra1n_staff.framework */,
-				775CAB049D6515B9F49C0B1E /* libPods-dra1n.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -664,19 +657,6 @@
 			path = "Global Classes";
 			sourceTree = "<group>";
 		};
-		B95D2EAA777B680200B2A50B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7A0F37A93DDF8406B334B31C /* Pods-dra1n.debug.xcconfig */,
-				44DAD9F12CE624441E28F423 /* Pods-dra1n.release.xcconfig */,
-				19BFEA8E89FA80067947BF16 /* Pods-dra1n-jailed.debug.xcconfig */,
-				9AECE26FE686E6E4CE7D727E /* Pods-dra1n-jailed.release.xcconfig */,
-				DEFC712D4622201458C605E6 /* Pods-dra1n-staff.debug.xcconfig */,
-				7424984E28DDEDC3DFB1D7BE /* Pods-dra1n-staff.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -684,7 +664,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 531DF12724B9DA7100317E92 /* Build configuration list for PBXNativeTarget "dra1n" */;
 			buildPhases = (
-				23D51C6480A107EF71846250 /* [CP] Check Pods Manifest.lock */,
 				531DF10F24B9DA6100317E92 /* Sources */,
 				531DF11024B9DA6100317E92 /* Frameworks */,
 				531DF11124B9DA6100317E92 /* Resources */,
@@ -694,6 +673,10 @@
 			dependencies = (
 			);
 			name = dra1n;
+			packageProductDependencies = (
+				E1F39D8C261E114100DC3068 /* Macaw */,
+				E1F39D8F261E117300DC3068 /* SwiftyMarkdown */,
+			);
 			productName = dra1n;
 			productReference = 531DF11324B9DA6100317E92 /* dra1n.app */;
 			productType = "com.apple.product-type.application";
@@ -702,40 +685,43 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 536787C024FED2850034F4A7 /* Build configuration list for PBXNativeTarget "dra1n-staff" */;
 			buildPhases = (
-				939C319DBE002D7CD410130D /* [CP] Check Pods Manifest.lock */,
 				5367877F24FED2850034F4A7 /* Sources */,
 				5367879624FED2850034F4A7 /* Frameworks */,
 				5367879B24FED2850034F4A7 /* Resources */,
 				536787BF24FED2850034F4A7 /* Embed Libraries */,
-				17F9FF28A36325BB7B8E9E32 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "dra1n-staff";
+			packageProductDependencies = (
+				E153A1C1261E13FB00A155FD /* Macaw */,
+				E153A1C3261E13FF00A155FD /* SwiftyMarkdown */,
+			);
 			productName = dra1n;
 			productReference = 536787C324FED2850034F4A7 /* Staff.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E1D344D825EE973D00EFAECA /* dra1n-jailed */ = {
+		E153A1CD261E14F700A155FD /* Jailed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1D3452225EE973D00EFAECA /* Build configuration list for PBXNativeTarget "dra1n-jailed" */;
+			buildConfigurationList = E153A21B261E14F700A155FD /* Build configuration list for PBXNativeTarget "Jailed" */;
 			buildPhases = (
-				6CDA351C219EED0C36896EF5 /* [CP] Check Pods Manifest.lock */,
-				E1D344DA25EE973D00EFAECA /* Sources */,
-				E1D344FA25EE973D00EFAECA /* Frameworks */,
-				E1D344FD25EE973D00EFAECA /* Resources */,
-				E1D3452025EE973D00EFAECA /* Embed Libraries */,
-				45BB350BDE8D4434D3CFDBEF /* [CP] Embed Pods Frameworks */,
+				E153A1D2261E14F700A155FD /* Sources */,
+				E153A1F2261E14F700A155FD /* Frameworks */,
+				E153A1F8261E14F700A155FD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "dra1n-jailed";
+			name = Jailed;
+			packageProductDependencies = (
+				E153A1CE261E14F700A155FD /* Macaw */,
+				E153A1D0261E14F700A155FD /* SwiftyMarkdown */,
+			);
 			productName = dra1n;
-			productReference = E1D3452525EE973D00EFAECA /* dra1n-jailed.app */;
+			productReference = E153A21E261E14F700A155FD /* Jailed.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -763,13 +749,17 @@
 				fr,
 			);
 			mainGroup = 531DF10A24B9DA6100317E92;
+			packageReferences = (
+				E1F39D8B261E114100DC3068 /* XCRemoteSwiftPackageReference "Macaw" */,
+				E1F39D8E261E117300DC3068 /* XCRemoteSwiftPackageReference "SwiftyMarkdown" */,
+			);
 			productRefGroup = 531DF11424B9DA6100317E92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				531DF11224B9DA6100317E92 /* dra1n */,
 				5367877D24FED2850034F4A7 /* dra1n-staff */,
-				E1D344D825EE973D00EFAECA /* dra1n-jailed */,
+				E153A1CD261E14F700A155FD /* Jailed */,
 			);
 		};
 /* End PBXProject section */
@@ -857,151 +847,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D344FD25EE973D00EFAECA /* Resources */ = {
+		E153A1F8261E14F700A155FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D344FE25EE973D00EFAECA /* Dra1nPurple@3x.png in Resources */,
-				E1D344FF25EE973D00EFAECA /* Rainbow@3x.png in Resources */,
-				E1D3450025EE973D00EFAECA /* mainCell.xib in Resources */,
-				E1D3450125EE973D00EFAECA /* 3DBattery@3x.png in Resources */,
-				E1D3450225EE973D00EFAECA /* Lato-Heavy.ttf in Resources */,
-				E1D3450325EE973D00EFAECA /* 3DBattery~ipad@3x.png in Resources */,
-				E1D3450425EE973D00EFAECA /* Dra1nWhite~ipad@2x.png in Resources */,
-				E1D3450525EE973D00EFAECA /* 3DBattery@2x.png in Resources */,
-				E1D3450625EE973D00EFAECA /* Lato-Regular.ttf in Resources */,
-				E1D3450725EE973D00EFAECA /* Dra1nGlyph~ipad@2x.png in Resources */,
-				E1D3450825EE973D00EFAECA /* LaunchScreen.storyboard in Resources */,
-				E1D3450925EE973D00EFAECA /* Assets.xcassets in Resources */,
-				E1D3450A25EE973D00EFAECA /* Rainbow~ipad@2x.png in Resources */,
-				E1D3450B25EE973D00EFAECA /* RainbowForeground~ipad@3x.png in Resources */,
-				E1D3450C25EE973D00EFAECA /* RainbowForeground@2x.png in Resources */,
-				E1D3450D25EE973D00EFAECA /* Dra1nGlyph~ipad@3x.png in Resources */,
-				E1D3450E25EE973D00EFAECA /* Main.storyboard in Resources */,
-				E1D3450F25EE973D00EFAECA /* Dra1nWhite@3x.png in Resources */,
-				E1D3451025EE973D00EFAECA /* Dra1nPurple@2x.png in Resources */,
-				E1D3451125EE973D00EFAECA /* 3DBattery~ipad@2x.png in Resources */,
-				E1D3451225EE973D00EFAECA /* Dra1nWhite@2x.png in Resources */,
-				E1D3451325EE973D00EFAECA /* Dra1nWhite~ipad@3x.png in Resources */,
-				E1D3451425EE973D00EFAECA /* culpritCell.xib in Resources */,
-				E1D3451525EE973D00EFAECA /* Dra1nPurple~ipad@3x.png in Resources */,
-				E1D3451625EE973D00EFAECA /* Dra1nGlyph@3x.png in Resources */,
-				E1D3451725EE973D00EFAECA /* Rainbow~ipad@3x.png in Resources */,
-				E1D3451825EE973D00EFAECA /* Lato-Bold.ttf in Resources */,
-				E1D3451925EE973D00EFAECA /* RainbowForeground~ipad@2x.png in Resources */,
-				E1D3451A25EE973D00EFAECA /* Localizable.strings in Resources */,
-				E1D3451B25EE973D00EFAECA /* Dra1nGlyph@2x.png in Resources */,
-				E1D3451C25EE973D00EFAECA /* appIconCell.xib in Resources */,
-				E1D3451D25EE973D00EFAECA /* Rainbow@2x.png in Resources */,
-				E1D3451E25EE973D00EFAECA /* Dra1nPurple~ipad@2x.png in Resources */,
-				E1D3451F25EE973D00EFAECA /* RainbowForeground@3x.png in Resources */,
+				E153A1F9261E14F700A155FD /* Dra1nPurple@3x.png in Resources */,
+				E153A1FA261E14F700A155FD /* Rainbow@3x.png in Resources */,
+				E153A1FB261E14F700A155FD /* mainCell.xib in Resources */,
+				E153A1FC261E14F700A155FD /* 3DBattery@3x.png in Resources */,
+				E153A1FD261E14F700A155FD /* Lato-Heavy.ttf in Resources */,
+				E153A1FE261E14F700A155FD /* 3DBattery~ipad@3x.png in Resources */,
+				E153A1FF261E14F700A155FD /* Dra1nWhite~ipad@2x.png in Resources */,
+				E153A200261E14F700A155FD /* 3DBattery@2x.png in Resources */,
+				E153A201261E14F700A155FD /* Lato-Regular.ttf in Resources */,
+				E153A202261E14F700A155FD /* Dra1nGlyph~ipad@2x.png in Resources */,
+				E153A203261E14F700A155FD /* LaunchScreen.storyboard in Resources */,
+				E153A204261E14F700A155FD /* Assets.xcassets in Resources */,
+				E153A205261E14F700A155FD /* Rainbow~ipad@2x.png in Resources */,
+				E153A206261E14F700A155FD /* RainbowForeground~ipad@3x.png in Resources */,
+				E153A207261E14F700A155FD /* RainbowForeground@2x.png in Resources */,
+				E153A208261E14F700A155FD /* Dra1nGlyph~ipad@3x.png in Resources */,
+				E153A209261E14F700A155FD /* Main.storyboard in Resources */,
+				E153A20A261E14F700A155FD /* Dra1nWhite@3x.png in Resources */,
+				E153A20B261E14F700A155FD /* Dra1nPurple@2x.png in Resources */,
+				E153A20C261E14F700A155FD /* 3DBattery~ipad@2x.png in Resources */,
+				E153A20D261E14F700A155FD /* Dra1nWhite@2x.png in Resources */,
+				E153A20E261E14F700A155FD /* Dra1nWhite~ipad@3x.png in Resources */,
+				E153A20F261E14F700A155FD /* culpritCell.xib in Resources */,
+				E153A210261E14F700A155FD /* Dra1nPurple~ipad@3x.png in Resources */,
+				E153A211261E14F700A155FD /* Dra1nGlyph@3x.png in Resources */,
+				E153A212261E14F700A155FD /* Rainbow~ipad@3x.png in Resources */,
+				E153A213261E14F700A155FD /* Lato-Bold.ttf in Resources */,
+				E153A214261E14F700A155FD /* RainbowForeground~ipad@2x.png in Resources */,
+				E153A215261E14F700A155FD /* Localizable.strings in Resources */,
+				E153A216261E14F700A155FD /* Dra1nGlyph@2x.png in Resources */,
+				E153A217261E14F700A155FD /* appIconCell.xib in Resources */,
+				E153A218261E14F700A155FD /* Rainbow@2x.png in Resources */,
+				E153A219261E14F700A155FD /* Dra1nPurple~ipad@2x.png in Resources */,
+				E153A21A261E14F700A155FD /* RainbowForeground@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		17F9FF28A36325BB7B8E9E32 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dra1n-staff/Pods-dra1n-staff-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		23D51C6480A107EF71846250 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-dra1n-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		45BB350BDE8D4434D3CFDBEF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dra1n-jailed/Pods-dra1n-jailed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dra1n-jailed/Pods-dra1n-jailed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dra1n-jailed/Pods-dra1n-jailed-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CDA351C219EED0C36896EF5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-dra1n-jailed-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		939C319DBE002D7CD410130D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-dra1n-staff-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		531DF10F24B9DA6100317E92 /* Sources */ = {
@@ -1080,41 +967,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D344DA25EE973D00EFAECA /* Sources */ = {
+		E153A1D2261E14F700A155FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D344DB25EE973D00EFAECA /* ColourScheme.swift in Sources */,
-				E1D344DC25EE973D00EFAECA /* appIconCell.swift in Sources */,
-				E1D344DD25EE973D00EFAECA /* PreferenceCell.swift in Sources */,
-				E1D344DE25EE973D00EFAECA /* CepheiController.swift in Sources */,
-				E1D344DF25EE973D00EFAECA /* searchViewController.swift in Sources */,
-				E1D344E025EE973D00EFAECA /* privacyPolicyViewController.swift in Sources */,
-				E1D344E125EE973D00EFAECA /* culpritCell.swift in Sources */,
-				E1D344E225EE973D00EFAECA /* infoViewController.swift in Sources */,
-				E1D344E325EE973D00EFAECA /* settingsController.swift in Sources */,
-				E1D344E425EE973D00EFAECA /* dra1nViewController.swift in Sources */,
-				E1D344E525EE973D00EFAECA /* onboardingViewController.swift in Sources */,
-				E1D344E625EE973D00EFAECA /* analyseViewController.swift in Sources */,
-				E1D344E725EE973D00EFAECA /* tabViewController.swift in Sources */,
-				E1D344E825EE973D00EFAECA /* GlobalResources.swift in Sources */,
-				E1D344E925EE973D00EFAECA /* ParcilityParser.swift in Sources */,
-				E1D344EA25EE973D00EFAECA /* iconPicker.swift in Sources */,
-				E1D344EB25EE973D00EFAECA /* PreferenceSocialCell.swift in Sources */,
-				E1D344EC25EE973D00EFAECA /* ColourAwareLabel.swift in Sources */,
-				E1D344ED25EE973D00EFAECA /* PreferenceSwitch.swift in Sources */,
-				E1D344EE25EE973D00EFAECA /* licensesViewController.swift in Sources */,
-				E1D344EF25EE973D00EFAECA /* Dra1nController.swift in Sources */,
-				E1D344F025EE973D00EFAECA /* HeaderCellButton.swift in Sources */,
-				E1D344F125EE973D00EFAECA /* Dra1nApiParser.swift in Sources */,
-				E1D344F225EE973D00EFAECA /* Dra1nServerController.m in Sources */,
-				E1D344F325EE973D00EFAECA /* headerCell.swift in Sources */,
-				E1D344F425EE973D00EFAECA /* drainGraphView.swift in Sources */,
-				E1D344F525EE973D00EFAECA /* ColourAwareButton.swift in Sources */,
-				E1D344F625EE973D00EFAECA /* ColourAwareTextView.swift in Sources */,
-				E1D344F725EE973D00EFAECA /* mainCell.swift in Sources */,
-				E1D344F825EE973D00EFAECA /* AppDelegate.swift in Sources */,
-				E1D344F925EE973D00EFAECA /* PreferenceIcon.swift in Sources */,
+				E153A1D3261E14F700A155FD /* ColourScheme.swift in Sources */,
+				E153A1D4261E14F700A155FD /* appIconCell.swift in Sources */,
+				E153A1D5261E14F700A155FD /* PreferenceCell.swift in Sources */,
+				E153A1D6261E14F700A155FD /* CepheiController.swift in Sources */,
+				E153A1D7261E14F700A155FD /* searchViewController.swift in Sources */,
+				E153A1D8261E14F700A155FD /* privacyPolicyViewController.swift in Sources */,
+				E153A1D9261E14F700A155FD /* culpritCell.swift in Sources */,
+				E153A1DA261E14F700A155FD /* infoViewController.swift in Sources */,
+				E153A1DB261E14F700A155FD /* settingsController.swift in Sources */,
+				E153A1DC261E14F700A155FD /* dra1nViewController.swift in Sources */,
+				E153A1DD261E14F700A155FD /* onboardingViewController.swift in Sources */,
+				E153A1DE261E14F700A155FD /* analyseViewController.swift in Sources */,
+				E153A1DF261E14F700A155FD /* tabViewController.swift in Sources */,
+				E153A1E0261E14F700A155FD /* GlobalResources.swift in Sources */,
+				E153A1E1261E14F700A155FD /* ParcilityParser.swift in Sources */,
+				E153A1E2261E14F700A155FD /* iconPicker.swift in Sources */,
+				E153A1E3261E14F700A155FD /* PreferenceSocialCell.swift in Sources */,
+				E153A1E4261E14F700A155FD /* ColourAwareLabel.swift in Sources */,
+				E153A1E5261E14F700A155FD /* PreferenceSwitch.swift in Sources */,
+				E153A1E6261E14F700A155FD /* licensesViewController.swift in Sources */,
+				E153A1E7261E14F700A155FD /* Dra1nController.swift in Sources */,
+				E153A1E8261E14F700A155FD /* HeaderCellButton.swift in Sources */,
+				E153A1E9261E14F700A155FD /* Dra1nApiParser.swift in Sources */,
+				E153A1EA261E14F700A155FD /* Dra1nServerController.m in Sources */,
+				E153A1EB261E14F700A155FD /* headerCell.swift in Sources */,
+				E153A1EC261E14F700A155FD /* drainGraphView.swift in Sources */,
+				E153A1ED261E14F700A155FD /* ColourAwareButton.swift in Sources */,
+				E153A1EE261E14F700A155FD /* ColourAwareTextView.swift in Sources */,
+				E153A1EF261E14F700A155FD /* mainCell.swift in Sources */,
+				E153A1F0261E14F700A155FD /* AppDelegate.swift in Sources */,
+				E153A1F1261E14F700A155FD /* PreferenceIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1271,7 +1158,6 @@
 		};
 		531DF12824B9DA7100317E92 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A0F37A93DDF8406B334B31C /* Pods-dra1n.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1299,14 +1185,7 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(THEOS_LIBRARY_PATH)",
-					"$(THEOS_VENDOR_LIBRARY_PATH)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 1.4.1;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -1330,7 +1209,6 @@
 		};
 		531DF12924B9DA7100317E92 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44DAD9F12CE624441E28F423 /* Pods-dra1n.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1360,14 +1238,7 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(THEOS_LIBRARY_PATH)",
-					"$(THEOS_VENDOR_LIBRARY_PATH)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 1.4.1;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -1388,7 +1259,6 @@
 		};
 		536787C124FED2850034F4A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEFC712D4622201458C605E6 /* Pods-dra1n-staff.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1459,7 +1329,6 @@
 		};
 		536787C224FED2850034F4A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7424984E28DDEDC3DFB1D7BE /* Pods-dra1n-staff.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1526,9 +1395,8 @@
 			};
 			name = Release;
 		};
-		E1D3452325EE973D00EFAECA /* Debug */ = {
+		E153A21C261E14F700A155FD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19BFEA8E89FA80067947BF16 /* Pods-dra1n-jailed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1543,8 +1411,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 					"$(THEOS_LIBRARY_PATH)",
 					"$(THEOS_VENDOR_LIBRARY_PATH)",
 					"$(PROJECT_DIR)",
@@ -1552,36 +1418,23 @@
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
 					"jailed=1",
+					"DEBUG=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/dra1n/Info.plist";
+				INFOPLIST_FILE = "dra1n copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(THEOS_LIBRARY_PATH)",
-					"$(THEOS_VENDOR_LIBRARY_PATH)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-				);
-				MARKETING_VERSION = 1.4;
-				OTHER_CFLAGS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 1.4.1;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
+					"-framework",
+					IOKit,
 					"$(inherited)",
-					"-framework",
-					"\"Macaw\"",
-					"-framework",
-					"\"SWXMLHash\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D jailed";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-jailed";
@@ -1597,9 +1450,8 @@
 			};
 			name = Debug;
 		};
-		E1D3452425EE973D00EFAECA /* Release */ = {
+		E153A21D261E14F700A155FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AECE26FE686E6E4CE7D727E /* Pods-dra1n-jailed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1609,7 +1461,7 @@
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = 7J8FJX4SRX;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1622,42 +1474,25 @@
 					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"jailed=1",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/dra1n/Info.plist";
+				GCC_PREPROCESSOR_DEFINITIONS = "jailed=1";
+				INFOPLIST_FILE = "dra1n copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(THEOS_LIBRARY_PATH)",
-					"$(THEOS_VENDOR_LIBRARY_PATH)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources/RocketBootstrap",
-				);
-				MARKETING_VERSION = 1.4;
-				OTHER_CFLAGS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 1.4.1;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = (
+					"-framework",
+					IOKit,
 					"$(inherited)",
-					"-framework",
-					"\"Macaw\"",
-					"-framework",
-					"\"SWXMLHash\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D jailed";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-jailed";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
@@ -1696,16 +1531,84 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1D3452225EE973D00EFAECA /* Build configuration list for PBXNativeTarget "dra1n-jailed" */ = {
+		E153A21B261E14F700A155FD /* Build configuration list for PBXNativeTarget "Jailed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1D3452325EE973D00EFAECA /* Debug */,
-				E1D3452425EE973D00EFAECA /* Release */,
+				E153A21C261E14F700A155FD /* Debug */,
+				E153A21D261E14F700A155FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E153A1CF261E14F700A155FD /* XCRemoteSwiftPackageReference "Macaw" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elihwyma/Macaw.git";
+			requirement = {
+				kind = revision;
+				revision = 65f958d65924cce91ec8c0095ea99174984d5058;
+			};
+		};
+		E153A1D1261E14F700A155FD /* XCRemoteSwiftPackageReference "SwiftyMarkdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimonFairbairn/SwiftyMarkdown";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.3;
+			};
+		};
+		E1F39D8B261E114100DC3068 /* XCRemoteSwiftPackageReference "Macaw" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elihwyma/Macaw.git";
+			requirement = {
+				kind = revision;
+				revision = 65f958d65924cce91ec8c0095ea99174984d5058;
+			};
+		};
+		E1F39D8E261E117300DC3068 /* XCRemoteSwiftPackageReference "SwiftyMarkdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimonFairbairn/SwiftyMarkdown";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E153A1C1261E13FB00A155FD /* Macaw */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1F39D8B261E114100DC3068 /* XCRemoteSwiftPackageReference "Macaw" */;
+			productName = Macaw;
+		};
+		E153A1C3261E13FF00A155FD /* SwiftyMarkdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1F39D8E261E117300DC3068 /* XCRemoteSwiftPackageReference "SwiftyMarkdown" */;
+			productName = SwiftyMarkdown;
+		};
+		E153A1CE261E14F700A155FD /* Macaw */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E153A1CF261E14F700A155FD /* XCRemoteSwiftPackageReference "Macaw" */;
+			productName = Macaw;
+		};
+		E153A1D0261E14F700A155FD /* SwiftyMarkdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E153A1D1261E14F700A155FD /* XCRemoteSwiftPackageReference "SwiftyMarkdown" */;
+			productName = SwiftyMarkdown;
+		};
+		E1F39D8C261E114100DC3068 /* Macaw */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1F39D8B261E114100DC3068 /* XCRemoteSwiftPackageReference "Macaw" */;
+			productName = Macaw;
+		};
+		E1F39D8F261E117300DC3068 /* SwiftyMarkdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1F39D8E261E117300DC3068 /* XCRemoteSwiftPackageReference "SwiftyMarkdown" */;
+			productName = SwiftyMarkdown;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 531DF10B24B9DA6100317E92 /* Project object */;
 }

@@ -5,8 +5,11 @@
 //  Created by Amy While on 09/09/2020.
 //
 
-import Foundation
+#if !jailed
 import IOKit
+#endif
+import Foundation
+
 
 class Dra1nController {
     static let shared = Dra1nController()

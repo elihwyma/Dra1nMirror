@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OnBoardingKit
 
 class dra1nViewController: UIViewController {
     
@@ -46,12 +47,26 @@ class dra1nViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.pp()
+        //self.pp()
+        
+        let welcomeController = OBWelcomeController(title: "Fat Ass Title here innit", detailText: "Omg wtf is Dra1n like what the fuck does it actually do", icon: UIImage(named: "Original"), contentLayout: 2)!
+        welcomeController.view.tintColor = dra1nColour
+        welcomeController.headerView.imageView.layer.cornerRadius = 15
+        welcomeController.headerView.imageView.layer.masksToBounds = true
+        
+        if #available(iOS 13.0, *) {
+            welcomeController.addBulletedListItem(withTitle: "Test 1", description: "Example Test 1", image: UIImage(systemName: "app"))
+            welcomeController.addBulletedListItem(withTitle: "Battery", description: "Omg mega uwu battery", image: UIImage(systemName: "battery.100"))
+        } else {
+            // Fallback on earlier versions
+        }
+        welcomeController._shouldInlineButtontray = true
+        self.tabBarController?.present(welcomeController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         NotificationCenter.default.addObserver(self, selector: #selector(self.showUpdateBanner(_:)), name: .updateBanner, object: nil)
         Dra1nApiParser.shared.setup()
         
