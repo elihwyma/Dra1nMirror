@@ -16,25 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made With Love" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gD-Uh-oZE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Made With Love" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gD-Uh-oZE">
                                 <rect key="frame" x="10" y="842.5" width="394" height="14.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="dra1nIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vQl-do-DLr">
+                                <rect key="frame" x="127" y="368" width="160" height="160"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vQl-do-DLr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="324" id="0eU-wx-fK9"/>
                             <constraint firstItem="6gD-Uh-oZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Ktl-zP-UVn"/>
+                            <constraint firstItem="vQl-do-DLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="MEu-QY-fMw"/>
+                            <constraint firstItem="6gD-Uh-oZE" firstAttribute="top" secondItem="vQl-do-DLr" secondAttribute="bottom" constant="314.5" id="Wne-T4-bcI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6gD-Uh-oZE" secondAttribute="trailing" constant="10" id="gnd-xe-Jsv"/>
                             <constraint firstItem="6gD-Uh-oZE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-5" id="wkS-kN-O5Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vQl-do-DLr" secondAttribute="trailing" constant="127" id="x44-55-Tso"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dra1nIcon" width="375" height="375"/>
+    </resources>
 </document>

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245E0E872624CC1100950FED /* infotutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E0E862624CC1100950FED /* infotutViewController.swift */; };
+		245E0E882624CC1100950FED /* infotutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E0E862624CC1100950FED /* infotutViewController.swift */; };
+		245E0E892624CC1100950FED /* infotutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E0E862624CC1100950FED /* infotutViewController.swift */; };
+		245E0EB52624DC5100950FED /* tutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E0EB32624DC5100950FED /* tutCell.swift */; };
+		245E0EB62624DC5100950FED /* tutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E0EB32624DC5100950FED /* tutCell.swift */; };
+		245E0EB72624DC5100950FED /* tutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E0EB32624DC5100950FED /* tutCell.swift */; };
+		245E0EB82624DC5100950FED /* tutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245E0EB42624DC5100950FED /* tutCell.xib */; };
+		245E0EB92624DC5100950FED /* tutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245E0EB42624DC5100950FED /* tutCell.xib */; };
+		245E0EBA2624DC5100950FED /* tutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245E0EB42624DC5100950FED /* tutCell.xib */; };
 		531DF11724B9DA6100317E92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF11624B9DA6100317E92 /* AppDelegate.swift */; };
 		531DF11E24B9DA6200317E92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11C24B9DA6200317E92 /* Main.storyboard */; };
 		531DF12024B9DA7000317E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11F24B9DA7000317E92 /* Assets.xcassets */; };
@@ -231,6 +240,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		245E0E862624CC1100950FED /* infotutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infotutViewController.swift; sourceTree = "<group>"; };
+		245E0EB32624DC5100950FED /* tutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutCell.swift; sourceTree = "<group>"; };
+		245E0EB42624DC5100950FED /* tutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tutCell.xib; sourceTree = "<group>"; };
 		531DF11324B9DA6100317E92 /* dra1n.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dra1n.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		531DF11624B9DA6100317E92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		531DF11D24B9DA6200317E92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -350,6 +362,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245E0E8C2624D60800950FED /* Tut Cell */ = {
+			isa = PBXGroup;
+			children = (
+				245E0EB32624DC5100950FED /* tutCell.swift */,
+				245E0EB42624DC5100950FED /* tutCell.xib */,
+			);
+			path = "Tut Cell";
+			sourceTree = "<group>";
+		};
 		531DF10A24B9DA6100317E92 = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +561,7 @@
 		5378948224E6E9F6001B835B /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				245E0E8C2624D60800950FED /* Tut Cell */,
 				53205BE52508049100A571B7 /* Preference Cell Classes */,
 				53C26A3C24E727EF0055E11E /* App Icon Cell */,
 				53C26A3524E724A90055E11E /* Header Cell */,
@@ -631,6 +653,7 @@
 				5378A51324E4478300DE2D1D /* licensesViewController.swift */,
 				53C0460524D4AE5600F23E5E /* onboardingViewController.swift */,
 				53240DD624D4E4620098DBDE /* iconPicker.swift */,
+				245E0E862624CC1100950FED /* infotutViewController.swift */,
 			);
 			path = "Minor Views";
 			sourceTree = "<group>";
@@ -791,6 +814,7 @@
 				537205FA24D9F1D500295AD4 /* 3DBattery~ipad@2x.png in Resources */,
 				537205E824D9F1D500295AD4 /* Dra1nWhite@2x.png in Resources */,
 				537205EC24D9F1D500295AD4 /* Dra1nWhite~ipad@3x.png in Resources */,
+				245E0EB82624DC5100950FED /* tutCell.xib in Resources */,
 				53B5D0DF24E71DFA00AE6878 /* culpritCell.xib in Resources */,
 				5372060A24D9F1D500295AD4 /* Dra1nPurple~ipad@3x.png in Resources */,
 				5372060224D9F1D500295AD4 /* Dra1nGlyph@3x.png in Resources */,
@@ -832,6 +856,7 @@
 				536787AF24FED2850034F4A7 /* 3DBattery~ipad@2x.png in Resources */,
 				536787B024FED2850034F4A7 /* Dra1nWhite@2x.png in Resources */,
 				536787B124FED2850034F4A7 /* Dra1nWhite~ipad@3x.png in Resources */,
+				245E0EB92624DC5100950FED /* tutCell.xib in Resources */,
 				536787B224FED2850034F4A7 /* culpritCell.xib in Resources */,
 				536787B324FED2850034F4A7 /* Dra1nPurple~ipad@3x.png in Resources */,
 				536787B424FED2850034F4A7 /* Dra1nGlyph@3x.png in Resources */,
@@ -873,6 +898,7 @@
 				E153A20C261E14F700A155FD /* 3DBattery~ipad@2x.png in Resources */,
 				E153A20D261E14F700A155FD /* Dra1nWhite@2x.png in Resources */,
 				E153A20E261E14F700A155FD /* Dra1nWhite~ipad@3x.png in Resources */,
+				245E0EBA2624DC5100950FED /* tutCell.xib in Resources */,
 				E153A20F261E14F700A155FD /* culpritCell.xib in Resources */,
 				E153A210261E14F700A155FD /* Dra1nPurple~ipad@3x.png in Resources */,
 				E153A211261E14F700A155FD /* Dra1nGlyph@3x.png in Resources */,
@@ -897,6 +923,7 @@
 			files = (
 				53FBF26324E5C76A00C47C92 /* ColourScheme.swift in Sources */,
 				53C26A3F24E728220055E11E /* appIconCell.swift in Sources */,
+				245E0EB52624DC5100950FED /* tutCell.swift in Sources */,
 				53F648AA250EB45F00DFC41D /* PreferenceCell.swift in Sources */,
 				53205BEB2508088600A571B7 /* CepheiController.swift in Sources */,
 				53EEE36C24DCB44900402784 /* searchViewController.swift in Sources */,
@@ -925,6 +952,7 @@
 				53F648A6250E897A00DFC41D /* ColourAwareTextView.swift in Sources */,
 				5378948524E6EA69001B835B /* mainCell.swift in Sources */,
 				531DF11724B9DA6100317E92 /* AppDelegate.swift in Sources */,
+				245E0E872624CC1100950FED /* infotutViewController.swift in Sources */,
 				531E5DD2250AACB3007B4D54 /* PreferenceIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -935,6 +963,7 @@
 			files = (
 				5367878024FED2850034F4A7 /* ColourScheme.swift in Sources */,
 				5367878124FED2850034F4A7 /* appIconCell.swift in Sources */,
+				245E0EB62624DC5100950FED /* tutCell.swift in Sources */,
 				53F648AC250EB45F00DFC41D /* PreferenceCell.swift in Sources */,
 				53205BED2508088600A571B7 /* CepheiController.swift in Sources */,
 				5367878324FED2850034F4A7 /* searchViewController.swift in Sources */,
@@ -963,6 +992,7 @@
 				53F648A8250E897A00DFC41D /* ColourAwareTextView.swift in Sources */,
 				5367879424FED2850034F4A7 /* mainCell.swift in Sources */,
 				5367879524FED2850034F4A7 /* AppDelegate.swift in Sources */,
+				245E0E882624CC1100950FED /* infotutViewController.swift in Sources */,
 				531E5DD4250AACB3007B4D54 /* PreferenceIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -973,6 +1003,7 @@
 			files = (
 				E153A1D3261E14F700A155FD /* ColourScheme.swift in Sources */,
 				E153A1D4261E14F700A155FD /* appIconCell.swift in Sources */,
+				245E0EB72624DC5100950FED /* tutCell.swift in Sources */,
 				E153A1D5261E14F700A155FD /* PreferenceCell.swift in Sources */,
 				E153A1D6261E14F700A155FD /* CepheiController.swift in Sources */,
 				E153A1D7261E14F700A155FD /* searchViewController.swift in Sources */,
@@ -1001,6 +1032,7 @@
 				E153A1EE261E14F700A155FD /* ColourAwareTextView.swift in Sources */,
 				E153A1EF261E14F700A155FD /* mainCell.swift in Sources */,
 				E153A1F0261E14F700A155FD /* AppDelegate.swift in Sources */,
+				245E0E892624CC1100950FED /* infotutViewController.swift in Sources */,
 				E153A1F1261E14F700A155FD /* PreferenceIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1166,7 +1198,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = NO;
-				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				DEVELOPMENT_TEAM = LZTMLLBH4L;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1217,7 +1249,7 @@
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				DEVELOPMENT_TEAM = LZTMLLBH4L;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1267,7 +1299,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = NO;
-				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				DEVELOPMENT_TEAM = LZTMLLBH4L;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1337,7 +1369,7 @@
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				DEVELOPMENT_TEAM = LZTMLLBH4L;
 				ENABLE_BITCODE = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1405,7 +1437,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = NO;
-				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				DEVELOPMENT_TEAM = LZTMLLBH4L;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1460,7 +1492,7 @@
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				DEVELOPMENT_TEAM = LZTMLLBH4L;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (

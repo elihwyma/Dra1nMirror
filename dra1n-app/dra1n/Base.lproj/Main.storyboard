@@ -182,14 +182,46 @@
                     <connections>
                         <outlet property="tabView" destination="QMT-8Q-pGX" id="LIB-cM-9Ug"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WDq-uL-U4Z"/>
-                        <segue destination="qlL-z1-v05" kind="relationship" relationship="viewControllers" id="BeZ-hE-Y5n"/>
                         <segue destination="ZkZ-UD-ns5" kind="relationship" relationship="viewControllers" id="0fb-Zg-cgi"/>
+                        <segue destination="qlL-z1-v05" kind="relationship" relationship="viewControllers" id="BeZ-hE-Y5n"/>
+                        <segue destination="Roq-8L-ptg" kind="relationship" relationship="viewControllers" id="sPh-AO-t4r"/>
                         <segue destination="oVc-0f-ObP" kind="relationship" relationship="viewControllers" id="dxJ-Z8-HQC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rw2-qg-o2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2194" y="-1873"/>
+        </scene>
+        <!--Info & Tutorials-->
+        <scene sceneID="Bpn-2Y-pNN">
+            <objects>
+                <viewController id="DPT-oZ-n5Y" customClass="infotutViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x0v-uF-acm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Vrv-29-6lO">
+                                <rect key="frame" x="20" y="150" width="374" height="648"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dY7-U6-SMz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dY7-U6-SMz" firstAttribute="bottom" secondItem="Vrv-29-6lO" secondAttribute="bottom" constant="15" id="86Z-rp-8C2"/>
+                            <constraint firstItem="Vrv-29-6lO" firstAttribute="top" secondItem="dY7-U6-SMz" secondAttribute="top" constant="10" id="j5A-rR-OZR"/>
+                            <constraint firstItem="dY7-U6-SMz" firstAttribute="trailing" secondItem="Vrv-29-6lO" secondAttribute="trailing" constant="20" id="paT-sb-TYj"/>
+                            <constraint firstItem="Vrv-29-6lO" firstAttribute="leading" secondItem="dY7-U6-SMz" secondAttribute="leading" constant="20" id="vwT-ah-AbK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info &amp; Tutorials" largeTitleDisplayMode="always" id="KZ9-Bh-iZr"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vrv-29-6lO" id="Au0-4r-51S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHu-NL-1km" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4879.7101449275369" y="-2356.4732142857142"/>
         </scene>
         <!--Analyse View Controller-->
         <scene sceneID="8SK-Gr-mGY">
@@ -1229,21 +1261,44 @@
             </objects>
             <point key="canvasLocation" x="3974" y="-999"/>
         </scene>
+        <!--info-->
+        <scene sceneID="pWc-5y-orr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Roq-8L-ptg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="info" image="info" catalog="system" selectedImage="info" id="L41-oW-Hgl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Mm2-eV-ZMJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DPT-oZ-n5Y" kind="relationship" relationship="rootViewController" id="iCI-0B-6Ia"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCr-jF-SWB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3641" y="-2115"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="RDw-vu-Mrh"/>
-        <segue reference="Ymk-yH-al9"/>
+        <segue reference="eIL-J0-dm0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="battery.100" catalog="system" width="128" height="61"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="icloud.and.arrow.down" catalog="system" width="128" height="112"/>
+        <image name="info" catalog="system" width="93" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="paypal" width="512" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
