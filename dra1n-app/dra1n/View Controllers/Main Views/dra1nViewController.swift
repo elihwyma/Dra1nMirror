@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import SwiftConfettiView
+
+
 
 class dra1nViewController: UIViewController {
-    
+
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var bannerButton: UIButton!
@@ -20,7 +23,8 @@ class dra1nViewController: UIViewController {
     var timer = Timer()
     var offset = 0
     var bannerURL = ""
-    
+
+    var confettiView: SwiftConfettiView!
     //Global variables
     //I do love me a big ass array, it's not a constant so that new rows can be added at run time
     var tableData = [
@@ -47,10 +51,31 @@ class dra1nViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.pp()
+
+     
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        guard let megaBday = dateFormatter.date(from: "04/14/2021") else { return }
+        
+        confettiView = SwiftConfettiView(frame: self.view.bounds)
+        if   Calendar.current.isDateInToday(megaBday) {
+            self.view.addSubview(confettiView)
+            confettiView.isUserInteractionEnabled = false
+            confettiView.startConfetti()
+        }
+
+       
+
+
+
+        
+
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.showUpdateBanner(_:)), name: .updateBanner, object: nil)
         Dra1nApiParser.shared.setup()
@@ -63,6 +88,8 @@ class dra1nViewController: UIViewController {
         
         Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(setTheDra1n), userInfo: nil, repeats: true)
     }
+    
+
    
     @IBAction func bannerButton(_ sender: Any) {
         if let url = URL(string: self.bannerURL) {

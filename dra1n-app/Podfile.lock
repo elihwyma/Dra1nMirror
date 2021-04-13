@@ -1,28 +1,32 @@
 PODS:
   - Macaw (0.9.6):
     - SWXMLHash
+  - SwiftConfettiView (0.1.0)
   - SwiftyMarkdown (1.2.3)
   - SwiftyOnboard (1.3.8)
   - SWXMLHash (5.0.1)
 
 DEPENDENCIES:
   - Macaw (= 0.9.6)
+  - SwiftConfettiView
   - SwiftyMarkdown
   - SwiftyOnboard
 
 SPEC REPOS:
   trunk:
     - Macaw
+    - SwiftConfettiView
     - SwiftyMarkdown
     - SwiftyOnboard
     - SWXMLHash
 
 SPEC CHECKSUMS:
   Macaw: 8306d775625ba003beee4186b9533fd7cf284024
+  SwiftConfettiView: 1bdbc2e6913b6b1c76d8070802b212508ad5c352
   SwiftyMarkdown: be01b2905694bd7bfd95330cd43704bfdb978aec
   SwiftyOnboard: de60e90c2af23dd61b01ec0c6a8d0be3370f857b
   SWXMLHash: 9cc0c2e4807926c74377724aa8722ee5707a0485
 
-PODFILE CHECKSUM: 0ed8dcee51e742d130351572a4d2e5a0e4bd31c9
+PODFILE CHECKSUM: 95dbcd9162895a391556bd5b10bb309797462f6e
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.9.3

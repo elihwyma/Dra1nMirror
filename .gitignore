@@ -175,3 +175,4 @@ Pods/
 .theos
 .theos/
 *.theos/
+dra1n-app/dra1n.xcodeproj/project.pbxproj
