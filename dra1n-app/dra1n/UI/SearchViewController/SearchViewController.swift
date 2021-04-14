@@ -7,7 +7,7 @@
 
 import UIKit
 
-class searchViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     var shownTweaks = [DatabaseObject]()
 
@@ -100,7 +100,7 @@ class searchViewController: UIViewController {
     }
 }
 
-extension searchViewController: UISearchBarDelegate {
+extension SearchViewController: UISearchBarDelegate {
    
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         return true
@@ -125,7 +125,7 @@ extension searchViewController: UISearchBarDelegate {
 }
 
 
-extension searchViewController : UITableViewDelegate {
+extension SearchViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if shownTweaks[indexPath.row].Bundleid == "Privacy Policy Disabled" { return }
         performSegue(withIdentifier: "showTheDetail", sender: nil)
@@ -133,7 +133,7 @@ extension searchViewController : UITableViewDelegate {
     }
 }
 
-extension searchViewController : UITableViewDataSource {
+extension SearchViewController : UITableViewDataSource {
   
     //This is just meant to be
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

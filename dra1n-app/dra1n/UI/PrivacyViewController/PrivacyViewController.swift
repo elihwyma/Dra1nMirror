@@ -8,7 +8,7 @@
 import UIKit
 import SwiftyMarkdown
 
-class privacyPolicyViewController: UIViewController {
+class PrivacyViewController: UIViewController {
     
     @IBOutlet weak var privacyPolicy: ColourAwareTextView!
     

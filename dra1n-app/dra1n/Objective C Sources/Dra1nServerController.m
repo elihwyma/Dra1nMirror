@@ -6,11 +6,12 @@
 //
 
 #import "Dra1nServerController.h"
+#ifdef jailed
+#else
 #import <IOKit/IOKitLib.h>
+#endif
 
 @implementation Dra1nServerController
-
-
 -(NSDictionary *)batteryData {
     
 #ifdef jailed

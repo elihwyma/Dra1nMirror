@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class infotutViewController: UIViewController {
+class InfotutViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,14 +37,14 @@ class infotutViewController: UIViewController {
         tableView.delegate = self
      
         tableView.alwaysBounceVertical = true
-        tableView.register(UINib(nibName: "tutCell", bundle: nil), forCellReuseIdentifier: "tutCell")
+        tableView.register(UINib(nibName: "TutCell", bundle: nil), forCellReuseIdentifier: "Dra1n.TutCell")
         
     }
     
  
 }
 
-extension infotutViewController : UITableViewDelegate {
+extension InfotutViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      
         tableView.deselectRow(at: indexPath, animated: true)
@@ -53,24 +53,24 @@ extension infotutViewController : UITableViewDelegate {
 
 
 
-extension infotutViewController : UITableViewDataSource {
+extension InfotutViewController : UITableViewDataSource {
     
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10;
+        10
     }
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        1
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 1
+        1
     }
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tutCell", for: indexPath) as! tutCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Dra1n.TutCell", for: indexPath) as! TutCell
     
         return cell
     }
