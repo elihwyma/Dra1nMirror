@@ -7,9 +7,9 @@
 
 import UIKit
 
-class tutCell: UITableViewCell {
-    @IBOutlet weak var backgroundImageCell: UIImageView!
+class TutCell: UITableViewCell {
     
+    @IBOutlet weak var backgroundImageCell: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,8 +17,6 @@ class tutCell: UITableViewCell {
     }
 
     let minHeight: CGFloat! = 100
-    
-    
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
         let size = super.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: horizontalFittingPriority, verticalFittingPriority: verticalFittingPriority)

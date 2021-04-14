@@ -7,7 +7,7 @@
 
 import UIKit
 
-class settingsController: UITableViewController {
+class SettingsViewController: UITableViewController {
         
     @IBOutlet weak var averageTimeLabel: UILabel!
     @IBOutlet weak var sensitivityLabel: UILabel!

@@ -12,7 +12,7 @@
         <!--Dra1n-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="dra1nViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428" y="-613"/>
+            <point key="canvasLocation" x="630" y="-999"/>
         </scene>
         <!--Privacy Policy View Controller-->
         <scene sceneID="XJ8-Za-nY6">
@@ -195,7 +195,7 @@
         <!--Info & Tutorials-->
         <scene sceneID="Bpn-2Y-pNN">
             <objects>
-                <viewController id="DPT-oZ-n5Y" customClass="infotutViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DPT-oZ-n5Y" customClass="InfotutViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x0v-uF-acm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +226,7 @@
         <!--Analyse View Controller-->
         <scene sceneID="8SK-Gr-mGY">
             <objects>
-                <viewController id="S1G-AT-Giu" customClass="analyseViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S1G-AT-Giu" customClass="AnalyseViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RMC-YZ-Im8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,7 +328,7 @@
         <!--Settings-->
         <scene sceneID="0EP-eM-MIw">
             <objects>
-                <tableViewController id="p8c-yZ-UJ3" customClass="settingsController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="p8c-yZ-UJ3" customClass="SettingsViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="xHa-o4-4Zt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1033,7 +1033,7 @@
         <!--Search-->
         <scene sceneID="b9C-se-Nvz">
             <objects>
-                <viewController id="Csh-fV-SfR" customClass="searchViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Csh-fV-SfR" customClass="SearchViewController" customModule="Jailed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U4A-pM-7fd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1061,7 +1061,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="x0L-Ew-6Db"/>
                     <connections>
-                        <outlet property="searchBar" destination="A5a-O0-MDc" id="eK5-BX-NPC"/>
+                        <outlet property="searchBar" destination="A5a-O0-MDc" id="wc0-3K-aYA"/>
                         <outlet property="tableView" destination="xZ8-w5-R2X" id="bzi-EL-yZB"/>
                         <segue destination="euu-05-Msk" kind="show" identifier="showTheDetail" id="cJ3-kf-sUn"/>
                     </connections>
@@ -1282,8 +1282,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RDw-vu-Mrh"/>
-        <segue reference="eIL-J0-dm0"/>
+        <segue reference="cJ3-kf-sUn"/>
+        <segue reference="Ymk-yH-al9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="battery.100" catalog="system" width="128" height="61"/>

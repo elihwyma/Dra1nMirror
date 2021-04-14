@@ -8,7 +8,7 @@
 import UIKit
 import OnBoardingKit
 
-class dra1nViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -89,7 +89,7 @@ class dra1nViewController: UIViewController {
         DispatchQueue.main.async {
             let icon = notification.userInfo?["icon"] as? String ?? "icloud.and.arrow.down"
             let text = notification.userInfo?["text"] as? String ?? "An update is available for Dra1n"
-            self.bannerURL = notification.userInfo?["link"] as? String ?? "cydia://url/https://cydia.saurik.com/api/share#?package=com.megadev.dra1n"
+            self.bannerURL = notification.userInfo?["link"] as? String ?? "cydia://url/https://cydia.saurik.com/api/share#?package=com.amymega.dra1n"
  
             self.bannerButton.isEnabled = true
             self.updateView.isHidden = false
@@ -241,7 +241,7 @@ class dra1nViewController: UIViewController {
         
         UIDevice.current.isBatteryMonitoringEnabled = true
 
-        tableView.register(UINib(nibName: "mainCell", bundle: nil), forCellReuseIdentifier: "mainCell")
+        tableView.register(UINib(nibName: "MainCell", bundle: nil), forCellReuseIdentifier: "Dra1n.MainCell")
         
         self.colourThings()
         
@@ -256,14 +256,14 @@ class dra1nViewController: UIViewController {
     }
 }
 
-extension dra1nViewController : UITableViewDelegate {
+extension HomeViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Make it invisible when you press it
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-extension dra1nViewController : UITableViewDataSource {
+extension HomeViewController : UITableViewDataSource {
     
     //Number of things to show
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -280,14 +280,13 @@ extension dra1nViewController : UITableViewDataSource {
     
     //This is what handles all the images and text etc, using the class mainScreenTableCells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! mainCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Dra1n.MainCell", for: indexPath) as! MainCell
         cell.title.text = tableData[0][indexPath.section]
         cell.descriptionText.text = tableData[1][indexPath.section]
         cell.specificValue.text = tableData[3][indexPath.section]
         cell.icon = tableData[2][indexPath.section]
         
         cell.allTheAdjustments()
-        cell.addSubViews()
         return cell
     }
 }

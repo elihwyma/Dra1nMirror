@@ -27,7 +27,7 @@ struct CulpritObject {
     }
 }
 
-class analyseViewController: UIViewController {
+class AnalyseViewController: UIViewController {
     
     var counter = 0
     var shouldRefresh = false
@@ -180,7 +180,7 @@ class analyseViewController: UIViewController {
 }
 
 
-extension analyseViewController : UITableViewDelegate {
+extension AnalyseViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.row == 0) {
             tableView.deselectRow(at: indexPath, animated: true)
@@ -198,7 +198,7 @@ extension analyseViewController : UITableViewDelegate {
     }
 }
 
-extension analyseViewController : UITableViewDataSource {
+extension AnalyseViewController: UITableViewDataSource {
     
     //This is just meant to be
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

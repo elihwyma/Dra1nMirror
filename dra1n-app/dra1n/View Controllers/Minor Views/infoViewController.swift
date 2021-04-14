@@ -122,7 +122,7 @@ class infoViewController: UIViewController {
         //Disable scrolling if it all fits
         tableView.alwaysBounceVertical = false
         
-        tableView.register(UINib(nibName: "mainCell", bundle: nil), forCellReuseIdentifier: "mainCell")
+        tableView.register(UINib(nibName: "MainCell", bundle: nil), forCellReuseIdentifier: "Dra1n.MainCell")
         
         self.title = self.dict.Bundleid ?? ""
         
@@ -164,7 +164,7 @@ extension infoViewController : UITableViewDataSource {
     
     //This is what handles all the images and text etc, using the class mainScreenTableCells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! mainCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Dra1n.MainCell", for: indexPath) as! MainCell
     
         cell.title.text = tableData[0][indexPath.section]
         cell.descriptionText.text = tableData[1][indexPath.section]
@@ -179,7 +179,6 @@ extension infoViewController : UITableViewDataSource {
         }
     
         cell.allTheAdjustments()
-        cell.addSubViews()
             
         return cell
     }
