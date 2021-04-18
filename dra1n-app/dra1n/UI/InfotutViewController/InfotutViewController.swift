@@ -71,7 +71,8 @@ extension InfotutViewController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Dra1n.TutCell", for: indexPath) as! TutCell
-    
+        
+        cell.allTheAdjustments()
         return cell
     }
 }

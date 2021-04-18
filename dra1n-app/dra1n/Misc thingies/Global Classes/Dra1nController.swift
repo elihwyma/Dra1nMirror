@@ -21,9 +21,13 @@ class Dra1nController {
         return Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String ?? "Error"
     }
 
-    var privacyPolicy: Bool {
+  /*  var privacyPolicy: Bool {
         return CepheiController.shared.getBool(key: "privacyPolicy")
-    }
+    }*/
+    
+    var privacyPolicy: Bool {
+        return true
+     }
     
     func respring() {
         let task = NSTask()

@@ -182,8 +182,8 @@
                     <connections>
                         <outlet property="tabView" destination="QMT-8Q-pGX" id="LIB-cM-9Ug"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WDq-uL-U4Z"/>
-                        <segue destination="ZkZ-UD-ns5" kind="relationship" relationship="viewControllers" id="0fb-Zg-cgi"/>
                         <segue destination="qlL-z1-v05" kind="relationship" relationship="viewControllers" id="BeZ-hE-Y5n"/>
+                        <segue destination="ZkZ-UD-ns5" kind="relationship" relationship="viewControllers" id="0fb-Zg-cgi"/>
                         <segue destination="Roq-8L-ptg" kind="relationship" relationship="viewControllers" id="sPh-AO-t4r"/>
                         <segue destination="oVc-0f-ObP" kind="relationship" relationship="viewControllers" id="dxJ-Z8-HQC"/>
                     </connections>
@@ -1283,7 +1283,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cJ3-kf-sUn"/>
-        <segue reference="Ymk-yH-al9"/>
+        <segue reference="eIL-J0-dm0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="battery.100" catalog="system" width="128" height="61"/>

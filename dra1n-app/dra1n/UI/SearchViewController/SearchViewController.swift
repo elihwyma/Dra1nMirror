@@ -80,7 +80,7 @@ class SearchViewController: UIViewController {
         let searchText = self.searchBar.text ?? ""
         
         if !Dra1nController.shared.privacyPolicy {
-            let le = DatabaseObject(image: UIImage(named: "tweakIcon"), goodImage: true, badImage: false, Bundleid: "Privacy Policy Disabled", flag: 0, warns: 0)
+            let le = DatabaseObject(image: UIImage(named: "tweakIcon"), goodImage: true, badImage: false, Bundleid: "Privacy Policy Disabled", flag: 0, warns: 0, ratio: 0)
             shownTweaks.append(le)
         } else {
             if (searchText == "") {
@@ -153,8 +153,9 @@ extension SearchViewController : UITableViewDataSource {
         let secondAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColour, NSAttributedString.Key.font: secondFont]
         
         let firstString = NSMutableAttributedString(string: "\(cell.le?.Bundleid ?? "Error")\n", attributes: firstAttributes)
-        let secondString = NSAttributedString(string: "\(cell.le?.warns ?? 0) Warnings", attributes: secondAttributes)
         
+        let secondString = NSAttributedString(string: "\(cell.le?.ratio ?? 0)% Flag Ratio", attributes: secondAttributes)
+     
         firstString.append(secondString)
 
         cell.textView.attributedText = firstString

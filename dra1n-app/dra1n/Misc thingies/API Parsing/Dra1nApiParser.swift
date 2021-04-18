@@ -16,6 +16,7 @@ struct DatabaseObject {
     var flag: Int?
     var author: String?
     var warns: Int?
+    var ratio: Int?
     var hide: Bool?
     var time: Date?
     var name: String?
@@ -27,6 +28,7 @@ struct DatabaseObject {
          flag: Int? = nil,
          author: String? = nil,
          warns: Int? = nil,
+         ratio: Int? = nil,
          hide: Bool? = nil,
          time: Date? = nil,
          name: String? = nil) {
@@ -38,6 +40,7 @@ struct DatabaseObject {
         self.flag = flag
         self.author = author
         self.warns = warns
+        self.ratio = ratio
         self.hide = hide
         self.time = time
         self.name = name
@@ -55,7 +58,8 @@ class Dra1nApiParser {
         "iosgods",
         "localiapstore",
         "cydown",
-        "cracktool"
+        "cracktool",
+        "cydiakk"
     ]
     
     var database = [DatabaseObject]()
@@ -111,11 +115,11 @@ class Dra1nApiParser {
                         }
                         #else
                         for tweak in owo {
-                            if ((tweak["flag"] as? Int ?? 1 != 1) && (tweak["flag"] as? Int ?? 1 != 4)) {
-                                let le = DatabaseObject(Bundleid: (tweak["Bundleid"] as? String ?? "Error"), flag: (tweak["flag"] as? Int ?? 0), warns: (tweak["warns"] as? Int ?? 0))
+                            
+                                let le = DatabaseObject(Bundleid: (tweak["Bundleid"] as? String ?? "Error"), flag: (tweak["flag"] as? Int ?? 0), warns: (tweak["warns"] as? Int ?? 0) ,  ratio: (tweak["ratio"] as? Int ?? 0))
                                 self.database.append(le)
                                 self.tweakNames.append(le.Bundleid ?? "Error")
-                            }
+                            
                         }
                         #endif
 
@@ -194,6 +198,44 @@ class Dra1nApiParser {
             task.resume()
         }
     }
+    
+    func getTutInfo() {
+        var update = false
+        var text = "An update is available for Dra1n"
+        var icon = "icloud.and.arrow.down"
+        var link = "cydia://url/https://cydia.saurik.com/api/share#?package=com.megadev.dra1n"
+        
+        if let url = URL(string: "https://\(endpoint()).dra1n.app/v1/tutorial-info") {
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
+                if let data = data {
+                    let decoder = JSONDecoder()
+                    if let json = try? decoder.decode(UpdateResponse.self, from: data) {
+                        if ((json.UpdateAvailable != Dra1nController.shared.installedVersion) || (json.isAnnouncement == 1)) { update = true }
+                        if !update { return }
+                        
+                        if ((json.UpdateAvailable != Dra1nController.shared.installedVersion)) { CepheiController.shared.set(key: "Update", object: true) }
+                        if (json.UpdateText != nil) { text = json.UpdateText }
+                        if (json.UpdateImage != nil) { icon = json.UpdateImage }
+                        if (json.url != nil) { link = json.url }
+                       
+                        let dict: [String : Any] = [
+                            "text" : text,
+                            "icon" : icon,
+                            "link" : link
+                        ]
+                        
+                        NotificationCenter.default.post(name: .updateBanner, object: nil, userInfo: dict)
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    
     
     func postCulprits() {
         if (Dra1nController.shared.privacyPolicy) {

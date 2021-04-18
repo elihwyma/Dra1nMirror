@@ -193,7 +193,7 @@ NSString* bundleIdentifier;
 	                                              soundName:nil //research UNNotificationSound
 	                                                  delay:1.00 //cannot be zero & cannot be < 60 if repeats is YES
 	                                                repeats:NO
-	                                               bundleId:@"com.megadev.dra1n"
+	                                               bundleId:@"com.amywhile.dra1n-fix"
 	                                                   uuid:uid //specify if you need to use hideAlertWithBundleId and store the string for later use
 	                                                 silent:NO];
 					       				       
@@ -350,7 +350,7 @@ NSString* bundleIdentifier;
 	                                              soundName:nil //research UNNotificationSound
 	                                                  delay:1.00 //cannot be zero & cannot be < 60 if repeats is YES
 	                                                repeats:NO
-	                                               bundleId:@"com.megadev.dra1n"
+	                                               bundleId:@"com.amywhile.dra1n-fix"
 	                                                   uuid:uid //specify if you need to use hideAlertWithBundleId and store the string for later use
 	                                                 silent:NO];
 					       				       

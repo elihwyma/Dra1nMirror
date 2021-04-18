@@ -29,7 +29,7 @@ struct megaCoolPreCulprits: Decodable {
     let flag: Int!
 }
 
-let sandboxed = false
+let sandboxed = true
 
 func endpoint() -> String {
     if (sandboxed) {
