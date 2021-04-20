@@ -37,7 +37,7 @@
 		53439E0E24BDC7C100C3E723 /* Dra1nServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */; };
 		5350857124D8BA6600E45F8B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5350857424D8BA6600E45F8B /* Localizable.strings */; };
 		5359D58624C85EA200BBEC79 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5359D58524C85EA200BBEC79 /* SettingsViewController.swift */; };
-		5367878024FED2850034F4A7 /* ColourScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ColourScheme.swift */; };
+		5367878024FED2850034F4A7 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ThemeManager.swift */; };
 		5367878124FED2850034F4A7 /* appIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3D24E728220055E11E /* appIconCell.swift */; };
 		5367878324FED2850034F4A7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EEE36B24DCB44900402784 /* SearchViewController.swift */; };
 		5367878424FED2850034F4A7 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EBDCAB24CB6FBA00E6E981 /* PrivacyViewController.swift */; };
@@ -62,11 +62,9 @@
 		5367879D24FED2850034F4A7 /* Rainbow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E724D9F1D500295AD4 /* Rainbow@3x.png */; };
 		5367879E24FED2850034F4A7 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5378948424E6EA69001B835B /* MainCell.xib */; };
 		5367879F24FED2850034F4A7 /* 3DBattery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D724D9F1D500295AD4 /* 3DBattery@3x.png */; };
-		536787A024FED2850034F4A7 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460924D4B56700F23E5E /* Lato-Heavy.ttf */; };
 		536787A124FED2850034F4A7 /* 3DBattery~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D524D9F1D500295AD4 /* 3DBattery~ipad@3x.png */; };
 		536787A224FED2850034F4A7 /* Dra1nWhite~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CE24D9F1D500295AD4 /* Dra1nWhite~ipad@2x.png */; };
 		536787A324FED2850034F4A7 /* 3DBattery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D824D9F1D500295AD4 /* 3DBattery@2x.png */; };
-		536787A424FED2850034F4A7 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460A24D4B56800F23E5E /* Lato-Regular.ttf */; };
 		536787A524FED2850034F4A7 /* Dra1nGlyph~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DD24D9F1D500295AD4 /* Dra1nGlyph~ipad@2x.png */; };
 		536787A624FED2850034F4A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF12124B9DA7000317E92 /* LaunchScreen.storyboard */; };
 		536787A724FED2850034F4A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11F24B9DA7000317E92 /* Assets.xcassets */; };
@@ -84,7 +82,6 @@
 		536787B324FED2850034F4A7 /* Dra1nPurple~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E024D9F1D500295AD4 /* Dra1nPurple~ipad@3x.png */; };
 		536787B424FED2850034F4A7 /* Dra1nGlyph@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DB24D9F1D500295AD4 /* Dra1nGlyph@3x.png */; };
 		536787B524FED2850034F4A7 /* Rainbow~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E524D9F1D500295AD4 /* Rainbow~ipad@3x.png */; };
-		536787B624FED2850034F4A7 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460B24D4B56800F23E5E /* Lato-Bold.ttf */; };
 		536787B724FED2850034F4A7 /* RainbowForeground~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D224D9F1D500295AD4 /* RainbowForeground~ipad@2x.png */; };
 		536787B824FED2850034F4A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5350857424D8BA6600E45F8B /* Localizable.strings */; };
 		536787B924FED2850034F4A7 /* Dra1nGlyph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DC24D9F1D500295AD4 /* Dra1nGlyph@2x.png */; };
@@ -129,9 +126,6 @@
 		53B5D0DD24E71DFA00AE6878 /* culpritCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5D0DB24E71DFA00AE6878 /* culpritCell.swift */; };
 		53B5D0DF24E71DFA00AE6878 /* culpritCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B5D0DC24E71DFA00AE6878 /* culpritCell.xib */; };
 		53C0460624D4AE5600F23E5E /* onboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C0460524D4AE5600F23E5E /* onboardingViewController.swift */; };
-		53C0460C24D4B58300F23E5E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460B24D4B56800F23E5E /* Lato-Bold.ttf */; };
-		53C0460D24D4B58600F23E5E /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460924D4B56700F23E5E /* Lato-Heavy.ttf */; };
-		53C0460E24D4B58900F23E5E /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460A24D4B56800F23E5E /* Lato-Regular.ttf */; };
 		53C26A3824E724D90055E11E /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3624E724D90055E11E /* headerCell.swift */; };
 		53C26A3F24E728220055E11E /* appIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3D24E728220055E11E /* appIconCell.swift */; };
 		53C26A4124E728220055E11E /* appIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C26A3E24E728220055E11E /* appIconCell.xib */; };
@@ -146,13 +140,13 @@
 		53F648AC250EB45F00DFC41D /* PreferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648A9250EB45F00DFC41D /* PreferenceCell.swift */; };
 		53F648AE250EBAEB00DFC41D /* HeaderCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */; };
 		53F648B0250EBAEB00DFC41D /* HeaderCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */; };
-		53FBF26324E5C76A00C47C92 /* ColourScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ColourScheme.swift */; };
+		53FBF26324E5C76A00C47C92 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ThemeManager.swift */; };
 		E10111BB261E090E00DB4DB8 /* OnBoardingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */; };
 		E153A1C2261E13FB00A155FD /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = E153A1C1261E13FB00A155FD /* Macaw */; };
 		E153A1C4261E13FF00A155FD /* SwiftyMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = E153A1C3261E13FF00A155FD /* SwiftyMarkdown */; };
 		E153A1C5261E140400A155FD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B4484824FF22BF0066D2B8 /* IOKit.framework */; };
 		E153A1C6261E140900A155FD /* OnBoardingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */; };
-		E153A1D3261E14F700A155FD /* ColourScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ColourScheme.swift */; };
+		E153A1D3261E14F700A155FD /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ThemeManager.swift */; };
 		E153A1D4261E14F700A155FD /* appIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3D24E728220055E11E /* appIconCell.swift */; };
 		E153A1D5261E14F700A155FD /* PreferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648A9250EB45F00DFC41D /* PreferenceCell.swift */; };
 		E153A1D6261E14F700A155FD /* CepheiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* CepheiController.swift */; };
@@ -190,11 +184,9 @@
 		E153A1FA261E14F700A155FD /* Rainbow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E724D9F1D500295AD4 /* Rainbow@3x.png */; };
 		E153A1FB261E14F700A155FD /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5378948424E6EA69001B835B /* MainCell.xib */; };
 		E153A1FC261E14F700A155FD /* 3DBattery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D724D9F1D500295AD4 /* 3DBattery@3x.png */; };
-		E153A1FD261E14F700A155FD /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460924D4B56700F23E5E /* Lato-Heavy.ttf */; };
 		E153A1FE261E14F700A155FD /* 3DBattery~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D524D9F1D500295AD4 /* 3DBattery~ipad@3x.png */; };
 		E153A1FF261E14F700A155FD /* Dra1nWhite~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205CE24D9F1D500295AD4 /* Dra1nWhite~ipad@2x.png */; };
 		E153A200261E14F700A155FD /* 3DBattery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D824D9F1D500295AD4 /* 3DBattery@2x.png */; };
-		E153A201261E14F700A155FD /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460A24D4B56800F23E5E /* Lato-Regular.ttf */; };
 		E153A202261E14F700A155FD /* Dra1nGlyph~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DD24D9F1D500295AD4 /* Dra1nGlyph~ipad@2x.png */; };
 		E153A203261E14F700A155FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF12124B9DA7000317E92 /* LaunchScreen.storyboard */; };
 		E153A204261E14F700A155FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11F24B9DA7000317E92 /* Assets.xcassets */; };
@@ -212,7 +204,6 @@
 		E153A210261E14F700A155FD /* Dra1nPurple~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E024D9F1D500295AD4 /* Dra1nPurple~ipad@3x.png */; };
 		E153A211261E14F700A155FD /* Dra1nGlyph@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DB24D9F1D500295AD4 /* Dra1nGlyph@3x.png */; };
 		E153A212261E14F700A155FD /* Rainbow~ipad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E524D9F1D500295AD4 /* Rainbow~ipad@3x.png */; };
-		E153A213261E14F700A155FD /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C0460B24D4B56800F23E5E /* Lato-Bold.ttf */; };
 		E153A214261E14F700A155FD /* RainbowForeground~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D224D9F1D500295AD4 /* RainbowForeground~ipad@2x.png */; };
 		E153A215261E14F700A155FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5350857424D8BA6600E45F8B /* Localizable.strings */; };
 		E153A216261E14F700A155FD /* Dra1nGlyph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DC24D9F1D500295AD4 /* Dra1nGlyph@2x.png */; };
@@ -220,6 +211,9 @@
 		E153A218261E14F700A155FD /* Rainbow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E624D9F1D500295AD4 /* Rainbow@2x.png */; };
 		E153A219261E14F700A155FD /* Dra1nPurple~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DF24D9F1D500295AD4 /* Dra1nPurple~ipad@2x.png */; };
 		E153A21A261E14F700A155FD /* RainbowForeground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D024D9F1D500295AD4 /* RainbowForeground@3x.png */; };
+		E1DDA623262F323600E889A5 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */; };
+		E1DDA624262F323600E889A5 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */; };
+		E1DDA625262F323600E889A5 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */; };
 		E1EFA3C525EC41D900DD45BC /* Cephei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53823D2C250809E800275D52 /* Cephei.framework */; };
 		E1F39D8D261E114100DC3068 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = E1F39D8C261E114100DC3068 /* Macaw */; };
 		E1F39D90261E117300DC3068 /* SwiftyMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = E1F39D8F261E117300DC3068 /* SwiftyMarkdown */; };
@@ -304,9 +298,6 @@
 		53B7A88224D890D100B897EA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		53B7A88324D890D200B897EA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		53C0460524D4AE5600F23E5E /* onboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingViewController.swift; sourceTree = "<group>"; };
-		53C0460924D4B56700F23E5E /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
-		53C0460A24D4B56800F23E5E /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		53C0460B24D4B56800F23E5E /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		53C26A3624E724D90055E11E /* headerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerCell.swift; sourceTree = "<group>"; };
 		53C26A3D24E728220055E11E /* appIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appIconCell.swift; sourceTree = "<group>"; };
 		53C26A3E24E728220055E11E /* appIconCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = appIconCell.xib; sourceTree = "<group>"; };
@@ -318,9 +309,10 @@
 		53F648A5250E897900DFC41D /* ColourAwareTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourAwareTextView.swift; sourceTree = "<group>"; };
 		53F648A9250EB45F00DFC41D /* PreferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceCell.swift; sourceTree = "<group>"; };
 		53F648AD250EBAEB00DFC41D /* HeaderCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellButton.swift; sourceTree = "<group>"; };
-		53FBF26224E5C76900C47C92 /* ColourScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourScheme.swift; sourceTree = "<group>"; };
+		53FBF26224E5C76900C47C92 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OnBoardingKit.framework; path = System/Library/Frameworks/OnBoardingKit.framework; sourceTree = SDKROOT; };
 		E153A21E261E14F700A155FD /* Jailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmyNetworkResolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,6 +422,7 @@
 		5328CD2124F41997007AE2E6 /* API Parsing */ = {
 			isa = PBXGroup;
 			children = (
+				E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */,
 				53EEE36E24DCB6BD00402784 /* ParcilityParser.swift */,
 				5383134B24F41D8D00697673 /* Dra1nApiParser.swift */,
 			);
@@ -596,7 +589,6 @@
 			children = (
 				531DF11F24B9DA7000317E92 /* Assets.xcassets */,
 				537205C924D9F1D500295AD4 /* AlternativeIcons */,
-				53C0460824D4B55E00F23E5E /* Fonts */,
 				53B7A88424D891E700B897EA /* Localizations  */,
 			);
 			path = Assets;
@@ -610,16 +602,6 @@
 				531DF12B24B9E79E00317E92 /* tabViewController.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		53C0460824D4B55E00F23E5E /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				53C0460B24D4B56800F23E5E /* Lato-Bold.ttf */,
-				53C0460924D4B56700F23E5E /* Lato-Heavy.ttf */,
-				53C0460A24D4B56800F23E5E /* Lato-Regular.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		53C26A3524E724A90055E11E /* Header Cell */ = {
@@ -656,7 +638,7 @@
 			children = (
 				53205BEA2508088600A571B7 /* CepheiController.swift */,
 				53DF34A324DAF3BB005D88ED /* GlobalResources.swift */,
-				53FBF26224E5C76900C47C92 /* ColourScheme.swift */,
+				53FBF26224E5C76900C47C92 /* ThemeManager.swift */,
 				53823D30250948D700275D52 /* Dra1nController.swift */,
 			);
 			path = "Global Classes";
@@ -842,11 +824,9 @@
 				5372061624D9F1D500295AD4 /* Rainbow@3x.png in Resources */,
 				5378948724E6EA69001B835B /* MainCell.xib in Resources */,
 				537205FC24D9F1D500295AD4 /* 3DBattery@3x.png in Resources */,
-				53C0460D24D4B58600F23E5E /* Lato-Heavy.ttf in Resources */,
 				537205F824D9F1D500295AD4 /* 3DBattery~ipad@3x.png in Resources */,
 				537205EE24D9F1D500295AD4 /* Dra1nWhite~ipad@2x.png in Resources */,
 				537205FE24D9F1D500295AD4 /* 3DBattery@2x.png in Resources */,
-				53C0460E24D4B58900F23E5E /* Lato-Regular.ttf in Resources */,
 				5372060624D9F1D500295AD4 /* Dra1nGlyph~ipad@2x.png in Resources */,
 				531DF12324B9DA7000317E92 /* LaunchScreen.storyboard in Resources */,
 				531DF12024B9DA7000317E92 /* Assets.xcassets in Resources */,
@@ -865,7 +845,6 @@
 				5372060A24D9F1D500295AD4 /* Dra1nPurple~ipad@3x.png in Resources */,
 				5372060224D9F1D500295AD4 /* Dra1nGlyph@3x.png in Resources */,
 				5372061224D9F1D500295AD4 /* Rainbow~ipad@3x.png in Resources */,
-				53C0460C24D4B58300F23E5E /* Lato-Bold.ttf in Resources */,
 				537205F424D9F1D500295AD4 /* RainbowForeground~ipad@2x.png in Resources */,
 				5350857124D8BA6600E45F8B /* Localizable.strings in Resources */,
 				5372060424D9F1D500295AD4 /* Dra1nGlyph@2x.png in Resources */,
@@ -884,11 +863,9 @@
 				5367879D24FED2850034F4A7 /* Rainbow@3x.png in Resources */,
 				5367879E24FED2850034F4A7 /* MainCell.xib in Resources */,
 				5367879F24FED2850034F4A7 /* 3DBattery@3x.png in Resources */,
-				536787A024FED2850034F4A7 /* Lato-Heavy.ttf in Resources */,
 				536787A124FED2850034F4A7 /* 3DBattery~ipad@3x.png in Resources */,
 				536787A224FED2850034F4A7 /* Dra1nWhite~ipad@2x.png in Resources */,
 				536787A324FED2850034F4A7 /* 3DBattery@2x.png in Resources */,
-				536787A424FED2850034F4A7 /* Lato-Regular.ttf in Resources */,
 				536787A524FED2850034F4A7 /* Dra1nGlyph~ipad@2x.png in Resources */,
 				536787A624FED2850034F4A7 /* LaunchScreen.storyboard in Resources */,
 				536787A724FED2850034F4A7 /* Assets.xcassets in Resources */,
@@ -907,7 +884,6 @@
 				536787B324FED2850034F4A7 /* Dra1nPurple~ipad@3x.png in Resources */,
 				536787B424FED2850034F4A7 /* Dra1nGlyph@3x.png in Resources */,
 				536787B524FED2850034F4A7 /* Rainbow~ipad@3x.png in Resources */,
-				536787B624FED2850034F4A7 /* Lato-Bold.ttf in Resources */,
 				536787B724FED2850034F4A7 /* RainbowForeground~ipad@2x.png in Resources */,
 				536787B824FED2850034F4A7 /* Localizable.strings in Resources */,
 				536787B924FED2850034F4A7 /* Dra1nGlyph@2x.png in Resources */,
@@ -926,11 +902,9 @@
 				E153A1FA261E14F700A155FD /* Rainbow@3x.png in Resources */,
 				E153A1FB261E14F700A155FD /* MainCell.xib in Resources */,
 				E153A1FC261E14F700A155FD /* 3DBattery@3x.png in Resources */,
-				E153A1FD261E14F700A155FD /* Lato-Heavy.ttf in Resources */,
 				E153A1FE261E14F700A155FD /* 3DBattery~ipad@3x.png in Resources */,
 				E153A1FF261E14F700A155FD /* Dra1nWhite~ipad@2x.png in Resources */,
 				E153A200261E14F700A155FD /* 3DBattery@2x.png in Resources */,
-				E153A201261E14F700A155FD /* Lato-Regular.ttf in Resources */,
 				E153A202261E14F700A155FD /* Dra1nGlyph~ipad@2x.png in Resources */,
 				E153A203261E14F700A155FD /* LaunchScreen.storyboard in Resources */,
 				E153A204261E14F700A155FD /* Assets.xcassets in Resources */,
@@ -949,7 +923,6 @@
 				E153A210261E14F700A155FD /* Dra1nPurple~ipad@3x.png in Resources */,
 				E153A211261E14F700A155FD /* Dra1nGlyph@3x.png in Resources */,
 				E153A212261E14F700A155FD /* Rainbow~ipad@3x.png in Resources */,
-				E153A213261E14F700A155FD /* Lato-Bold.ttf in Resources */,
 				E153A214261E14F700A155FD /* RainbowForeground~ipad@2x.png in Resources */,
 				E153A215261E14F700A155FD /* Localizable.strings in Resources */,
 				E153A216261E14F700A155FD /* Dra1nGlyph@2x.png in Resources */,
@@ -967,7 +940,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53FBF26324E5C76A00C47C92 /* ColourScheme.swift in Sources */,
+				53FBF26324E5C76A00C47C92 /* ThemeManager.swift in Sources */,
 				53C26A3F24E728220055E11E /* appIconCell.swift in Sources */,
 				245E0EB52624DC5100950FED /* TutCell.swift in Sources */,
 				53F648AA250EB45F00DFC41D /* PreferenceCell.swift in Sources */,
@@ -975,6 +948,7 @@
 				53EEE36C24DCB44900402784 /* SearchViewController.swift in Sources */,
 				53EBDCAC24CB6FBA00E6E981 /* PrivacyViewController.swift in Sources */,
 				53B5D0DD24E71DFA00AE6878 /* culpritCell.swift in Sources */,
+				E1DDA623262F323600E889A5 /* AmyNetworkResolver.swift in Sources */,
 				53EEE36924DCB37600402784 /* infoViewController.swift in Sources */,
 				5359D58624C85EA200BBEC79 /* SettingsViewController.swift in Sources */,
 				53AA1B3D24C8713E00A9B459 /* HomeViewController.swift in Sources */,
@@ -1007,7 +981,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5367878024FED2850034F4A7 /* ColourScheme.swift in Sources */,
+				5367878024FED2850034F4A7 /* ThemeManager.swift in Sources */,
 				5367878124FED2850034F4A7 /* appIconCell.swift in Sources */,
 				245E0EB62624DC5100950FED /* TutCell.swift in Sources */,
 				53F648AC250EB45F00DFC41D /* PreferenceCell.swift in Sources */,
@@ -1015,6 +989,7 @@
 				5367878324FED2850034F4A7 /* SearchViewController.swift in Sources */,
 				5367878424FED2850034F4A7 /* PrivacyViewController.swift in Sources */,
 				5367878524FED2850034F4A7 /* culpritCell.swift in Sources */,
+				E1DDA624262F323600E889A5 /* AmyNetworkResolver.swift in Sources */,
 				5367878624FED2850034F4A7 /* infoViewController.swift in Sources */,
 				5367878724FED2850034F4A7 /* SettingsViewController.swift in Sources */,
 				5367878824FED2850034F4A7 /* HomeViewController.swift in Sources */,
@@ -1047,7 +1022,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E153A1D3261E14F700A155FD /* ColourScheme.swift in Sources */,
+				E153A1D3261E14F700A155FD /* ThemeManager.swift in Sources */,
 				E153A1D4261E14F700A155FD /* appIconCell.swift in Sources */,
 				245E0EB72624DC5100950FED /* TutCell.swift in Sources */,
 				E153A1D5261E14F700A155FD /* PreferenceCell.swift in Sources */,
@@ -1055,6 +1030,7 @@
 				E153A1D7261E14F700A155FD /* SearchViewController.swift in Sources */,
 				E153A1D8261E14F700A155FD /* PrivacyViewController.swift in Sources */,
 				E153A1D9261E14F700A155FD /* culpritCell.swift in Sources */,
+				E1DDA625262F323600E889A5 /* AmyNetworkResolver.swift in Sources */,
 				E153A1DA261E14F700A155FD /* infoViewController.swift in Sources */,
 				E153A1DB261E14F700A155FD /* SettingsViewController.swift in Sources */,
 				E153A1DC261E14F700A155FD /* HomeViewController.swift in Sources */,

@@ -32,27 +32,27 @@ class SettingsViewController: UITableViewController {
         
         if #available(iOS 13.0, *) {
             if traitCollection.userInterfaceStyle == .dark {
-                self.tableView.backgroundColor = customBackground
+                self.tableView.backgroundColor = .secondaryBackground
             } else {
-                self.tableView.backgroundColor = customGray5
+                self.tableView.backgroundColor = .secondaryBackground
             }
         } else {
-            self.tableView.backgroundColor = customGray5
+            self.tableView.backgroundColor = .secondaryBackground
         }
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : textColour]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.dra1nLabel]
     }
 
     @IBOutlet weak var licensesButton: UIButton!
     func initStuff() {
-        let averageTimeSliderCase = Float(CepheiController.shared.getInt(key: "averageTimeSlider"))
-        let drainSensitivityCase = Float(CepheiController.shared.getInt(key: "DrainSensitivity"))
-        let barCountCase = Float(CepheiController.shared.getInt(key: "BarCount"))
+        let averageTimeSliderCase = Float(CepheiController.getInt(key: "averageTimeSlider"))
+        let drainSensitivityCase = Float(CepheiController.getInt(key: "DrainSensitivity"))
+        let barCountCase = Float(CepheiController.getInt(key: "BarCount"))
         
         
-        if (averageTimeSliderCase != 0.0) { averageTime.value = averageTimeSliderCase } else { averageTime.value = 4.0; CepheiController.shared.set(key: "AverageTime", object: 21600) }
-        if (drainSensitivityCase != 0.0) { sensitivity.value = drainSensitivityCase } else { sensitivity.value = 125.0; CepheiController.shared.set(key: "DrainSensitivity", object: 125) }
-        if (barCountCase != 0.0) { barCount.value = barCountCase } else { barCount.value = 5; CepheiController.shared.set(key: "BarCount", object: 5) }
+        if (averageTimeSliderCase != 0.0) { averageTime.value = averageTimeSliderCase } else { averageTime.value = 4.0; CepheiController.set(key: "AverageTime", object: 21600) }
+        if (drainSensitivityCase != 0.0) { sensitivity.value = drainSensitivityCase } else { sensitivity.value = 125.0; CepheiController.set(key: "DrainSensitivity", object: 125) }
+        if (barCountCase != 0.0) { barCount.value = barCountCase } else { barCount.value = 5; CepheiController.set(key: "BarCount", object: 5) }
         
     }
     
@@ -73,14 +73,13 @@ class SettingsViewController: UITableViewController {
 
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("clear", comment: ""))", style: .destructive, handler: { action in
             
-            let c = CepheiController.shared
-            c.set(key: "CulpritLog", object: [[String : Any]]())
-            c.set(key: "DrainAvarageLog", object: [[String : Any]]())
-            c.set(key: "DrainLog", object: [[String : Any]]())
-            c.set(key: "UpdatedNewTweaks", object: [[String : Any]]())
-            c.set(key: "increaseSinceLastCheck", object: false)
+            CepheiController.set(key: "CulpritLog", object: [[String : Any]]())
+            CepheiController.set(key: "DrainAvarageLog", object: [[String : Any]]())
+            CepheiController.set(key: "DrainLog", object: [[String : Any]]())
+            CepheiController.set(key: "UpdatedNewTweaks", object: [[String : Any]]())
+            CepheiController.set(key: "increaseSinceLastCheck", object: false)
             
-            Dra1nController.shared.respring()
+            Dra1nController.respring()
         }))
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("cancel", comment: ""))", style: .cancel, handler: nil))
 
@@ -94,8 +93,8 @@ class SettingsViewController: UITableViewController {
         averageTime.value = rounded
         setSliderText()
         
-        CepheiController.shared.set(key: "averageTimeSlider", object: Int(averageTime.value))
-        CepheiController.shared.set(key: "AverageTime", object: Int(averageTime.value * 3600))
+        CepheiController.set(key: "averageTimeSlider", object: Int(averageTime.value))
+        CepheiController.set(key: "AverageTime", object: Int(averageTime.value * 3600))
     }
     
     @IBOutlet weak var sensitivity: UISlider!
@@ -105,7 +104,7 @@ class SettingsViewController: UITableViewController {
         sensitivity.value = rounded
         setSliderText()
 
-        CepheiController.shared.set(key: "DrainSensitivity", object: Int(sensitivity.value))
+        CepheiController.set(key: "DrainSensitivity", object: Int(sensitivity.value))
     }
     
 
@@ -117,7 +116,7 @@ class SettingsViewController: UITableViewController {
         barCount.value = rounded
         setSliderText()
 
-        CepheiController.shared.set(key: "BarCount", object: Int(barCount.value))
+        CepheiController.set(key: "BarCount", object: Int(barCount.value))
         NotificationCenter.default.post(name: .GraphRefresh, object: nil)
     }
         
@@ -126,7 +125,7 @@ class SettingsViewController: UITableViewController {
         let alert = UIAlertController(title: "\(NSLocalizedString("respring", comment: ""))", message: "\(NSLocalizedString("clear?", comment: ""))", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("yes", comment: ""))", style: .destructive, handler: { action in
-            Dra1nController.shared.respring()
+            Dra1nController.respring()
         }))
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("cancel", comment: ""))", style: .cancel, handler: nil))
 
@@ -140,9 +139,9 @@ class SettingsViewController: UITableViewController {
     
     @IBOutlet weak var exportData: UIButton!
     @IBAction func exportData(_ sender: Any) {
-        let drainAverageLog = CepheiController.shared.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
-        let secondary = CepheiController.shared.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
-        let tweakList = CepheiController.shared.getObject(key: "TweakList") as? [String] ?? [String]()
+        let drainAverageLog = CepheiController.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
+        let secondary = CepheiController.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
+        let tweakList = CepheiController.getObject(key: "TweakList") as? [String] ?? [String]()
         var fixedTweakList = [String]()
         
         for item in tweakList {

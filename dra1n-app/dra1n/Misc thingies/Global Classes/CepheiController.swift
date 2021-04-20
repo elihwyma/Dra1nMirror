@@ -8,44 +8,43 @@
 import Foundation
 
 class CepheiController {
-    static let shared = CepheiController()
 
     #if jailed
-    let def = UserDefaults.standard
+    static let def = UserDefaults.standard
     #else
-    let def = HBPreferences(identifier: "com.megadev.dra1n")
+    static let def = HBPreferences(identifier: "com.megadev.dra1n")
     #endif
        
  
-    func set(key: String, object: Any) {
+    static func set(key: String, object: Any) {
         #if jailed
         UserDefaults.standard.set(object, forKey: key)
         #else
-        self.def.set(object, forKey: key)
+        def.set(object, forKey: key)
         #endif
     }
     
-    func getBool(key: String) -> Bool {
+    static func getBool(key: String) -> Bool {
         #if jailed
         return UserDefaults.standard.bool(forKey: key)
         #else
-        return self.def.bool(forKey: key)
+        return def.bool(forKey: key)
         #endif
     }
     
-    func getObject(key: String) -> Any {
+    static func getObject(key: String) -> Any {
         #if jailed
         return UserDefaults.standard.object(forKey: key) as Any
         #else
-        return self.def.object(forKey: key)
+        return def.object(forKey: key)
         #endif
     }
     
-    func getInt(key: String) -> Int {
+    static func getInt(key: String) -> Int {
         #if jailed
         return UserDefaults.standard.integer(forKey: key)
         #else
-        return self.def.integer(forKey: key)
+        return def.integer(forKey: key)
         #endif
     }
 }

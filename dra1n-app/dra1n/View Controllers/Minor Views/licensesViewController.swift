@@ -13,7 +13,7 @@ class licenseCell: UITableViewCell {
     
     func colourSettings() {
         self.backgroundColor = .clear
-        self.label.textColor = textColour
+        self.label.textColor = .dra1nLabel
     }
 }
 
@@ -33,8 +33,8 @@ class licensesViewController: UIViewController {
     }
     
     @objc func colourThings() {
-        self.view.backgroundColor = customBackground
-        self.tableView.backgroundColor = customBackground
+        self.view.backgroundColor = .secondaryBackground
+        self.tableView.backgroundColor = .secondaryBackground
         self.tableView.reloadData()
     }
     
@@ -78,7 +78,7 @@ extension licensesViewController : UITableViewDataSource {
   
     //This is just meant to be
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.credits[0].count
+        self.credits[0].count
     }
 
     //This is what handles all the images and text etc, using the class mainScreenTableCells
@@ -86,8 +86,8 @@ extension licensesViewController : UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "licenseCell", for: indexPath) as! licenseCell
         cell.label.text = self.credits[0][indexPath.row]
-        cell.backgroundColor = customGray5
-        cell.label.textColor = textColour
+        cell.backgroundColor = .secondaryBackground
+        cell.label.textColor = .dra1nLabel
         return cell
     }
 }

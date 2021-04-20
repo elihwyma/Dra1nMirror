@@ -33,15 +33,15 @@ class HomeViewController: UIViewController {
     ]
     
     @objc func colourThings() {
-        self.view.backgroundColor = customBackground
-        updateText.textColor = textColour
-        blurView.backgroundColor = customGray5
+        self.view.backgroundColor = .secondaryBackground
+        updateText.textColor = .dra1nColor
+        blurView.backgroundColor = .secondaryBackground
         
         self.tableView.reloadData()
     }
     
     func pp() {
-        if !(CepheiController.shared.getBool(key: "NewHasAsked")) {
+        if !(CepheiController.getBool(key: "NewHasAsked")) {
             performSegue(withIdentifier: "showPrivacyPolicy", sender: nil)
         }
     }
@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
         //self.pp()
         
         let welcomeController = OBWelcomeController(title: "Fat Ass Title here innit", detailText: "Omg wtf is Dra1n like what the fuck does it actually do", icon: UIImage(named: "Original"), contentLayout: 2)!
-        welcomeController.view.tintColor = dra1nColour
+        welcomeController.view.tintColor = .dra1nColor
         welcomeController.headerView.imageView.layer.cornerRadius = 15
         welcomeController.headerView.imageView.layer.masksToBounds = true
         
@@ -66,8 +66,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        NotificationCenter.default.addObserver(self, selector: #selector(self.showUpdateBanner(_:)), name: .updateBanner, object: nil)
+        
         Dra1nApiParser.shared.setup()
         
         //General UI setup
@@ -85,77 +84,70 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @objc func showUpdateBanner(_ notification: NSNotification) {
-        DispatchQueue.main.async {
-            let icon = notification.userInfo?["icon"] as? String ?? "icloud.and.arrow.down"
-            let text = notification.userInfo?["text"] as? String ?? "An update is available for Dra1n"
-            self.bannerURL = notification.userInfo?["link"] as? String ?? "cydia://url/https://cydia.saurik.com/api/share#?package=com.amymega.dra1n"
- 
-            self.bannerButton.isEnabled = true
-            self.updateView.isHidden = false
-            self.blurView.isHidden = false
+    private func loadUpdateBanner() {
+        Dra1nApiParser.checkForUpdate() { update, text, icon, link in
+            if !update { return }
             
-            if #available(iOS 13, *) {
-                self.updateImage.image = UIImage(systemName: icon)
-            } else {
-                self.updateImage.image = UIImage(named: "info.circle")?.withRenderingMode(.alwaysTemplate)
-            }
-            
-            self.updateText.text = text
-            self.updateText.adjustsFontSizeToFitWidth = true
-            
-            if !UIAccessibility.isReduceTransparencyEnabled {
+            DispatchQueue.main.async {
+                self.bannerURL = link
+     
+                self.bannerButton.isEnabled = true
+                self.updateView.isHidden = false
+                self.blurView.isHidden = false
                 
-                for v in self.blurView.subviews{
-                   if v is UIVisualEffectView{
-                      v.removeFromSuperview()
-                   }
+                if #available(iOS 13, *) {
+                    self.updateImage.image = UIImage(systemName: icon)
+                } else {
+                    self.updateImage.image = UIImage(named: "info.circle")?.withRenderingMode(.alwaysTemplate)
                 }
-                            
-                let blurEffect = UIBlurEffect(style: .regular)
-                let blurEffectView = UIVisualEffectView(effect: blurEffect)
-                                
-                blurEffectView.frame = self.blurView.bounds
-                blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
-                self.blurView.addSubview(blurEffectView)
                 
-            } else {
-                self.blurView.backgroundColor = customGray5
+                self.updateText.text = text
+                self.updateText.adjustsFontSizeToFitWidth = true
+                
+                if !UIAccessibility.isReduceTransparencyEnabled {
+                    
+                    for v in self.blurView.subviews{
+                       if v is UIVisualEffectView{
+                          v.removeFromSuperview()
+                       }
+                    }
+                                
+                    let blurEffect = UIBlurEffect(style: .regular)
+                    let blurEffectView = UIVisualEffectView(effect: blurEffect)
+                                    
+                    blurEffectView.frame = self.blurView.bounds
+                    blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+                    self.blurView.addSubview(blurEffectView)
+                    
+                } else {
+                    self.blurView.backgroundColor = .secondaryBackground
+                }
             }
         }
     }
    
     @objc func setTheDra1n() {
-        let currentDict = Dra1nController.shared.BatteryData()
-                
-        let dischargeCurrent = currentDict["dischargeCurrent"]!,
-            cycles = currentDict["cycles"]!,
-            currentCharge = currentDict["currentCapacity"]!,
-            designCapacity = currentDict["designCapacity"]!,
-            maxCapacity = currentDict["maxCapacity"]!,
-            temperature = currentDict["temperature"]!,
-            voltage = currentDict["voltage"]! ,
-            ramUsage = currentDict["ram"]!
-        
+        let data = Dra1nController.batteryData
+   
         let batteryHealth: String!
-        let healthPercent: Double = (Double(maxCapacity) / Double(designCapacity)) * 100
+        let healthPercent: Double = (Double(data.maxCapacity) / Double(data.designCapacity)) * 100
         
         if (healthPercent >= 90) { batteryHealth = "\(NSLocalizedString("great", comment: ""))" } else if (healthPercent >= 85) { batteryHealth = "\(NSLocalizedString("good", comment: ""))" } else { batteryHealth = "\(NSLocalizedString("poor", comment: ""))" }
         
-        let roundedCelsius: Double = Double(temperature) / Double(100)
+        let roundedCelsius: Double = Double(data.temperature) / Double(100)
         
         var discharge = 0
         var set = false
         
-        let array = CepheiController.shared.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
+        let array = CepheiController.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
         if (array.count == 0) {
-            discharge = abs(dischargeCurrent)
+            discharge = abs(data.dischargeCurrent)
         } else {
             for(index, _) in array.enumerated() {
                 let dict = Array(array.suffix(index + 1))
                 let item = dict[0]
-                let dischargeAverage = abs(item["drain"] as? Int ?? abs(dischargeCurrent))
+                let dischargeAverage = abs(item["drain"] as? Int ?? abs(data.dischargeCurrent))
                 if ((dischargeAverage >= 50) && (dischargeAverage <= 500)) {
                     discharge = dischargeAverage
                     set = true
@@ -163,17 +155,17 @@ class HomeViewController: UIViewController {
                 }
             }
             if (!set) {
-               discharge = abs(dischargeCurrent)
+                discharge = abs(data.dischargeCurrent)
             }
         }
         
-        if ((UIDevice.current.batteryState == .full) || (maxCapacity <= currentCharge)) {
+        if ((UIDevice.current.batteryState == .full) || (data.maxCapacity <= data.currentCapacity)) {
             tableData[0][0 + offset] = "\(NSLocalizedString("discharge", comment: ""))"
             tableData[1][0 + offset] = "\(NSLocalizedString("drainingFromYourDevice", comment: ""))"
             
         } else if (UIDevice.current.batteryState == .charging) {
             tableData[1][2 + offset] = "\(NSLocalizedString("timeTillCharged", comment: ""))"
-            let powerToCharge = maxCapacity - currentCharge
+            let powerToCharge = data.maxCapacity - data.currentCapacity
             let timeLeft: Double = Double(powerToCharge) / Double(discharge)
             if timeLeft.isFinite {
                 let hours: Double = Double(Int(timeLeft))
@@ -184,7 +176,7 @@ class HomeViewController: UIViewController {
             tableData[0][0 + offset] = "\(NSLocalizedString("charge", comment: ""))"
             tableData[1][0 + offset] = "\(NSLocalizedString("chargingYourDevice", comment: ""))"
         } else if (UIDevice.current.batteryState == .unplugged) {
-            let timeLeft = Double(currentCharge) / Double(discharge)
+            let timeLeft = Double(data.currentCapacity) / Double(discharge)
             if timeLeft.isFinite {
                 let hours: Double = Double(Int(timeLeft))
                 let minutes: Double = (Double(timeLeft) - Double(Int(timeLeft))) * 60
@@ -200,19 +192,19 @@ class HomeViewController: UIViewController {
         }
          
         
-        if CepheiController.shared.getBool(key: "Fahrenheit") {
+        if CepheiController.getBool(key: "Fahrenheit") {
             let fahrenheit = (roundedCelsius * 9/5) + 32
             tableData[3][4 + offset] = String(format: "%.1f°F", fahrenheit)
         } else {
             tableData[3][4 + offset] = String(format: "%.1f℃", roundedCelsius)
         }
         
-        tableData[3][0 + offset] = "\(dischargeCurrent) mA"
-        tableData[3][1 + offset] = "\(cycles)"
+        tableData[3][0 + offset] = "\(data.dischargeCurrent) mA"
+        tableData[3][1 + offset] = "\(data.cycles)"
         tableData[3][3 + offset] = batteryHealth
         tableData[1][3 + offset] = "Your current battery health is \(String(format: "%.2f", healthPercent))%"
-        tableData[3][5 + offset] = "\(voltage) mV"
-        tableData[3][6 + offset] = "\(ramUsage) MB"
+        tableData[3][5 + offset] = "\(data.voltage) mV"
+        tableData[3][6 + offset] = "\(data.ram) MB"
        
         
         self.tableView.reloadData()
@@ -289,10 +281,4 @@ extension HomeViewController : UITableViewDataSource {
         cell.allTheAdjustments()
         return cell
     }
-}
-
-
-
-extension Notification.Name {
-    static let updateBanner = Notification.Name("UpdateNotification")
 }

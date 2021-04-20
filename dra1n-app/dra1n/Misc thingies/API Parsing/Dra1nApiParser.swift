@@ -70,12 +70,18 @@ class Dra1nApiParser {
     
     static let shared = Dra1nApiParser()
     
+    class func meta() {
+        //self.postCulprits()
+        //self.preCulpriting()
+        tweakListPosting()
+    }
+    
     func register() {
         NotificationCenter.default.addObserver(self, selector: #selector(setup), name: NSNotification.Name(rawValue: "PrivacyPolicy"), object: nil)
     }
     
     @objc func setup() {
-        if Dra1nController.shared.privacyPolicy {
+        if Dra1nController.privacyPolicy {
             DispatchQueue.global(qos: .utility).async {
                 if self.database.count == 0 {
                     self.refresh(completion: { (success) -> Void in
@@ -83,11 +89,8 @@ class Dra1nApiParser {
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DatabaseLoad"), object: nil)
                     })
                 }
+
                 
-                self.checkForUpdate()
-                self.postCulprits()
-                self.preCulpriting()
-                self.tweakListPosting()
             }
         }
     }
@@ -95,11 +98,11 @@ class Dra1nApiParser {
     
     typealias refreshCompletion = (_ success: Bool) -> Void
     func refresh(completion: @escaping refreshCompletion) {
-        if (!Dra1nController.shared.privacyPolicy) { return }
+        if (!Dra1nController.privacyPolicy) { return }
         if let url = URL(string: databaseURL) {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
-            request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
+            request.setValue(Dra1nController.installedVersion, forHTTPHeaderField: "tweakVersion")
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
                 if let data = data {
                     do {
@@ -163,83 +166,40 @@ class Dra1nApiParser {
     }
     #endif
     
-    func checkForUpdate() {
+    class func checkForUpdate(_ completion: @escaping ((_ show: Bool, _ text: String, _ icon: String, _ link: String) -> Void)) {
         var update = false
         var text = "An update is available for Dra1n"
         var icon = "icloud.and.arrow.down"
-        var link = "cydia://url/https://cydia.saurik.com/api/share#?package=com.megadev.dra1n"
-        
-        if let url = URL(string: "https://\(endpoint()).dra1n.app/v1/update") {
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
-            request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
-            let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
-                if let data = data {
-                    let decoder = JSONDecoder()
-                    if let json = try? decoder.decode(UpdateResponse.self, from: data) {
-                        if ((json.UpdateAvailable != Dra1nController.shared.installedVersion) || (json.isAnnouncement == 1)) { update = true }
-                        if !update { return }
-                        
-                        if ((json.UpdateAvailable != Dra1nController.shared.installedVersion)) { CepheiController.shared.set(key: "Update", object: true) }
-                        if (json.UpdateText != nil) { text = json.UpdateText }
-                        if (json.UpdateImage != nil) { icon = json.UpdateImage }
-                        if (json.url != nil) { link = json.url }
-                       
-                        let dict: [String : Any] = [
-                            "text" : text,
-                            "icon" : icon,
-                            "link" : link
-                        ]
-                        
-                        NotificationCenter.default.post(name: .updateBanner, object: nil, userInfo: dict) 
-                    }
-                }
-            }
-            task.resume()
+        var link = "cydia://url/https://cydia.saurik.com/api/share#?package=com.amymega.dra1n"
+        let headers: [String: String] = [
+            "tweakVersion" : Dra1nController.installedVersion
+        ]
+        AmyNetworkResolver.dict(url: "https://\(endpoint()).dra1n.app/v1/update", headers: headers) { success, dict in
+            guard success,
+                  let dict = dict else { return completion(false, text, icon, link) }
+            update = dict["UpdateAvailable"] as? String != Dra1nController.installedVersion ||
+                dict["isAnnouncement"] as? Int == 1
+            if let remoteText = dict["UpdateText"] as? String { text = remoteText }
+            if let remoteImage = dict["UpdateImage"] as? String { icon = remoteImage }
+            if let remoteLink = dict["url"] as? String { link = remoteLink }
+            return completion(update, text, icon, link)
         }
     }
     
-    func getTutInfo() {
-        var update = false
-        var text = "An update is available for Dra1n"
-        var icon = "icloud.and.arrow.down"
-        var link = "cydia://url/https://cydia.saurik.com/api/share#?package=com.megadev.dra1n"
-        
-        if let url = URL(string: "https://\(endpoint()).dra1n.app/v1/tutorial-info") {
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
-            request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
-            let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
-                if let data = data {
-                    let decoder = JSONDecoder()
-                    if let json = try? decoder.decode(UpdateResponse.self, from: data) {
-                        if ((json.UpdateAvailable != Dra1nController.shared.installedVersion) || (json.isAnnouncement == 1)) { update = true }
-                        if !update { return }
-                        
-                        if ((json.UpdateAvailable != Dra1nController.shared.installedVersion)) { CepheiController.shared.set(key: "Update", object: true) }
-                        if (json.UpdateText != nil) { text = json.UpdateText }
-                        if (json.UpdateImage != nil) { icon = json.UpdateImage }
-                        if (json.url != nil) { link = json.url }
-                       
-                        let dict: [String : Any] = [
-                            "text" : text,
-                            "icon" : icon,
-                            "link" : link
-                        ]
-                        
-                        NotificationCenter.default.post(name: .updateBanner, object: nil, userInfo: dict)
-                    }
-                }
-            }
-            task.resume()
+    class func getTutInfo() {
+        let headers: [String: String] = [
+            "tweakVersion" : Dra1nController.installedVersion
+        ]
+        AmyNetworkResolver.dict(url: "https://\(endpoint()).dra1n.app/v1/tutorial-info", headers: headers) { success, dict in
+            // Parse the JSON here
         }
     }
     
     
     
     func postCulprits() {
-        if (Dra1nController.shared.privacyPolicy) {
-            var array = CepheiController.shared.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
+        if (Dra1nController.privacyPolicy) {
+            var array = CepheiController.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
             for (index, element) in array.enumerated() {
                 
                 let tweak = element["culrpit"] as? String ?? "Unknown Cause"
@@ -253,7 +213,7 @@ class Dra1nApiParser {
                     if let url = URL(string: encoded ?? "") {
                         var request = URLRequest(url: url)
                         request.httpMethod = "GET"
-                        request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
+                        request.setValue(Dra1nController.installedVersion, forHTTPHeaderField: "tweakVersion")
                         let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
                                 if let data = data {
                                     let decoder = JSONDecoder()
@@ -263,7 +223,7 @@ class Dra1nApiParser {
                                                 var dict = element
                                                 dict["posted"] = true
                                                 array[index] = dict
-                                                CepheiController.shared.set(key: "CulpritLog", object: array)
+                                                CepheiController.set(key: "CulpritLog", object: array)
                                             }
                                         }
                                     }
@@ -276,92 +236,69 @@ class Dra1nApiParser {
         }
     }
     
-    func preCulpriting() {
-        if (!Dra1nController.shared.privacyPolicy || !CepheiController.shared.getBool(key: "hasOnboardedPost")) { return }
-        if let url = URL(string: "https://\(endpoint()).dra1n.app/V1/tweaks/") {
+    class func preCulpriting() {
+        if !Dra1nController.privacyPolicy || !CepheiController.getBool(key: "hasOnboardedPost") { return }
+        let headers: [String: String] = [
+            "tweakVersion": Dra1nController.installedVersion
+        ]
+        AmyNetworkResolver.array(url: "https://\(endpoint()).dra1n.app/V1/tweaks/", headers: headers) { success, array in
+            guard success,
+                  let array = array else { return }
+            let tweakList = CepheiController.getObject(key: "TweakList") as? [String] ?? [String]()
+            var whoops = [String]()
+            var culpritList = CepheiController.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
             
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
-            request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
-            let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
-                if let data = data {
-                    do {
-                        let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String : Any]] ?? [[String : Any]]()
-                        let tweakList = CepheiController.shared.getObject(key: "TweakList") as? [String] ?? [String]()
-                        var whoops = [String]()
-                        var culpritList = CepheiController.shared.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
-                        
-                        for yeet in tweakList {
-                            if (!yeet.contains("gsc.")) {
-                                let noTPlease = yeet.replacingOccurrences(of: "\t", with: "")
-                                whoops.append(noTPlease)
-                            }
-                        }
-                        
-                        for tweak in jsonObj {
-                            let checkingCulprit = tweak["Bundleid"] as? String ?? ""
-                            let flag = tweak["flag"] as? Int ?? 0
-                            if (flag == 3) {
-                                if (whoops.contains(checkingCulprit)) {
-                                    var dict = [String : Any]()
-                                    dict["time"] = NSDate()
-                                    dict["culrpit"] = checkingCulprit
-                                    dict["posted"] = true
-                                    culpritList.append(dict)
-                                }
-                            }
-                        }
-                        
-                        CepheiController.shared.set(key: "hasOnboardedPost", object: true)
-                        CepheiController.shared.set(key: "CulpritLog", object: culpritList)
-                    } catch { return }
-                    
+            for yeet in tweakList {
+                if (!yeet.contains("gsc.")) {
+                    let noTPlease = yeet.replacingOccurrences(of: "\t", with: "")
+                    whoops.append(noTPlease)
                 }
             }
-            task.resume()
+            
+            for tweak in array {
+                let checkingCulprit = tweak["Bundleid"] as? String ?? ""
+                let flag = tweak["flag"] as? Int ?? 0
+                if flag == 3 {
+                    if (whoops.contains(checkingCulprit)) {
+                        var dict = [String : Any]()
+                        dict["time"] = NSDate()
+                        dict["culrpit"] = checkingCulprit
+                        dict["posted"] = true
+                        culpritList.append(dict)
+                    }
+                }
+            }
+            
+            CepheiController.set(key: "hasOnboardedPost", object: true)
+            CepheiController.set(key: "CulpritLog", object: culpritList)
         }
-        
     }
     
-    func tweakListPosting() {
+    class func tweakListPosting() {
+        var listToPost: [String] = CepheiController.getBool(key: "TweakPost") ? [String]() :
+            (CepheiController.getObject(key: "TweakList") as? [String] ?? [String]()).map({$0.replacingOccurrences(of: "\t", with: "")})
         
-        var listToPost = [String]()
-        
-        if (!CepheiController.shared.getBool(key: "TweakPost")) {
-            let tweakList = CepheiController.shared.getObject(key: "TweakList") as? [String] ?? [String]()
-            for tweak in tweakList {
-                listToPost.append(tweak.replacingOccurrences(of: "\t", with: ""))
-            }
-        }
-        
-        var newTweakList = CepheiController.shared.getObject(key: "UpdatedNewTweaks") as? [[String : Any]] ?? [[String : Any]]()
+        var newTweakList = CepheiController.getObject(key: "UpdatedNewTweaks") as? [[String : Any]] ?? [[String : Any]]()
         for (index, tweak) in newTweakList.enumerated() {
             if !(tweak["posted"] as? Bool ?? false) {
                 listToPost.append((tweak["tweak"] as? String ?? "").replacingOccurrences(of: "\t", with: ""))
                 newTweakList[index]["posted"] = true
             }
         }
+        if listToPost.isEmpty { return }
         
-        if !listToPost.isEmpty {
-            guard let data = try? JSONSerialization.data(withJSONObject: listToPost, options: []) else {
-                return
-            }
-            let json = String(data: data, encoding: String.Encoding.utf8)
-            
-            if let url = URL(string: "https://\(endpoint()).dra1n.app/v1/tweaklist/") {
-                var request = URLRequest(url: url)
-                request.httpMethod = "GET"
-                request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
-                request.setValue(json, forHTTPHeaderField: "tweaklist")
-                let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
-                    if let response = response {
-                        if (response as! HTTPURLResponse).statusCode == 200 {
-                            CepheiController.shared.set(key: "UpdatedNewTweaks", object: newTweakList)
-                            CepheiController.shared.set(key: "TweakPost", object: true)
-                        }
-                    }
-                }
-                task.resume()
+        guard let data = try? JSONSerialization.data(withJSONObject: listToPost, options: []),
+              let json = String(data: data, encoding: String.Encoding.utf8) else {
+            return
+        }
+        let headers: [String: String] = [
+            "tweakVersion": Dra1nController.installedVersion,
+            "tweaklist": json
+        ]
+        AmyNetworkResolver.dict(url: "https://\(endpoint()).dra1n.app/v1/tweaklist/", headers: headers) { success, _ in
+            if success {
+                CepheiController.set(key: "UpdatedNewTweaks", object: newTweakList)
+                CepheiController.set(key: "TweakPost", object: true)
             }
         }
     }

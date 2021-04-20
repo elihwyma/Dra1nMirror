@@ -17,14 +17,14 @@ class tabViewController: UITabBarController {
         // Do any additional setup after loading the view.
         
         tabView.tintColor = UIColor(red: 0.75, green: 0.56, blue: 0.83, alpha: 1.00)
-        self.tabView.barTintColor = customGray5
+        self.tabView.barTintColor = .secondaryBackground
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         if #available(iOS 13, *) {
             if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
-                self.tabView.barTintColor = customGray5
+                self.tabView.barTintColor = .secondaryBackground
             }
         }
     }

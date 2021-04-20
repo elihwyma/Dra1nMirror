@@ -31,23 +31,23 @@ class PrivacyViewController: UIViewController {
     }
     
     @objc func colourControl() {
-        self.view.backgroundColor = customBackground
+        self.view.backgroundColor = .secondaryBackground
     }
     
     @IBOutlet weak var decline: UIButton!
     @IBAction func decline(_ sender: Any) {
-        CepheiController.shared.set(key: "privacyPolicy", object: false)
-        CepheiController.shared.set(key: "NewHasAsked", object: true)
-        if !CepheiController.shared.getBool(key: "onboarding") {
+        CepheiController.set(key: "privacyPolicy", object: false)
+        CepheiController.set(key: "NewHasAsked", object: true)
+        if !CepheiController.getBool(key: "onboarding") {
            performSegue(withIdentifier: "showOnboarding", sender: nil)
         } else { self.dismiss(animated: true, completion: nil) }
     }
     
     @IBOutlet weak var accept: UIButton!
     @IBAction func accept(_ sender: Any) {
-        CepheiController.shared.set(key: "privacyPolicy", object: true)
-        CepheiController.shared.set(key: "NewHasAsked", object: true)
-        if !CepheiController.shared.getBool(key: "onboarding") {
+        CepheiController.set(key: "privacyPolicy", object: true)
+        CepheiController.set(key: "NewHasAsked", object: true)
+        if !CepheiController.getBool(key: "onboarding") {
            performSegue(withIdentifier: "showOnboarding", sender: nil)
         } else { self.dismiss(animated: true, completion: nil) }
     }
@@ -57,7 +57,7 @@ class PrivacyViewController: UIViewController {
             do {
                 var request = URLRequest(url: URL(string: "https://\(endpoint()).dra1n.app/V1/policy")!)
                 request.httpMethod = "GET"
-                request.setValue(Dra1nController.shared.installedVersion, forHTTPHeaderField: "tweakVersion")
+                request.setValue(Dra1nController.installedVersion, forHTTPHeaderField: "tweakVersion")
                 let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
                     if (data != nil) {
                         let content = String(decoding: data!, as: UTF8.self)

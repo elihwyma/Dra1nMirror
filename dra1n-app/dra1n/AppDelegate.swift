@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch
         
         UIApplication.shared.applicationIconBadgeNumber = 0
-        CepheiController.shared.set(key: "TimeLastOpened", object: NSDate())
+        CepheiController.set(key: "TimeLastOpened", object: NSDate())
+        
         
         return true
     }

@@ -83,7 +83,7 @@ class AnalyseViewController: UIViewController {
     }
     
     func colourThings() {
-        self.view.backgroundColor = customBackground
+        self.view.backgroundColor = .dra1nBackground
     }
   
     override func viewDidLoad() {
@@ -119,14 +119,14 @@ class AnalyseViewController: UIViewController {
         dictionary.removeAll()
         shownDictionary.removeAll()
         
-        let array2 = CepheiController.shared.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
+        let array2 = CepheiController.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
         let reversed2 = Array(array2.reversed())
         for item in reversed2 {
             self.dictionary.append(CulpritObject(bundleid: (item["culrpit"] as? String ?? "Discharge Increase").replacingOccurrences(of: "\t", with: ""),
                                                  date: item["time"] as? Date ?? Date()))
         }
     
-        if (!Dra1nController.shared.privacyPolicy || Dra1nApiParser.shared.database.count == 0) {
+        if (!Dra1nController.privacyPolicy || Dra1nApiParser.shared.database.count == 0) {
             for tweak in self.dictionary {
                 self.shownDictionary.append(DatabaseObject(badImage: true, Bundleid: "Discharge Increase", flag: 1, hide: true, time: tweak.date ?? Date()))
             }
@@ -152,7 +152,7 @@ class AnalyseViewController: UIViewController {
 
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("clear", comment: ""))", style: .destructive, handler: { action in
             let blankDict = [[String : Any]]()
-            CepheiController.shared.set(key: "CulpritLog", object: blankDict)
+            CepheiController.set(key: "CulpritLog", object: blankDict)
             
             _ = self.organiseTheData()
             self.tableView.reloadData()
@@ -222,9 +222,8 @@ extension AnalyseViewController: UITableViewDataSource {
         
         let dateFormatter = DateFormatter()
         dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = Dra1nController.dayMonthFormat ? "HH:mm / MM-dd-yyyy" : "HH:mm / dd-MM-yyyy"
         
-        if Dra1nController.shared.dayMonthFormat { dateFormatter.dateFormat = "HH:mm / MM-dd-yyyy" } else { dateFormatter.dateFormat = "HH:mm / dd-MM-yyyy" }
- 
         let cell = tableView.dequeueReusableCell(withIdentifier: "culpritCell", for: indexPath) as! culpritCell
         let firstFont = UIFont.systemFont(ofSize: 14)
         let firstAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: firstFont]

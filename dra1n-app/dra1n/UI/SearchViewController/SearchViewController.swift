@@ -12,8 +12,8 @@ class SearchViewController: UIViewController {
     var shownTweaks = [DatabaseObject]()
 
     @objc func colourControl() {
-        self.view.backgroundColor = customBackground
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : textColour]
+        self.view.backgroundColor = .dra1nBackground
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.dra1nLabel]
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -54,7 +54,7 @@ class SearchViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "culpritCell", bundle: nil), forCellReuseIdentifier: "culpritCell")
         
-        self.view.backgroundColor = customBackground
+        self.view.backgroundColor = .dra1nBackground
         self.colourControl()
         
         NotificationCenter.default.addObserver(self, selector: #selector(colourControl), name: NSNotification.Name(rawValue: "OledModeChange"), object: nil)
@@ -79,7 +79,7 @@ class SearchViewController: UIViewController {
         
         let searchText = self.searchBar.text ?? ""
         
-        if !Dra1nController.shared.privacyPolicy {
+        if !Dra1nController.privacyPolicy {
             let le = DatabaseObject(image: UIImage(named: "tweakIcon"), goodImage: true, badImage: false, Bundleid: "Privacy Policy Disabled", flag: 0, warns: 0, ratio: 0)
             shownTweaks.append(le)
         } else {
@@ -148,9 +148,9 @@ extension SearchViewController : UITableViewDataSource {
         cell.index = indexPath.row
         
         let firstFont = UIFont.systemFont(ofSize: 14)
-        let firstAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColour, NSAttributedString.Key.font: firstFont]
+        let firstAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.dra1nLabel, NSAttributedString.Key.font: firstFont]
         let secondFont = UIFont.systemFont(ofSize: 11)
-        let secondAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColour, NSAttributedString.Key.font: secondFont]
+        let secondAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.dra1nLabel, NSAttributedString.Key.font: secondFont]
         
         let firstString = NSMutableAttributedString(string: "\(cell.le?.Bundleid ?? "Error")\n", attributes: firstAttributes)
         

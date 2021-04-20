@@ -19,10 +19,10 @@ class infoViewController: UIViewController {
     ]
     
     @objc func colourControl() {
-        self.view.backgroundColor = customBackground
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : textColour]
+        self.view.backgroundColor = .dra1nBackground
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.dra1nLabel]
         self.navigationController?.navigationBar.tintColor = .systemBlue
-        self.navigationController?.navigationBar.barTintColor = customGray5
+        self.navigationController?.navigationBar.barTintColor = .secondaryBackground
         self.tableView.reloadData()
     }
   

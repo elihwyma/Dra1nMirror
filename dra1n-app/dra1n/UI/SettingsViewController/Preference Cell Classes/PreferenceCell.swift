@@ -26,12 +26,12 @@ class PreferenceCell: UITableViewCell {
     @objc func colourControl() {
         if #available(iOS 13.0, *) {
             if traitCollection.userInterfaceStyle == .dark {
-                self.backgroundColor = customGray5
+                self.backgroundColor = .secondaryBackground
             } else {
-                self.backgroundColor = customBackground
+                self.backgroundColor = .dra1nBackground
             }
         } else {
-            self.backgroundColor = customBackground
+            self.backgroundColor = .dra1nBackground
         }
     }
 }

@@ -24,7 +24,7 @@ class PreferenceSwitch: UISwitch {
     
     @objc func switchChanged() {
         if !prefsName.isEmpty {
-            CepheiController.shared.set(key: prefsName, object: self.isOn)
+            CepheiController.set(key: prefsName, object: self.isOn)
         }
         
         if !notificationName.isEmpty {

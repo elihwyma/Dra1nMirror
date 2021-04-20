@@ -57,6 +57,6 @@ class MainCell: UITableViewCell {
  
     func allTheAdjustments() {
         descriptionText.sizeToFit()
-        self.backgroundColor = customGray5
+        self.backgroundColor = .secondaryBackground
     }
 }

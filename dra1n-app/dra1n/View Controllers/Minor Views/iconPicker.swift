@@ -46,9 +46,9 @@ class iconPicker: UIViewController {
     }
     
     @objc func colourControl() {
-        self.view.backgroundColor = customBackground
+        self.view.backgroundColor = .dra1nBackground
         self.navigationController?.navigationBar.tintColor = .systemBlue
-        self.navigationController?.navigationBar.barTintColor = customGray5
+        self.navigationController?.navigationBar.barTintColor = .secondaryBackground
         self.tableView.reloadData()
     }
 }

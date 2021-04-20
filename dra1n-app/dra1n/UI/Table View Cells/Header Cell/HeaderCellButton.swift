@@ -23,8 +23,8 @@ class HeaderCellButton: UIButton {
     }
     
     @objc func colourAwareness() {
-        self.setTitleColor(textColour, for: .normal)
-        self.backgroundColor = customGray5
+        self.setTitleColor(.dra1nLabel, for: .normal)
+        self.backgroundColor = .secondaryBackground
     }
 
 }

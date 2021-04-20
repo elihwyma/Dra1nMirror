@@ -148,14 +148,14 @@ open class drainGraphView: MacawView {
     }
     
     func organiseTheData() -> Bool {
-        var array = CepheiController.shared.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
+        var array = CepheiController.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
         
         barsValues = [Int]()
         barsCaptions = [String]()
     
         if ((array.count == 0)) { return false }
         
-        var barCountCase = CepheiController.shared.getInt(key: "BarCount")
+        var barCountCase = CepheiController.getInt(key: "BarCount")
         if barCountCase == 0 {
             barCountCase = 5
         }
@@ -189,9 +189,8 @@ open class drainGraphView: MacawView {
         
         let data2 = DateFormatter()
         data2.locale = NSLocale.current
-        
-        if Dra1nController.shared.dayMonthFormat { data2.dateFormat = "MM/dd" } else { data2.dateFormat = "dd/MM" }
-        
+        data2.dateFormat = Dra1nController.dayMonthFormat ? "MM/dd" : "dd/MM"
+
         for item in array {
             let dict = item
             let drain = dict["drain"] as? Int ?? 0
