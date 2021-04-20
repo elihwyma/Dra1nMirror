@@ -72,7 +72,7 @@ class Dra1nApiParser {
     
     class func meta() {
         //self.postCulprits()
-        //self.preCulpriting()
+        preCulpriting()
         tweakListPosting()
     }
     

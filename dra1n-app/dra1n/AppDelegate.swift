@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.applicationIconBadgeNumber = 0
         CepheiController.set(key: "TimeLastOpened", object: NSDate())
-        
+        Dra1nApiParser.meta()
         
         return true
     }
