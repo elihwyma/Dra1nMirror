@@ -31,7 +31,6 @@ class MainCell: UITableViewCell {
     
     var icon = "" {
         didSet {
-            NSLog("Setting \(icon)")
             if #available(iOS 13.0, *) {
                 iconImageView.image = UIImage(systemName: icon)
             } else {

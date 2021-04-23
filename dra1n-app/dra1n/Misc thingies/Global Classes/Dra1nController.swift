@@ -5,7 +5,7 @@
 //  Created by Amy While on 09/09/2020.
 //
 
-#if !jailed
+#if !jailed || targetEnvironment(simulator)
 import IOKit
 #endif
 import Foundation

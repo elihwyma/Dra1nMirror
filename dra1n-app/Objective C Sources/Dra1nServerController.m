@@ -7,6 +7,7 @@
 
 #import "Dra1nServerController.h"
 #ifdef jailed
+#elif TARGET_OS_SIMULATOR
 #else
 #import <IOKit/IOKitLib.h>
 #endif
@@ -15,6 +16,9 @@
 -(NSDictionary *)batteryData {
     
 #ifdef jailed
+    NSDictionary *arrayOfItems = @{ @"dischargeCurrent" : [NSNumber numberWithInt: 500], @"cycles" : [NSNumber numberWithInt: 500], @"designCapacity" : [NSNumber numberWithInt: 500], @"maxCapacity" : [NSNumber numberWithInt: 500], @"currentCapacity" : [NSNumber numberWithInt: 500], @"temperature" : [NSNumber numberWithInt: 500], @"voltage" : [NSNumber numberWithInt: 500]};
+        return arrayOfItems;
+#elif TARGET_OS_SIMULATOR
     NSDictionary *arrayOfItems = @{ @"dischargeCurrent" : [NSNumber numberWithInt: 500], @"cycles" : [NSNumber numberWithInt: 500], @"designCapacity" : [NSNumber numberWithInt: 500], @"maxCapacity" : [NSNumber numberWithInt: 500], @"currentCapacity" : [NSNumber numberWithInt: 500], @"temperature" : [NSNumber numberWithInt: 500], @"voltage" : [NSNumber numberWithInt: 500]};
         return arrayOfItems;
 #else

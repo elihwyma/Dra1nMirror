@@ -15,11 +15,9 @@ class PreferenceSwitch: UISwitch {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
-        #if !jailed
         if !prefsName.isEmpty {
             self.isOn = Dra1nDefaults.def.object(forKey: prefsName) as? Bool ?? self.isOn
         }
-        #endif
     }
     
     @objc func switchChanged() {

@@ -210,13 +210,50 @@
 		E153A218261E14F700A155FD /* Rainbow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E624D9F1D500295AD4 /* Rainbow@2x.png */; };
 		E153A219261E14F700A155FD /* Dra1nPurple~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205DF24D9F1D500295AD4 /* Dra1nPurple~ipad@2x.png */; };
 		E153A21A261E14F700A155FD /* RainbowForeground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205D024D9F1D500295AD4 /* RainbowForeground@3x.png */; };
+		E1B69AC326335CEE009E917B /* Dra1nServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */; };
+		E1B69ACE26335E97009E917B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B4484824FF22BF0066D2B8 /* IOKit.framework */; };
 		E1DDA623262F323600E889A5 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */; };
 		E1DDA624262F323600E889A5 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */; };
 		E1DDA625262F323600E889A5 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */; };
+		E1DDA653263356EA00E889A5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DDA652263356EA00E889A5 /* WidgetKit.framework */; };
+		E1DDA655263356EA00E889A5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DDA654263356EA00E889A5 /* SwiftUI.framework */; };
+		E1DDA658263356EA00E889A5 /* Dra1n_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA657263356EA00E889A5 /* Dra1n_Widget.swift */; };
+		E1DDA65A263356EE00E889A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DDA659263356EE00E889A5 /* Assets.xcassets */; };
+		E1DDA65E263356EE00E889A5 /* Dra1n-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E1DDA651263356EA00E889A5 /* Dra1n-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E1DDA6662633570100E889A5 /* Dra1n-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E1DDA651263356EA00E889A5 /* Dra1n-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E1DDA66A2633570D00E889A5 /* Dra1n-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E1DDA651263356EA00E889A5 /* Dra1n-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E1DDA66F2633579700E889A5 /* StatWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA66E2633579700E889A5 /* StatWidget.swift */; };
+		E1DDA673263357B100E889A5 /* Dra1nDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* Dra1nDefaults.swift */; };
+		E1DDA677263357B500E889A5 /* GlobalResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DF34A324DAF3BB005D88ED /* GlobalResources.swift */; };
+		E1DDA67B263357BA00E889A5 /* Dra1nController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53823D30250948D700275D52 /* Dra1nController.swift */; };
 		E1F39D8D261E114100DC3068 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = E1F39D8C261E114100DC3068 /* Macaw */; };
 		E1F39D90261E117300DC3068 /* SwiftyMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = E1F39D8F261E117300DC3068 /* SwiftyMarkdown */; };
 		E1F39D9B261E12E600DC3068 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B4484824FF22BF0066D2B8 /* IOKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1DDA65C263356EE00E889A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 531DF10B24B9DA6100317E92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DDA650263356EA00E889A5;
+			remoteInfo = "Dra1n-WidgetExtension";
+		};
+		E1DDA6672633570100E889A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 531DF10B24B9DA6100317E92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DDA650263356EA00E889A5;
+			remoteInfo = "Dra1n-WidgetExtension";
+		};
+		E1DDA66B2633570D00E889A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 531DF10B24B9DA6100317E92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DDA650263356EA00E889A5;
+			remoteInfo = "Dra1n-WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		536787BF24FED2850034F4A7 /* Embed Libraries */ = {
@@ -227,6 +264,39 @@
 			files = (
 			);
 			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DDA662263356EE00E889A5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E1DDA65E263356EE00E889A5 /* Dra1n-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DDA6692633570100E889A5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E1DDA6662633570100E889A5 /* Dra1n-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DDA66D2633570D00E889A5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E1DDA66A2633570D00E889A5 /* Dra1n-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -284,7 +354,6 @@
 		5378948424E6EA69001B835B /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
 		5378A51324E4478300DE2D1D /* licensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = licensesViewController.swift; sourceTree = "<group>"; };
 		537D903824C23F7A006A2157 /* AnalyseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyseViewController.swift; sourceTree = "<group>"; };
-		53823D2F2509488500275D52 /* NSTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSTask.h; path = ../../../libdra1n/NSTask.h; sourceTree = "<group>"; };
 		53823D30250948D700275D52 /* Dra1nController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1nController.swift; sourceTree = "<group>"; };
 		5383134B24F41D8D00697673 /* Dra1nApiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1nApiParser.swift; sourceTree = "<group>"; };
 		53889B5A24C3851400CA8F56 /* Dra1nGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1nGraphView.swift; sourceTree = "<group>"; };
@@ -309,8 +378,16 @@
 		53FBF26224E5C76900C47C92 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OnBoardingKit.framework; path = System/Library/Frameworks/OnBoardingKit.framework; sourceTree = SDKROOT; };
 		E153A21E261E14F700A155FD /* Jailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1B69AC726335D32009E917B /* NSTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTask.h; sourceTree = "<group>"; };
 		E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmyNetworkResolver.swift; sourceTree = "<group>"; };
 		E1DDA6422633464500E889A5 /* Jailed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jailed.entitlements; sourceTree = "<group>"; };
+		E1DDA651263356EA00E889A5 /* Dra1n-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dra1n-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1DDA652263356EA00E889A5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E1DDA654263356EA00E889A5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E1DDA657263356EA00E889A5 /* Dra1n_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1n_Widget.swift; sourceTree = "<group>"; };
+		E1DDA659263356EE00E889A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1DDA65B263356EE00E889A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1DDA66E2633579700E889A5 /* StatWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatWidget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +423,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1DDA64E263356EA00E889A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DDA655263356EA00E889A5 /* SwiftUI.framework in Frameworks */,
+				E1DDA653263356EA00E889A5 /* WidgetKit.framework in Frameworks */,
+				E1B69ACE26335E97009E917B /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -362,7 +449,9 @@
 			isa = PBXGroup;
 			children = (
 				E1DDA6422633464500E889A5 /* Jailed.entitlements */,
+				53439E0524BDC76A00C3E723 /* Objective C Sources */,
 				531DF11524B9DA6100317E92 /* dra1n */,
+				E1DDA656263356EA00E889A5 /* Dra1n-Widget */,
 				531DF11424B9DA6100317E92 /* Products */,
 				53439E0624BDC79100C3E723 /* Frameworks */,
 			);
@@ -374,6 +463,7 @@
 				531DF11324B9DA6100317E92 /* dra1n.app */,
 				536787C324FED2850034F4A7 /* Staff.app */,
 				E153A21E261E14F700A155FD /* Jailed.app */,
+				E1DDA651263356EA00E889A5 /* Dra1n-WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,7 +473,6 @@
 			children = (
 				E10D42A726276D8B00D422FA /* UI */,
 				53B7A88524D891F200B897EA /* Assets */,
-				53439E0524BDC76A00C3E723 /* Objective C Sources */,
 				5355278124B9F4710052C9D4 /* Misc thingies */,
 				5355277E24B9EDAB0052C9D4 /* View Controllers */,
 				531DF11624B9DA6100317E92 /* AppDelegate.swift */,
@@ -429,9 +518,9 @@
 		53439E0524BDC76A00C3E723 /* Objective C Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E1B69AC726335D32009E917B /* NSTask.h */,
 				53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */,
 				53439E0F24BDC7D100C3E723 /* Dra1nServerController.h */,
-				53823D2F2509488500275D52 /* NSTask.h */,
 				53439E0C24BDC7C000C3E723 /* Dra1n-Bridging-Header.h */,
 			);
 			path = "Objective C Sources";
@@ -442,6 +531,8 @@
 			children = (
 				E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */,
 				53B4484824FF22BF0066D2B8 /* IOKit.framework */,
+				E1DDA652263356EA00E889A5 /* WidgetKit.framework */,
+				E1DDA654263356EA00E889A5 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -704,6 +795,17 @@
 			path = PrivacyViewController;
 			sourceTree = "<group>";
 		};
+		E1DDA656263356EA00E889A5 /* Dra1n-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				E1DDA657263356EA00E889A5 /* Dra1n_Widget.swift */,
+				E1DDA66E2633579700E889A5 /* StatWidget.swift */,
+				E1DDA659263356EE00E889A5 /* Assets.xcassets */,
+				E1DDA65B263356EE00E889A5 /* Info.plist */,
+			);
+			path = "Dra1n-Widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -714,10 +816,12 @@
 				531DF10F24B9DA6100317E92 /* Sources */,
 				531DF11024B9DA6100317E92 /* Frameworks */,
 				531DF11124B9DA6100317E92 /* Resources */,
+				E1DDA662263356EE00E889A5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E1DDA65D263356EE00E889A5 /* PBXTargetDependency */,
 			);
 			name = dra1n;
 			packageProductDependencies = (
@@ -736,10 +840,12 @@
 				5367879624FED2850034F4A7 /* Frameworks */,
 				5367879B24FED2850034F4A7 /* Resources */,
 				536787BF24FED2850034F4A7 /* Embed Libraries */,
+				E1DDA66D2633570D00E889A5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E1DDA66C2633570D00E889A5 /* PBXTargetDependency */,
 			);
 			name = "dra1n-staff";
 			packageProductDependencies = (
@@ -757,10 +863,12 @@
 				E153A1D2261E14F700A155FD /* Sources */,
 				E153A1F2261E14F700A155FD /* Frameworks */,
 				E153A1F8261E14F700A155FD /* Resources */,
+				E1DDA6692633570100E889A5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E1DDA6682633570100E889A5 /* PBXTargetDependency */,
 			);
 			name = Jailed;
 			packageProductDependencies = (
@@ -771,18 +879,38 @@
 			productReference = E153A21E261E14F700A155FD /* Jailed.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E1DDA650263356EA00E889A5 /* Dra1n-WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1DDA65F263356EE00E889A5 /* Build configuration list for PBXNativeTarget "Dra1n-WidgetExtension" */;
+			buildPhases = (
+				E1DDA64D263356EA00E889A5 /* Sources */,
+				E1DDA64E263356EA00E889A5 /* Frameworks */,
+				E1DDA64F263356EA00E889A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dra1n-WidgetExtension";
+			productName = "Dra1n-WidgetExtension";
+			productReference = E1DDA651263356EA00E889A5 /* Dra1n-WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		531DF10B24B9DA6100317E92 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					531DF11224B9DA6100317E92 = {
 						CreatedOnToolsVersion = 12.0;
 						LastSwiftMigration = 1200;
+					};
+					E1DDA650263356EA00E889A5 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -807,6 +935,7 @@
 				531DF11224B9DA6100317E92 /* dra1n */,
 				5367877D24FED2850034F4A7 /* dra1n-staff */,
 				E153A1CD261E14F700A155FD /* Jailed */,
+				E1DDA650263356EA00E889A5 /* Dra1n-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -926,6 +1055,14 @@
 				E153A218261E14F700A155FD /* Rainbow@2x.png in Resources */,
 				E153A219261E14F700A155FD /* Dra1nPurple~ipad@2x.png in Resources */,
 				E153A21A261E14F700A155FD /* RainbowForeground@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DDA64F263356EA00E889A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DDA65A263356EE00E889A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1055,7 +1192,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1DDA64D263356EA00E889A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DDA677263357B500E889A5 /* GlobalResources.swift in Sources */,
+				E1B69AC326335CEE009E917B /* Dra1nServerController.m in Sources */,
+				E1DDA66F2633579700E889A5 /* StatWidget.swift in Sources */,
+				E1DDA658263356EA00E889A5 /* Dra1n_Widget.swift in Sources */,
+				E1DDA67B263357BA00E889A5 /* Dra1nController.swift in Sources */,
+				E1DDA673263357B100E889A5 /* Dra1nDefaults.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1DDA65D263356EE00E889A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DDA650263356EA00E889A5 /* Dra1n-WidgetExtension */;
+			targetProxy = E1DDA65C263356EE00E889A5 /* PBXContainerItemProxy */;
+		};
+		E1DDA6682633570100E889A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DDA650263356EA00E889A5 /* Dra1n-WidgetExtension */;
+			targetProxy = E1DDA6672633570100E889A5 /* PBXContainerItemProxy */;
+		};
+		E1DDA66C2633570D00E889A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DDA650263356EA00E889A5 /* Dra1n-WidgetExtension */;
+			targetProxy = E1DDA66B2633570D00E889A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		531DF11C24B9DA6200317E92 /* Main.storyboard */ = {
@@ -1209,6 +1377,7 @@
 		531DF12824B9DA7100317E92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -1249,7 +1418,7 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
 				STRIP_SWIFT_SYMBOLS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1259,6 +1428,7 @@
 		531DF12924B9DA7100317E92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -1298,7 +1468,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1367,7 +1537,7 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
 				STRIP_SWIFT_SYMBOLS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1435,7 +1605,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-staff";
 				PRODUCT_NAME = Staff;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1457,14 +1627,7 @@
 				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(THEOS_LIBRARY_PATH)",
-					"$(THEOS_VENDOR_LIBRARY_PATH)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"jailed=1",
@@ -1487,12 +1650,12 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D jailed";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix-jailed";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
 				STRIP_SWIFT_SYMBOLS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1513,16 +1676,7 @@
 				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-					"$(THEOS_LIBRARY_PATH)",
-					"$(THEOS_VENDOR_LIBRARY_PATH)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/dra1n/Objective\\ C\\ Sources",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = "jailed=1";
 				INFOPLIST_FILE = dra1n/Info.plist;
@@ -1541,10 +1695,56 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D jailed";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix-jailed";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E1DDA660263356EE00E889A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				INFOPLIST_FILE = "Dra1n-Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix.Dra1n-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective C Sources/Dra1n-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1DDA661263356EE00E889A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				INFOPLIST_FILE = "Dra1n-Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix.Dra1n-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1585,6 +1785,15 @@
 			buildConfigurations = (
 				E153A21C261E14F700A155FD /* Debug */,
 				E153A21D261E14F700A155FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1DDA65F263356EE00E889A5 /* Build configuration list for PBXNativeTarget "Dra1n-WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1DDA660263356EE00E889A5 /* Debug */,
+				E1DDA661263356EE00E889A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
