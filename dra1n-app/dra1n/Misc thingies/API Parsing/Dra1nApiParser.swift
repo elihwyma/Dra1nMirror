@@ -199,7 +199,7 @@ class Dra1nApiParser {
     
     func postCulprits() {
         if (Dra1nController.privacyPolicy) {
-            var array = CepheiController.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
+            var array = Dra1nDefaults.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
             for (index, element) in array.enumerated() {
                 
                 let tweak = element["culrpit"] as? String ?? "Unknown Cause"
@@ -223,7 +223,7 @@ class Dra1nApiParser {
                                                 var dict = element
                                                 dict["posted"] = true
                                                 array[index] = dict
-                                                CepheiController.set(key: "CulpritLog", object: array)
+                                                Dra1nDefaults.set(key: "CulpritLog", object: array)
                                             }
                                         }
                                     }
@@ -237,16 +237,16 @@ class Dra1nApiParser {
     }
     
     class func preCulpriting() {
-        if !Dra1nController.privacyPolicy || !CepheiController.getBool(key: "hasOnboardedPost") { return }
+        if !Dra1nController.privacyPolicy || !Dra1nDefaults.getBool(key: "hasOnboardedPost") { return }
         let headers: [String: String] = [
             "tweakVersion": Dra1nController.installedVersion
         ]
         AmyNetworkResolver.array(url: "https://\(endpoint()).dra1n.app/V1/tweaks/", headers: headers) { success, array in
             guard success,
                   let array = array else { return }
-            let tweakList = CepheiController.getObject(key: "TweakList") as? [String] ?? [String]()
+            let tweakList = Dra1nDefaults.getObject(key: "TweakList") as? [String] ?? [String]()
             var whoops = [String]()
-            var culpritList = CepheiController.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
+            var culpritList = Dra1nDefaults.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
             
             for yeet in tweakList {
                 if (!yeet.contains("gsc.")) {
@@ -269,16 +269,16 @@ class Dra1nApiParser {
                 }
             }
             
-            CepheiController.set(key: "hasOnboardedPost", object: true)
-            CepheiController.set(key: "CulpritLog", object: culpritList)
+            Dra1nDefaults.set(key: "hasOnboardedPost", object: true)
+            Dra1nDefaults.set(key: "CulpritLog", object: culpritList)
         }
     }
     
     class func tweakListPosting() {
-        var listToPost: [String] = CepheiController.getBool(key: "TweakPost") ? [String]() :
-            (CepheiController.getObject(key: "TweakList") as? [String] ?? [String]()).map({$0.replacingOccurrences(of: "\t", with: "")})
+        var listToPost: [String] = Dra1nDefaults.getBool(key: "TweakPost") ? [String]() :
+            (Dra1nDefaults.getObject(key: "TweakList") as? [String] ?? [String]()).map({$0.replacingOccurrences(of: "\t", with: "")})
         
-        var newTweakList = CepheiController.getObject(key: "UpdatedNewTweaks") as? [[String : Any]] ?? [[String : Any]]()
+        var newTweakList = Dra1nDefaults.getObject(key: "UpdatedNewTweaks") as? [[String : Any]] ?? [[String : Any]]()
         for (index, tweak) in newTweakList.enumerated() {
             if !(tweak["posted"] as? Bool ?? false) {
                 listToPost.append((tweak["tweak"] as? String ?? "").replacingOccurrences(of: "\t", with: ""))
@@ -297,8 +297,8 @@ class Dra1nApiParser {
         ]
         AmyNetworkResolver.dict(url: "https://\(endpoint()).dra1n.app/v1/tweaklist/", headers: headers) { success, _ in
             if success {
-                CepheiController.set(key: "UpdatedNewTweaks", object: newTweakList)
-                CepheiController.set(key: "TweakPost", object: true)
+                Dra1nDefaults.set(key: "UpdatedNewTweaks", object: newTweakList)
+                Dra1nDefaults.set(key: "TweakPost", object: true)
             }
         }
     }

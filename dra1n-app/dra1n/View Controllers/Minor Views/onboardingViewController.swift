@@ -34,7 +34,7 @@ class onboardingViewController: UIViewController {
             swiftyOnboard.dataSource = self
             swiftyOnboard.delegate = self
         
-            CepheiController.shared.set(key: "onboarding", object: true)
+            Dra1nDefaults.shared.set(key: "onboarding", object: true)
         }
         
         override var preferredStatusBarStyle: UIStatusBarStyle {

@@ -17,14 +17,14 @@ class PreferenceSwitch: UISwitch {
         self.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
         #if !jailed
         if !prefsName.isEmpty {
-            self.isOn = CepheiController.shared.def.bool(forKey: prefsName, default: self.isOn)
+            self.isOn = Dra1nDefaults.def.object(forKey: prefsName) as? Bool ?? self.isOn
         }
         #endif
     }
     
     @objc func switchChanged() {
         if !prefsName.isEmpty {
-            CepheiController.set(key: prefsName, object: self.isOn)
+            Dra1nDefaults.set(key: prefsName, object: self.isOn)
         }
         
         if !notificationName.isEmpty {

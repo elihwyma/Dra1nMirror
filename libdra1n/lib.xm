@@ -1,6 +1,6 @@
 #import "header.h"
 
-HBPreferences *def;
+NSUserDefaults *def;
 NSString* bundleIdentifier;
 
 @interface CPNotification : NSObject
@@ -37,7 +37,7 @@ NSString* bundleIdentifier;
 
 -(void)checkDefaults {
 
-  def = [[HBPreferences alloc] initWithIdentifier :@"com.megadev.dra1n"];
+  def = [[NSUserDefaults alloc] initWithSuiteName: @"com.megadev.dra1n"];
   if(![def objectForKey: @"increaseSinceLastCheck"]) { [def setBool: NO  forKey: @"increaseSinceLastCheck"]; }
   if(![def objectForKey: @"DailyReport"]) { [def setBool: YES  forKey: @"DailyReport"]; }
 
@@ -58,7 +58,7 @@ NSString* bundleIdentifier;
 
 -(void)Dra1nRecord{
 
- def = [[HBPreferences alloc] initWithIdentifier :@"com.megadev.dra1n"];
+ def = [[NSUserDefaults alloc] initWithSuiteName: @"com.megadev.dra1n"];
 
 	io_service_t powerSource = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching("IOPMPowerSource"));
 
@@ -450,12 +450,10 @@ NSString* bundleIdentifier;
 
 
 @try{
- def = [[HBPreferences alloc] initWithIdentifier :@"com.megadev.dra1n"];
+ def = [[NSUserDefaults alloc] initWithSuiteName: @"com.megadev.dra1n"];
 
 NSMutableArray *oldNewTweakList = [[def objectForKey:@"NewTweaks"] mutableCopy];
 NSMutableArray *newNewTweakList = [[def objectForKey:@"UpdatedNewTweaks"] mutableCopy];
-
-NSLog(@"[Dra1n] this is running uuw, %@, %@", oldNewTweakList, newNewTweakList);
 
 for (int i = 0; i<[oldNewTweakList count]; i++) {
   NSDictionary *uwu = @{@"tweak": [oldNewTweakList objectAtIndex:i]};

@@ -31,8 +31,8 @@
 		531E5DE1250ABF78007B4D54 /* ColourAwareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DDE250ABF78007B4D54 /* ColourAwareButton.swift */; };
 		53205BE7250804CF00A571B7 /* PreferenceSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BE6250804CF00A571B7 /* PreferenceSwitch.swift */; };
 		53205BE9250804CF00A571B7 /* PreferenceSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BE6250804CF00A571B7 /* PreferenceSwitch.swift */; };
-		53205BEB2508088600A571B7 /* CepheiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* CepheiController.swift */; };
-		53205BED2508088600A571B7 /* CepheiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* CepheiController.swift */; };
+		53205BEB2508088600A571B7 /* Dra1nDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* Dra1nDefaults.swift */; };
+		53205BED2508088600A571B7 /* Dra1nDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* Dra1nDefaults.swift */; };
 		53240DD724D4E4620098DBDE /* iconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53240DD624D4E4620098DBDE /* iconPicker.swift */; };
 		53439E0E24BDC7C100C3E723 /* Dra1nServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */; };
 		5350857124D8BA6600E45F8B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5350857424D8BA6600E45F8B /* Localizable.strings */; };
@@ -148,7 +148,7 @@
 		E153A1D3261E14F700A155FD /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FBF26224E5C76900C47C92 /* ThemeManager.swift */; };
 		E153A1D4261E14F700A155FD /* appIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3D24E728220055E11E /* appIconCell.swift */; };
 		E153A1D5261E14F700A155FD /* PreferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648A9250EB45F00DFC41D /* PreferenceCell.swift */; };
-		E153A1D6261E14F700A155FD /* CepheiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* CepheiController.swift */; };
+		E153A1D6261E14F700A155FD /* Dra1nDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53205BEA2508088600A571B7 /* Dra1nDefaults.swift */; };
 		E153A1D7261E14F700A155FD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EEE36B24DCB44900402784 /* SearchViewController.swift */; };
 		E153A1D8261E14F700A155FD /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EBDCAB24CB6FBA00E6E981 /* PrivacyViewController.swift */; };
 		E153A1D9261E14F700A155FD /* culpritCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5D0DB24E71DFA00AE6878 /* culpritCell.swift */; };
@@ -248,7 +248,7 @@
 		531E5DDA250ABCFD007B4D54 /* ColourAwareLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourAwareLabel.swift; sourceTree = "<group>"; };
 		531E5DDE250ABF78007B4D54 /* ColourAwareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourAwareButton.swift; sourceTree = "<group>"; };
 		53205BE6250804CF00A571B7 /* PreferenceSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceSwitch.swift; sourceTree = "<group>"; };
-		53205BEA2508088600A571B7 /* CepheiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CepheiController.swift; sourceTree = "<group>"; };
+		53205BEA2508088600A571B7 /* Dra1nDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1nDefaults.swift; sourceTree = "<group>"; };
 		53240DD624D4E4620098DBDE /* iconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconPicker.swift; sourceTree = "<group>"; };
 		53439E0C24BDC7C000C3E723 /* Dra1n-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dra1n-Bridging-Header.h"; sourceTree = "<group>"; };
 		53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dra1nServerController.m; sourceTree = "<group>"; };
@@ -310,6 +310,7 @@
 		E10111BA261E090E00DB4DB8 /* OnBoardingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OnBoardingKit.framework; path = System/Library/Frameworks/OnBoardingKit.framework; sourceTree = SDKROOT; };
 		E153A21E261E14F700A155FD /* Jailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmyNetworkResolver.swift; sourceTree = "<group>"; };
+		E1DDA6422633464500E889A5 /* Jailed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jailed.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +361,7 @@
 		531DF10A24B9DA6100317E92 = {
 			isa = PBXGroup;
 			children = (
+				E1DDA6422633464500E889A5 /* Jailed.entitlements */,
 				531DF11524B9DA6100317E92 /* dra1n */,
 				531DF11424B9DA6100317E92 /* Products */,
 				53439E0624BDC79100C3E723 /* Frameworks */,
@@ -630,7 +632,7 @@
 		53C26A4524E72A1F0055E11E /* Global Classes */ = {
 			isa = PBXGroup;
 			children = (
-				53205BEA2508088600A571B7 /* CepheiController.swift */,
+				53205BEA2508088600A571B7 /* Dra1nDefaults.swift */,
 				53DF34A324DAF3BB005D88ED /* GlobalResources.swift */,
 				53FBF26224E5C76900C47C92 /* ThemeManager.swift */,
 				53823D30250948D700275D52 /* Dra1nController.swift */,
@@ -938,7 +940,7 @@
 				53C26A3F24E728220055E11E /* appIconCell.swift in Sources */,
 				245E0EB52624DC5100950FED /* TutCell.swift in Sources */,
 				53F648AA250EB45F00DFC41D /* PreferenceCell.swift in Sources */,
-				53205BEB2508088600A571B7 /* CepheiController.swift in Sources */,
+				53205BEB2508088600A571B7 /* Dra1nDefaults.swift in Sources */,
 				53EEE36C24DCB44900402784 /* SearchViewController.swift in Sources */,
 				53EBDCAC24CB6FBA00E6E981 /* PrivacyViewController.swift in Sources */,
 				53B5D0DD24E71DFA00AE6878 /* culpritCell.swift in Sources */,
@@ -979,7 +981,7 @@
 				5367878124FED2850034F4A7 /* appIconCell.swift in Sources */,
 				245E0EB62624DC5100950FED /* TutCell.swift in Sources */,
 				53F648AC250EB45F00DFC41D /* PreferenceCell.swift in Sources */,
-				53205BED2508088600A571B7 /* CepheiController.swift in Sources */,
+				53205BED2508088600A571B7 /* Dra1nDefaults.swift in Sources */,
 				5367878324FED2850034F4A7 /* SearchViewController.swift in Sources */,
 				5367878424FED2850034F4A7 /* PrivacyViewController.swift in Sources */,
 				5367878524FED2850034F4A7 /* culpritCell.swift in Sources */,
@@ -1020,7 +1022,7 @@
 				E153A1D4261E14F700A155FD /* appIconCell.swift in Sources */,
 				245E0EB72624DC5100950FED /* TutCell.swift in Sources */,
 				E153A1D5261E14F700A155FD /* PreferenceCell.swift in Sources */,
-				E153A1D6261E14F700A155FD /* CepheiController.swift in Sources */,
+				E153A1D6261E14F700A155FD /* Dra1nDefaults.swift in Sources */,
 				E153A1D7261E14F700A155FD /* SearchViewController.swift in Sources */,
 				E153A1D8261E14F700A155FD /* PrivacyViewController.swift in Sources */,
 				E153A1D9261E14F700A155FD /* culpritCell.swift in Sources */,
@@ -1447,11 +1449,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Jailed.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = NO;
-				DEVELOPMENT_TEAM = LZTMLLBH4L;
+				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1484,7 +1487,7 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D jailed";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-jailed";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix-jailed";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
@@ -1502,11 +1505,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Jailed.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DEVELOPMENT_TEAM = LZTMLLBH4L;
+				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1537,7 +1541,7 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D jailed";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-jailed";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amywhile.dra1n-fix-jailed";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "dra1n/Objective C Sources/Dra1n-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";

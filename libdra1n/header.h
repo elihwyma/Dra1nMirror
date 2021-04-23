@@ -4,7 +4,6 @@
 
 #import <Foundation/Foundation.h>
 #import <IOKit/IOKitLib.h>
-#import <Cephei/HBPreferences.h>
 #import <UIKit/UIKit.h>
 
 @interface Dra1nManager : NSObject

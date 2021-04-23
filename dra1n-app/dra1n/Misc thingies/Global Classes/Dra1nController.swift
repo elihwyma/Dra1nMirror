@@ -21,7 +21,7 @@ class Dra1nController {
 
     static var privacyPolicy: Bool {
         return true
-        //return CepheiController.shared.getBool(key: "privacyPolicy")
+        //return Dra1nDefaults.shared.getBool(key: "privacyPolicy")
     }
         
     class func respring() {
@@ -44,7 +44,7 @@ class Dra1nController {
     }
     
     static var dayMonthFormat: Bool {
-        CepheiController.getBool(key: "badDateFormat")
+        Dra1nDefaults.getBool(key: "badDateFormat")
     }
 }
 

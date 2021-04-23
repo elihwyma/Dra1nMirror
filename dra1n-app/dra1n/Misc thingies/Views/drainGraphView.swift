@@ -148,14 +148,14 @@ open class drainGraphView: MacawView {
     }
     
     func organiseTheData() -> Bool {
-        var array = CepheiController.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
+        var array = Dra1nDefaults.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
         
         barsValues = [Int]()
         barsCaptions = [String]()
     
         if ((array.count == 0)) { return false }
         
-        var barCountCase = CepheiController.getInt(key: "BarCount")
+        var barCountCase = Dra1nDefaults.getInt(key: "BarCount")
         if barCountCase == 0 {
             barCountCase = 5
         }

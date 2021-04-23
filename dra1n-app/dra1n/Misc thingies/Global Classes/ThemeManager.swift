@@ -11,7 +11,7 @@ fileprivate class ThemeManager {
     
     static fileprivate var customBackground: UIColor {
         var colour: UIColor!
-        let oledMode = CepheiController.getBool(key: "oledMode")
+        let oledMode = Dra1nDefaults.getBool(key: "oledMode")
         
         if #available(iOS 13, *) { colour = .systemGray6 } else { colour = UIColor(red: 0.11, green: 0.11, blue: 0.12, alpha: 1.00) }
         if (oledMode) { colour = .black }

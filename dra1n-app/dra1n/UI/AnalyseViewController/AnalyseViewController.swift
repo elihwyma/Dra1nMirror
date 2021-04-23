@@ -119,7 +119,7 @@ class AnalyseViewController: UIViewController {
         dictionary.removeAll()
         shownDictionary.removeAll()
         
-        let array2 = CepheiController.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
+        let array2 = Dra1nDefaults.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
         let reversed2 = Array(array2.reversed())
         for item in reversed2 {
             self.dictionary.append(CulpritObject(bundleid: (item["culrpit"] as? String ?? "Discharge Increase").replacingOccurrences(of: "\t", with: ""),
@@ -152,7 +152,7 @@ class AnalyseViewController: UIViewController {
 
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("clear", comment: ""))", style: .destructive, handler: { action in
             let blankDict = [[String : Any]]()
-            CepheiController.set(key: "CulpritLog", object: blankDict)
+            Dra1nDefaults.set(key: "CulpritLog", object: blankDict)
             
             _ = self.organiseTheData()
             self.tableView.reloadData()

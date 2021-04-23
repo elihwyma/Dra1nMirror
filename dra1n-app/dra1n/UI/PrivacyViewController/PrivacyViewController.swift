@@ -36,18 +36,18 @@ class PrivacyViewController: UIViewController {
     
     @IBOutlet weak var decline: UIButton!
     @IBAction func decline(_ sender: Any) {
-        CepheiController.set(key: "privacyPolicy", object: false)
-        CepheiController.set(key: "NewHasAsked", object: true)
-        if !CepheiController.getBool(key: "onboarding") {
+        Dra1nDefaults.set(key: "privacyPolicy", object: false)
+        Dra1nDefaults.set(key: "NewHasAsked", object: true)
+        if !Dra1nDefaults.getBool(key: "onboarding") {
            performSegue(withIdentifier: "showOnboarding", sender: nil)
         } else { self.dismiss(animated: true, completion: nil) }
     }
     
     @IBOutlet weak var accept: UIButton!
     @IBAction func accept(_ sender: Any) {
-        CepheiController.set(key: "privacyPolicy", object: true)
-        CepheiController.set(key: "NewHasAsked", object: true)
-        if !CepheiController.getBool(key: "onboarding") {
+        Dra1nDefaults.set(key: "privacyPolicy", object: true)
+        Dra1nDefaults.set(key: "NewHasAsked", object: true)
+        if !Dra1nDefaults.getBool(key: "onboarding") {
            performSegue(withIdentifier: "showOnboarding", sender: nil)
         } else { self.dismiss(animated: true, completion: nil) }
     }

@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
     }
     
     func pp() {
-        if !(CepheiController.getBool(key: "NewHasAsked")) {
+        if !(Dra1nDefaults.getBool(key: "NewHasAsked")) {
             performSegue(withIdentifier: "showPrivacyPolicy", sender: nil)
         }
     }
@@ -140,7 +140,7 @@ class HomeViewController: UIViewController {
         var discharge = 0
         var set = false
         
-        let array = CepheiController.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
+        let array = Dra1nDefaults.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
         if (array.count == 0) {
             discharge = abs(data.dischargeCurrent)
         } else {
@@ -192,7 +192,7 @@ class HomeViewController: UIViewController {
         }
          
         
-        if CepheiController.getBool(key: "Fahrenheit") {
+        if Dra1nDefaults.getBool(key: "Fahrenheit") {
             let fahrenheit = (roundedCelsius * 9/5) + 32
             tableData[3][4 + offset] = String(format: "%.1f°F", fahrenheit)
         } else {

@@ -45,14 +45,14 @@ class SettingsViewController: UITableViewController {
 
     @IBOutlet weak var licensesButton: UIButton!
     func initStuff() {
-        let averageTimeSliderCase = Float(CepheiController.getInt(key: "averageTimeSlider"))
-        let drainSensitivityCase = Float(CepheiController.getInt(key: "DrainSensitivity"))
-        let barCountCase = Float(CepheiController.getInt(key: "BarCount"))
+        let averageTimeSliderCase = Float(Dra1nDefaults.getInt(key: "averageTimeSlider"))
+        let drainSensitivityCase = Float(Dra1nDefaults.getInt(key: "DrainSensitivity"))
+        let barCountCase = Float(Dra1nDefaults.getInt(key: "BarCount"))
         
         
-        if (averageTimeSliderCase != 0.0) { averageTime.value = averageTimeSliderCase } else { averageTime.value = 4.0; CepheiController.set(key: "AverageTime", object: 21600) }
-        if (drainSensitivityCase != 0.0) { sensitivity.value = drainSensitivityCase } else { sensitivity.value = 125.0; CepheiController.set(key: "DrainSensitivity", object: 125) }
-        if (barCountCase != 0.0) { barCount.value = barCountCase } else { barCount.value = 5; CepheiController.set(key: "BarCount", object: 5) }
+        if (averageTimeSliderCase != 0.0) { averageTime.value = averageTimeSliderCase } else { averageTime.value = 4.0; Dra1nDefaults.set(key: "AverageTime", object: 21600) }
+        if (drainSensitivityCase != 0.0) { sensitivity.value = drainSensitivityCase } else { sensitivity.value = 125.0; Dra1nDefaults.set(key: "DrainSensitivity", object: 125) }
+        if (barCountCase != 0.0) { barCount.value = barCountCase } else { barCount.value = 5; Dra1nDefaults.set(key: "BarCount", object: 5) }
         
     }
     
@@ -73,11 +73,11 @@ class SettingsViewController: UITableViewController {
 
         alert.addAction(UIAlertAction(title: "\(NSLocalizedString("clear", comment: ""))", style: .destructive, handler: { action in
             
-            CepheiController.set(key: "CulpritLog", object: [[String : Any]]())
-            CepheiController.set(key: "DrainAvarageLog", object: [[String : Any]]())
-            CepheiController.set(key: "DrainLog", object: [[String : Any]]())
-            CepheiController.set(key: "UpdatedNewTweaks", object: [[String : Any]]())
-            CepheiController.set(key: "increaseSinceLastCheck", object: false)
+            Dra1nDefaults.set(key: "CulpritLog", object: [[String : Any]]())
+            Dra1nDefaults.set(key: "DrainAvarageLog", object: [[String : Any]]())
+            Dra1nDefaults.set(key: "DrainLog", object: [[String : Any]]())
+            Dra1nDefaults.set(key: "UpdatedNewTweaks", object: [[String : Any]]())
+            Dra1nDefaults.set(key: "increaseSinceLastCheck", object: false)
             
             Dra1nController.respring()
         }))
@@ -93,8 +93,8 @@ class SettingsViewController: UITableViewController {
         averageTime.value = rounded
         setSliderText()
         
-        CepheiController.set(key: "averageTimeSlider", object: Int(averageTime.value))
-        CepheiController.set(key: "AverageTime", object: Int(averageTime.value * 3600))
+        Dra1nDefaults.set(key: "averageTimeSlider", object: Int(averageTime.value))
+        Dra1nDefaults.set(key: "AverageTime", object: Int(averageTime.value * 3600))
     }
     
     @IBOutlet weak var sensitivity: UISlider!
@@ -104,7 +104,7 @@ class SettingsViewController: UITableViewController {
         sensitivity.value = rounded
         setSliderText()
 
-        CepheiController.set(key: "DrainSensitivity", object: Int(sensitivity.value))
+        Dra1nDefaults.set(key: "DrainSensitivity", object: Int(sensitivity.value))
     }
     
 
@@ -116,7 +116,7 @@ class SettingsViewController: UITableViewController {
         barCount.value = rounded
         setSliderText()
 
-        CepheiController.set(key: "BarCount", object: Int(barCount.value))
+        Dra1nDefaults.set(key: "BarCount", object: Int(barCount.value))
         NotificationCenter.default.post(name: .GraphRefresh, object: nil)
     }
         
@@ -139,9 +139,9 @@ class SettingsViewController: UITableViewController {
     
     @IBOutlet weak var exportData: UIButton!
     @IBAction func exportData(_ sender: Any) {
-        let drainAverageLog = CepheiController.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
-        let secondary = CepheiController.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
-        let tweakList = CepheiController.getObject(key: "TweakList") as? [String] ?? [String]()
+        let drainAverageLog = Dra1nDefaults.getObject(key: "DrainAvarageLog") as? [[String : Any]] ?? [[String : Any]]()
+        let secondary = Dra1nDefaults.getObject(key: "CulpritLog") as? [[String : Any]] ?? [[String : Any]]()
+        let tweakList = Dra1nDefaults.getObject(key: "TweakList") as? [String] ?? [String]()
         var fixedTweakList = [String]()
         
         for item in tweakList {
