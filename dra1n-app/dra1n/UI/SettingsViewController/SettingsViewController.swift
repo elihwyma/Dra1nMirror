@@ -32,12 +32,12 @@ class SettingsViewController: UITableViewController {
         
         if #available(iOS 13.0, *) {
             if traitCollection.userInterfaceStyle == .dark {
-                self.tableView.backgroundColor = .secondaryBackground
+                self.tableView.backgroundColor = .dra1nBackground
             } else {
-                self.tableView.backgroundColor = .secondaryBackground
+                self.tableView.backgroundColor = .dra1nBackground
             }
         } else {
-            self.tableView.backgroundColor = .secondaryBackground
+            self.tableView.backgroundColor = .dra1nBackground
         }
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.dra1nLabel]

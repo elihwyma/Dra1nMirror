@@ -23,6 +23,7 @@ class InfotutViewController: UIViewController {
     }
     
     func setup() {
+        self.view.backgroundColor = .dra1nBackground
         
         tableView.backgroundColor = .none
 

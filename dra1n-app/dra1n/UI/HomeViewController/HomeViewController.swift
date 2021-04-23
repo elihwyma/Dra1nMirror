@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
     ]
     
     @objc func colourThings() {
-        self.view.backgroundColor = .secondaryBackground
+        self.view.backgroundColor = .dra1nBackground
         updateText.textColor = .dra1nColor
         blurView.backgroundColor = .secondaryBackground
         
@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //self.pp()
-        
+        /*
         let welcomeController = OBWelcomeController(title: "Fat Ass Title here innit", detailText: "Omg wtf is Dra1n like what the fuck does it actually do", icon: UIImage(named: "Original"), contentLayout: 2)!
         welcomeController.view.tintColor = .dra1nColor
         welcomeController.headerView.imageView.layer.cornerRadius = 15
@@ -62,6 +62,7 @@ class HomeViewController: UIViewController {
         }
         welcomeController._shouldInlineButtontray = true
         self.tabBarController?.present(welcomeController, animated: true, completion: nil)
+            */
     }
     
     override func viewDidLoad() {
@@ -277,7 +278,6 @@ extension HomeViewController : UITableViewDataSource {
         cell.descriptionText.text = tableData[1][indexPath.section]
         cell.specificValue.text = tableData[3][indexPath.section]
         cell.icon = tableData[2][indexPath.section]
-        
         cell.allTheAdjustments()
         return cell
     }

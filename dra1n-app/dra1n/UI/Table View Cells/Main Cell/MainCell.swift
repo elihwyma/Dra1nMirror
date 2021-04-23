@@ -12,41 +12,34 @@ class MainCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        if #available(iOS 13.0, *) {
-            dra1nImageView = UIImageView(image: UIImage(systemName: icon))
-        } else {
-            dra1nImageView = UIImageView(image: UIImage(named: icon)?.withRenderingMode(.alwaysTemplate))
-            dra1nImageView.contentMode = .center
-        }
-        
-        let backgroundCircle = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-        backgroundCircle.center = CGPoint(x: 45, y: 50)
-        backgroundCircle.layer.cornerRadius = 30 // half the width/height
-        backgroundCircle.backgroundColor = UIColor(red: 0.75, green: 0.56, blue: 0.83, alpha: 0.2)
-        
-        dra1nImageView.tintColor = UIColor(red: 0.75, green: 0.56, blue: 0.83, alpha: 1.00)
-
-        dra1nImageView.frame = CGRect(x: 0, y: 0, width: dra1nImageView.frame.size.width * 1.4, height: dra1nImageView.frame.size.height * 1.4)
-        dra1nImageView.center = CGPoint(x: 30, y: 30)
-        self.addSubview(backgroundCircle)
-        backgroundCircle.addSubview(dra1nImageView)
-        
+    
+        imageBackground.layer.cornerRadius = 30 // half the width/height
+        imageBackground.backgroundColor = UIColor(red: 0.75, green: 0.56, blue: 0.83, alpha: 0.2)
+        iconImageView.tintColor = UIColor(red: 0.75, green: 0.56, blue: 0.83, alpha: 1.00)
         title.adjustsFontSizeToFitWidth = true
         specificValue.adjustsFontSizeToFitWidth = true
         descriptionText.adjustsFontSizeToFitWidth = true
-        
-        self.specificValue.textColor = .red
+        self.specificValue.textColor = .systemRed
     }
 
     //All the outlets from the cell
     @IBOutlet weak var title: ColourAwareLabel!
     @IBOutlet weak var specificValue: UILabel!
     @IBOutlet weak var descriptionText: ColourAwareLabel!
-    var dra1nImageView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var imageBackground: UIView!
     
-    //Taken from SO, just to set a minimum size of the cell
-    var icon = ""
+    var icon = "" {
+        didSet {
+            NSLog("Setting \(icon)")
+            if #available(iOS 13.0, *) {
+                iconImageView.image = UIImage(systemName: icon)
+            } else {
+                iconImageView.image = UIImage(named: icon)?.withRenderingMode(.alwaysTemplate)
+                iconImageView.contentMode = .center
+            }
+        }
+    }
     let minHeight: CGFloat! = 100
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {

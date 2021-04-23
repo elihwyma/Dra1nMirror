@@ -32,7 +32,7 @@ class AnalyseViewController: UIViewController {
     var counter = 0
     var shouldRefresh = false
 
-    @IBOutlet weak var drainGraphView: drainGraphView!
+    @IBOutlet weak var drainGraphView: DrainGraphView!
     @IBOutlet weak var tableView: UITableView!
     
     var dictionary = [CulpritObject]()

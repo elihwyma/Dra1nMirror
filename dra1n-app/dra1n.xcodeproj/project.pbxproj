@@ -55,7 +55,7 @@
 		5367879024FED2850034F4A7 /* Dra1nApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5383134B24F41D8D00697673 /* Dra1nApiParser.swift */; };
 		5367879124FED2850034F4A7 /* Dra1nServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */; };
 		5367879224FED2850034F4A7 /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3624E724D90055E11E /* headerCell.swift */; };
-		5367879324FED2850034F4A7 /* drainGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889B5A24C3851400CA8F56 /* drainGraphView.swift */; };
+		5367879324FED2850034F4A7 /* Dra1nGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889B5A24C3851400CA8F56 /* Dra1nGraphView.swift */; };
 		5367879424FED2850034F4A7 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378948324E6EA69001B835B /* MainCell.swift */; };
 		5367879524FED2850034F4A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF11624B9DA6100317E92 /* AppDelegate.swift */; };
 		5367879C24FED2850034F4A7 /* Dra1nPurple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537205E124D9F1D500295AD4 /* Dra1nPurple@3x.png */; };
@@ -120,7 +120,7 @@
 		53823D31250948D800275D52 /* Dra1nController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53823D30250948D700275D52 /* Dra1nController.swift */; };
 		53823D33250948D800275D52 /* Dra1nController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53823D30250948D700275D52 /* Dra1nController.swift */; };
 		5383134C24F41D8D00697673 /* Dra1nApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5383134B24F41D8D00697673 /* Dra1nApiParser.swift */; };
-		53889B5B24C3851400CA8F56 /* drainGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889B5A24C3851400CA8F56 /* drainGraphView.swift */; };
+		53889B5B24C3851400CA8F56 /* Dra1nGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889B5A24C3851400CA8F56 /* Dra1nGraphView.swift */; };
 		53AA1B3D24C8713E00A9B459 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA1B3C24C8713E00A9B459 /* HomeViewController.swift */; };
 		53B5D0DD24E71DFA00AE6878 /* culpritCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5D0DB24E71DFA00AE6878 /* culpritCell.swift */; };
 		53B5D0DF24E71DFA00AE6878 /* culpritCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B5D0DC24E71DFA00AE6878 /* culpritCell.xib */; };
@@ -170,7 +170,7 @@
 		E153A1E9261E14F700A155FD /* Dra1nApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5383134B24F41D8D00697673 /* Dra1nApiParser.swift */; };
 		E153A1EA261E14F700A155FD /* Dra1nServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */; };
 		E153A1EB261E14F700A155FD /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C26A3624E724D90055E11E /* headerCell.swift */; };
-		E153A1EC261E14F700A155FD /* drainGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889B5A24C3851400CA8F56 /* drainGraphView.swift */; };
+		E153A1EC261E14F700A155FD /* Dra1nGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889B5A24C3851400CA8F56 /* Dra1nGraphView.swift */; };
 		E153A1ED261E14F700A155FD /* ColourAwareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531E5DDE250ABF78007B4D54 /* ColourAwareButton.swift */; };
 		E153A1EE261E14F700A155FD /* ColourAwareTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F648A5250E897900DFC41D /* ColourAwareTextView.swift */; };
 		E153A1EF261E14F700A155FD /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378948324E6EA69001B835B /* MainCell.swift */; };
@@ -287,7 +287,7 @@
 		53823D2F2509488500275D52 /* NSTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSTask.h; path = ../../../libdra1n/NSTask.h; sourceTree = "<group>"; };
 		53823D30250948D700275D52 /* Dra1nController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1nController.swift; sourceTree = "<group>"; };
 		5383134B24F41D8D00697673 /* Dra1nApiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1nApiParser.swift; sourceTree = "<group>"; };
-		53889B5A24C3851400CA8F56 /* drainGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drainGraphView.swift; sourceTree = "<group>"; };
+		53889B5A24C3851400CA8F56 /* Dra1nGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1nGraphView.swift; sourceTree = "<group>"; };
 		53AA1B3C24C8713E00A9B459 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		53B4484824FF22BF0066D2B8 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		53B5D0DB24E71DFA00AE6878 /* culpritCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = culpritCell.swift; sourceTree = "<group>"; };
@@ -593,8 +593,6 @@
 		53BA3A1624E72A7D006AE789 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				531E5DE8250CFD0C007B4D54 /* Global Aware Classes */,
-				53889B5A24C3851400CA8F56 /* drainGraphView.swift */,
 				531DF12B24B9E79E00317E92 /* tabViewController.swift */,
 			);
 			path = Views;
@@ -643,6 +641,7 @@
 		E10D42A726276D8B00D422FA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				531E5DE8250CFD0C007B4D54 /* Global Aware Classes */,
 				5378948224E6E9F6001B835B /* Table View Cells */,
 				E190DDA32627713B004A1DAB /* PrivacyViewController */,
 				E190DD9C26277081004A1DAB /* InfotutViewController */,
@@ -673,6 +672,7 @@
 		E190DD9426276E59004A1DAB /* AnalyseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				53889B5A24C3851400CA8F56 /* Dra1nGraphView.swift */,
 				537D903824C23F7A006A2157 /* AnalyseViewController.swift */,
 			);
 			path = AnalyseViewController;
@@ -963,7 +963,7 @@
 				5383134C24F41D8D00697673 /* Dra1nApiParser.swift in Sources */,
 				53439E0E24BDC7C100C3E723 /* Dra1nServerController.m in Sources */,
 				53C26A3824E724D90055E11E /* headerCell.swift in Sources */,
-				53889B5B24C3851400CA8F56 /* drainGraphView.swift in Sources */,
+				53889B5B24C3851400CA8F56 /* Dra1nGraphView.swift in Sources */,
 				531E5DDF250ABF78007B4D54 /* ColourAwareButton.swift in Sources */,
 				53F648A6250E897A00DFC41D /* ColourAwareTextView.swift in Sources */,
 				5378948524E6EA69001B835B /* MainCell.swift in Sources */,
@@ -1004,7 +1004,7 @@
 				5367879024FED2850034F4A7 /* Dra1nApiParser.swift in Sources */,
 				5367879124FED2850034F4A7 /* Dra1nServerController.m in Sources */,
 				5367879224FED2850034F4A7 /* headerCell.swift in Sources */,
-				5367879324FED2850034F4A7 /* drainGraphView.swift in Sources */,
+				5367879324FED2850034F4A7 /* Dra1nGraphView.swift in Sources */,
 				531E5DE1250ABF78007B4D54 /* ColourAwareButton.swift in Sources */,
 				53F648A8250E897A00DFC41D /* ColourAwareTextView.swift in Sources */,
 				5367879424FED2850034F4A7 /* MainCell.swift in Sources */,
@@ -1045,7 +1045,7 @@
 				E153A1E9261E14F700A155FD /* Dra1nApiParser.swift in Sources */,
 				E153A1EA261E14F700A155FD /* Dra1nServerController.m in Sources */,
 				E153A1EB261E14F700A155FD /* headerCell.swift in Sources */,
-				E153A1EC261E14F700A155FD /* drainGraphView.swift in Sources */,
+				E153A1EC261E14F700A155FD /* Dra1nGraphView.swift in Sources */,
 				E153A1ED261E14F700A155FD /* ColourAwareButton.swift in Sources */,
 				E153A1EE261E14F700A155FD /* ColourAwareTextView.swift in Sources */,
 				E153A1EF261E14F700A155FD /* MainCell.swift in Sources */,

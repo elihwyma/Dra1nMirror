@@ -7,7 +7,7 @@
 
 import Macaw
 
-open class drainGraphView: MacawView {
+open class DrainGraphView: MacawView {
     
     
     func setTextColourForMacaw(text: Text) -> Text {

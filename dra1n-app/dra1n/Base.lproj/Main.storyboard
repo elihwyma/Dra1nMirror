@@ -231,7 +231,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="bPz-8p-Mfp" userLabel="dra1nGraphView" customClass="drainGraphView" customModule="Jailed" customModuleProvider="target">
+                            <view autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="bPz-8p-Mfp" userLabel="dra1nGraphView" customClass="DrainGraphView" customModule="Jailed" customModuleProvider="target">
                                 <rect key="frame" x="15" y="93" width="384" height="313.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1282,8 +1282,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cJ3-kf-sUn"/>
-        <segue reference="eIL-J0-dm0"/>
+        <segue reference="RDw-vu-Mrh"/>
+        <segue reference="Ymk-yH-al9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="battery.100" catalog="system" width="128" height="61"/>

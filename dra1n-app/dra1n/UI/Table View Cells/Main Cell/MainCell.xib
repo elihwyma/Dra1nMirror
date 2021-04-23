@@ -39,17 +39,37 @@
                         <color key="textColor" systemColor="systemRedColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hae-h1-dnL" userLabel="Circle Background View">
+                        <rect key="frame" x="10" y="27.5" width="60" height="60"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Zh-rY-lyK">
+                                <rect key="frame" x="12.5" y="12.5" width="35" height="35"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="0O5-Tz-IAi"/>
+                            <constraint firstAttribute="bottom" secondItem="5Zh-rY-lyK" secondAttribute="bottom" constant="12.5" id="7XH-r7-933"/>
+                            <constraint firstAttribute="trailing" secondItem="5Zh-rY-lyK" secondAttribute="trailing" constant="12.5" id="NK1-BU-RFe"/>
+                            <constraint firstAttribute="height" constant="60" id="ONn-PQ-TGS"/>
+                            <constraint firstItem="5Zh-rY-lyK" firstAttribute="leading" secondItem="hae-h1-dnL" secondAttribute="leading" constant="12.5" id="bUV-xD-sL8"/>
+                            <constraint firstItem="5Zh-rY-lyK" firstAttribute="top" secondItem="hae-h1-dnL" secondAttribute="top" constant="12.5" id="qel-Bd-555"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="cX7-ev-mhp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="85" id="1Sy-Kw-7YD"/>
                     <constraint firstAttribute="trailing" secondItem="O0y-1T-gcI" secondAttribute="trailing" constant="15" id="4a1-Uz-BAS"/>
+                    <constraint firstItem="hae-h1-dnL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AHi-5v-nFp"/>
                     <constraint firstItem="O0y-1T-gcI" firstAttribute="leading" secondItem="cX7-ev-mhp" secondAttribute="trailing" constant="15" id="F5L-he-tST"/>
                     <constraint firstItem="Udd-b9-c9B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="FXl-FF-dOC"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cX7-ev-mhp" secondAttribute="bottom" constant="5" id="GSU-ch-d9r"/>
                     <constraint firstAttribute="trailing" secondItem="Udd-b9-c9B" secondAttribute="trailing" constant="100" id="MTc-Ka-aWk"/>
                     <constraint firstItem="Udd-b9-c9B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="85" id="RcB-Tf-3iP"/>
                     <constraint firstItem="O0y-1T-gcI" firstAttribute="leading" secondItem="Udd-b9-c9B" secondAttribute="trailing" id="kAA-Dh-DMX"/>
                     <constraint firstItem="cX7-ev-mhp" firstAttribute="top" secondItem="Udd-b9-c9B" secondAttribute="bottom" id="um3-cC-GTN"/>
+                    <constraint firstItem="hae-h1-dnL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xyI-UF-hBX"/>
                     <constraint firstItem="O0y-1T-gcI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zAa-a6-SUw"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
@@ -69,6 +89,8 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="descriptionText" destination="cX7-ev-mhp" id="c1p-aQ-ZqJ"/>
+                <outlet property="iconImageView" destination="5Zh-rY-lyK" id="Upj-Ah-dEW"/>
+                <outlet property="imageBackground" destination="hae-h1-dnL" id="qIR-6o-a3d"/>
                 <outlet property="specificValue" destination="O0y-1T-gcI" id="5qt-Pj-A7e"/>
                 <outlet property="title" destination="Udd-b9-c9B" id="gDf-vu-jM7"/>
             </connections>
@@ -76,6 +98,9 @@
         </tableViewCell>
     </objects>
     <resources>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
