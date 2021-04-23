@@ -32,7 +32,7 @@ struct megaCoolPreCulprits: Decodable {
 let sandboxed = true
 
 func endpoint() -> String {
-    if (sandboxed) {
+    if sandboxed {
         return "sandbox"
     } else {
         return "api"

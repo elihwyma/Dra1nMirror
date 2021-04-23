@@ -117,7 +117,6 @@
 		5378948724E6EA69001B835B /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5378948424E6EA69001B835B /* MainCell.xib */; };
 		5378A51424E4478300DE2D1D /* licensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378A51324E4478300DE2D1D /* licensesViewController.swift */; };
 		537D903924C23F7A006A2157 /* AnalyseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D903824C23F7A006A2157 /* AnalyseViewController.swift */; };
-		53823D2D250809E900275D52 /* Cephei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53823D2C250809E800275D52 /* Cephei.framework */; };
 		53823D31250948D800275D52 /* Dra1nController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53823D30250948D700275D52 /* Dra1nController.swift */; };
 		53823D33250948D800275D52 /* Dra1nController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53823D30250948D700275D52 /* Dra1nController.swift */; };
 		5383134C24F41D8D00697673 /* Dra1nApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5383134B24F41D8D00697673 /* Dra1nApiParser.swift */; };
@@ -214,7 +213,6 @@
 		E1DDA623262F323600E889A5 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */; };
 		E1DDA624262F323600E889A5 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */; };
 		E1DDA625262F323600E889A5 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DDA622262F323600E889A5 /* AmyNetworkResolver.swift */; };
-		E1EFA3C525EC41D900DD45BC /* Cephei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53823D2C250809E800275D52 /* Cephei.framework */; };
 		E1F39D8D261E114100DC3068 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = E1F39D8C261E114100DC3068 /* Macaw */; };
 		E1F39D90261E117300DC3068 /* SwiftyMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = E1F39D8F261E117300DC3068 /* SwiftyMarkdown */; };
 		E1F39D9B261E12E600DC3068 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B4484824FF22BF0066D2B8 /* IOKit.framework */; };
@@ -286,7 +284,6 @@
 		5378948424E6EA69001B835B /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
 		5378A51324E4478300DE2D1D /* licensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = licensesViewController.swift; sourceTree = "<group>"; };
 		537D903824C23F7A006A2157 /* AnalyseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyseViewController.swift; sourceTree = "<group>"; };
-		53823D2C250809E800275D52 /* Cephei.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cephei.framework; sourceTree = "<group>"; };
 		53823D2F2509488500275D52 /* NSTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSTask.h; path = ../../../libdra1n/NSTask.h; sourceTree = "<group>"; };
 		53823D30250948D700275D52 /* Dra1nController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1nController.swift; sourceTree = "<group>"; };
 		5383134B24F41D8D00697673 /* Dra1nApiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dra1nApiParser.swift; sourceTree = "<group>"; };
@@ -320,7 +317,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53823D2D250809E900275D52 /* Cephei.framework in Frameworks */,
 				E1F39D8D261E114100DC3068 /* Macaw in Frameworks */,
 				E10111BB261E090E00DB4DB8 /* OnBoardingKit.framework in Frameworks */,
 				E1F39D9B261E12E600DC3068 /* IOKit.framework in Frameworks */,
@@ -334,7 +330,6 @@
 			files = (
 				E153A1C6261E140900A155FD /* OnBoardingKit.framework in Frameworks */,
 				E153A1C2261E13FB00A155FD /* Macaw in Frameworks */,
-				E1EFA3C525EC41D900DD45BC /* Cephei.framework in Frameworks */,
 				E153A1C4261E13FF00A155FD /* SwiftyMarkdown in Frameworks */,
 				E153A1C5261E140400A155FD /* IOKit.framework in Frameworks */,
 			);
@@ -432,7 +427,6 @@
 		53439E0524BDC76A00C3E723 /* Objective C Sources */ = {
 			isa = PBXGroup;
 			children = (
-				53823D2C250809E800275D52 /* Cephei.framework */,
 				53439E0D24BDC7C100C3E723 /* Dra1nServerController.m */,
 				53439E0F24BDC7D100C3E723 /* Dra1nServerController.h */,
 				53823D2F2509488500275D52 /* NSTask.h */,
@@ -1220,7 +1214,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = NO;
-				DEVELOPMENT_TEAM = LZTMLLBH4L;
+				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1270,7 +1264,7 @@
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 69;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DEVELOPMENT_TEAM = LZTMLLBH4L;
+				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				FRAMEWORK_SEARCH_PATHS = (
