@@ -84,9 +84,7 @@ class searchViewController: UIViewController {
             shownTweaks.append(le)
         } else {
             if (searchText == "") {
-                for index in Dra1nApiParser.shared.randomIndexes {
-                    shownTweaks.append(Dra1nApiParser.shared.database[index])
-                }
+
             } else {
                 for tweak in Dra1nApiParser.shared.database {
                     if (tweak.Bundleid ?? "Error").range(of: searchText, options: .caseInsensitive) != nil {

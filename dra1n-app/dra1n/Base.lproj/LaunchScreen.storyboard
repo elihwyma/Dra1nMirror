@@ -19,14 +19,20 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made With Love" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gD-Uh-oZE">
                                 <rect key="frame" x="10" y="842.5" width="394" height="14.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" image="Dra1nGlyph" translatesAutoresizingMaskIntoConstraints="NO" id="B6s-vx-lcV">
+                                <rect key="frame" x="72" y="313" width="271" height="271"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6gD-Uh-oZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Ktl-zP-UVn"/>
+                            <constraint firstItem="B6s-vx-lcV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="LPz-5E-Rqr"/>
+                            <constraint firstItem="B6s-vx-lcV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="269" id="X0P-AM-yqV"/>
+                            <constraint firstItem="6gD-Uh-oZE" firstAttribute="top" secondItem="B6s-vx-lcV" secondAttribute="bottom" constant="258.5" id="fTH-yK-TNd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B6s-vx-lcV" secondAttribute="trailing" constant="71" id="gbk-JG-Sy6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6gD-Uh-oZE" secondAttribute="trailing" constant="10" id="gnd-xe-Jsv"/>
                             <constraint firstItem="6gD-Uh-oZE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-5" id="wkS-kN-O5Z"/>
                         </constraints>
@@ -34,7 +40,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dra1nGlyph" width="1024" height="1024"/>
+    </resources>
 </document>

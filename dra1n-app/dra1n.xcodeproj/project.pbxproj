@@ -8,9 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		07158EF09042D00757DFBC85 /* Pods_dra1n_staff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DA7EEDE5CAC48364CE7321 /* Pods_dra1n_staff.framework */; };
+		24046757262C89DE009E3552 /* infotutViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24046756262C89DE009E3552 /* infotutViewcontroller.swift */; };
+		24046758262C89DE009E3552 /* infotutViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24046756262C89DE009E3552 /* infotutViewcontroller.swift */; };
+		24046759262C89DE009E3552 /* infotutViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24046756262C89DE009E3552 /* infotutViewcontroller.swift */; };
+		2404676B262C8B24009E3552 /* TutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24046769262C8B24009E3552 /* TutCell.swift */; };
+		2404676C262C8B24009E3552 /* TutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24046769262C8B24009E3552 /* TutCell.swift */; };
+		2404676D262C8B24009E3552 /* TutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24046769262C8B24009E3552 /* TutCell.swift */; };
+		2404676E262C8B24009E3552 /* TutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2404676A262C8B24009E3552 /* TutCell.xib */; };
+		2404676F262C8B24009E3552 /* TutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2404676A262C8B24009E3552 /* TutCell.xib */; };
+		24046770262C8B24009E3552 /* TutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2404676A262C8B24009E3552 /* TutCell.xib */; };
 		24573E59262635930074CDC2 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24573E58262635930074CDC2 /* AmyNetworkResolver.swift */; };
 		24573E5A262635930074CDC2 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24573E58262635930074CDC2 /* AmyNetworkResolver.swift */; };
 		24573E5B262635930074CDC2 /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24573E58262635930074CDC2 /* AmyNetworkResolver.swift */; };
+		24ACE184262CF8280059A006 /* tutorialWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ACE183262CF8280059A006 /* tutorialWebView.swift */; };
+		24ACE185262CF8280059A006 /* tutorialWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ACE183262CF8280059A006 /* tutorialWebView.swift */; };
+		24ACE186262CF8280059A006 /* tutorialWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ACE183262CF8280059A006 /* tutorialWebView.swift */; };
 		531DF11724B9DA6100317E92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DF11624B9DA6100317E92 /* AppDelegate.swift */; };
 		531DF11E24B9DA6200317E92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11C24B9DA6200317E92 /* Main.storyboard */; };
 		531DF12024B9DA7000317E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531DF11F24B9DA7000317E92 /* Assets.xcassets */; };
@@ -237,7 +249,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24046756262C89DE009E3552 /* infotutViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infotutViewcontroller.swift; sourceTree = "<group>"; };
+		24046769262C8B24009E3552 /* TutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutCell.swift; sourceTree = "<group>"; };
+		2404676A262C8B24009E3552 /* TutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutCell.xib; sourceTree = "<group>"; };
 		24573E58262635930074CDC2 /* AmyNetworkResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmyNetworkResolver.swift; sourceTree = "<group>"; };
+		24ACE183262CF8280059A006 /* tutorialWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorialWebView.swift; sourceTree = "<group>"; };
 		2A178814973C5DD5F1C7633B /* Pods-dra1n-jailed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dra1n-jailed.debug.xcconfig"; path = "Target Support Files/Pods-dra1n-jailed/Pods-dra1n-jailed.debug.xcconfig"; sourceTree = "<group>"; };
 		531DF11324B9DA6100317E92 /* dra1n.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dra1n.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		531DF11624B9DA6100317E92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -357,6 +373,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2404675C262C8AB3009E3552 /* Tutcell */ = {
+			isa = PBXGroup;
+			children = (
+				24046769262C8B24009E3552 /* TutCell.swift */,
+				2404676A262C8B24009E3552 /* TutCell.xib */,
+			);
+			path = Tutcell;
+			sourceTree = "<group>";
+		};
 		531DF10A24B9DA6100317E92 = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +575,7 @@
 		5378948224E6E9F6001B835B /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2404675C262C8AB3009E3552 /* Tutcell */,
 				53205BE52508049100A571B7 /* Preference Cell Classes */,
 				53C26A3C24E727EF0055E11E /* App Icon Cell */,
 				53C26A3524E724A90055E11E /* Header Cell */,
@@ -641,6 +667,7 @@
 				5378A51324E4478300DE2D1D /* licensesViewController.swift */,
 				53C0460524D4AE5600F23E5E /* onboardingViewController.swift */,
 				53240DD624D4E4620098DBDE /* iconPicker.swift */,
+				24ACE183262CF8280059A006 /* tutorialWebView.swift */,
 			);
 			path = "Minor Views";
 			sourceTree = "<group>";
@@ -652,6 +679,7 @@
 				5359D58524C85EA200BBEC79 /* settingsController.swift */,
 				537D903824C23F7A006A2157 /* analyseViewController.swift */,
 				53AA1B3C24C8713E00A9B459 /* dra1nViewController.swift */,
+				24046756262C89DE009E3552 /* infotutViewcontroller.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -800,6 +828,7 @@
 				537205F224D9F1D500295AD4 /* RainbowForeground@2x.png in Resources */,
 				5372060024D9F1D500295AD4 /* Dra1nGlyph~ipad@3x.png in Resources */,
 				531DF11E24B9DA6200317E92 /* Main.storyboard in Resources */,
+				2404676E262C8B24009E3552 /* TutCell.xib in Resources */,
 				537205EA24D9F1D500295AD4 /* Dra1nWhite@3x.png in Resources */,
 				5372060E24D9F1D500295AD4 /* Dra1nPurple@2x.png in Resources */,
 				537205FA24D9F1D500295AD4 /* 3DBattery~ipad@2x.png in Resources */,
@@ -841,6 +870,7 @@
 				536787AA24FED2850034F4A7 /* RainbowForeground@2x.png in Resources */,
 				536787AB24FED2850034F4A7 /* Dra1nGlyph~ipad@3x.png in Resources */,
 				536787AC24FED2850034F4A7 /* Main.storyboard in Resources */,
+				2404676F262C8B24009E3552 /* TutCell.xib in Resources */,
 				536787AD24FED2850034F4A7 /* Dra1nWhite@3x.png in Resources */,
 				536787AE24FED2850034F4A7 /* Dra1nPurple@2x.png in Resources */,
 				536787AF24FED2850034F4A7 /* 3DBattery~ipad@2x.png in Resources */,
@@ -882,6 +912,7 @@
 				E1D3450C25EE973D00EFAECA /* RainbowForeground@2x.png in Resources */,
 				E1D3450D25EE973D00EFAECA /* Dra1nGlyph~ipad@3x.png in Resources */,
 				E1D3450E25EE973D00EFAECA /* Main.storyboard in Resources */,
+				24046770262C8B24009E3552 /* TutCell.xib in Resources */,
 				E1D3450F25EE973D00EFAECA /* Dra1nWhite@3x.png in Resources */,
 				E1D3451025EE973D00EFAECA /* Dra1nPurple@2x.png in Resources */,
 				E1D3451125EE973D00EFAECA /* 3DBattery~ipad@2x.png in Resources */,
@@ -1032,6 +1063,7 @@
 				53FBF26324E5C76A00C47C92 /* ColourScheme.swift in Sources */,
 				53C26A3F24E728220055E11E /* appIconCell.swift in Sources */,
 				53F648AA250EB45F00DFC41D /* PreferenceCell.swift in Sources */,
+				2404676B262C8B24009E3552 /* TutCell.swift in Sources */,
 				53205BEB2508088600A571B7 /* CepheiController.swift in Sources */,
 				53EEE36C24DCB44900402784 /* searchViewController.swift in Sources */,
 				53EBDCAC24CB6FBA00E6E981 /* privacyPolicyViewController.swift in Sources */,
@@ -1044,6 +1076,7 @@
 				531DF12C24B9E79E00317E92 /* tabViewController.swift in Sources */,
 				53DF34A424DAF3BC005D88ED /* GlobalResources.swift in Sources */,
 				53EEE36F24DCB6BD00402784 /* ParcilityParser.swift in Sources */,
+				24ACE184262CF8280059A006 /* tutorialWebView.swift in Sources */,
 				53240DD724D4E4620098DBDE /* iconPicker.swift in Sources */,
 				531E5DD7250AB29B007B4D54 /* PreferenceSocialCell.swift in Sources */,
 				531E5DDB250ABCFD007B4D54 /* ColourAwareLabel.swift in Sources */,
@@ -1051,6 +1084,7 @@
 				5378A51424E4478300DE2D1D /* licensesViewController.swift in Sources */,
 				53823D31250948D800275D52 /* Dra1nController.swift in Sources */,
 				53F648AE250EBAEB00DFC41D /* HeaderCellButton.swift in Sources */,
+				24046757262C89DE009E3552 /* infotutViewcontroller.swift in Sources */,
 				24573E59262635930074CDC2 /* AmyNetworkResolver.swift in Sources */,
 				5383134C24F41D8D00697673 /* Dra1nApiParser.swift in Sources */,
 				53439E0E24BDC7C100C3E723 /* Dra1nServerController.m in Sources */,
@@ -1071,6 +1105,7 @@
 				5367878024FED2850034F4A7 /* ColourScheme.swift in Sources */,
 				5367878124FED2850034F4A7 /* appIconCell.swift in Sources */,
 				53F648AC250EB45F00DFC41D /* PreferenceCell.swift in Sources */,
+				2404676C262C8B24009E3552 /* TutCell.swift in Sources */,
 				53205BED2508088600A571B7 /* CepheiController.swift in Sources */,
 				5367878324FED2850034F4A7 /* searchViewController.swift in Sources */,
 				5367878424FED2850034F4A7 /* privacyPolicyViewController.swift in Sources */,
@@ -1083,6 +1118,7 @@
 				5367878B24FED2850034F4A7 /* tabViewController.swift in Sources */,
 				5367878C24FED2850034F4A7 /* GlobalResources.swift in Sources */,
 				5367878D24FED2850034F4A7 /* ParcilityParser.swift in Sources */,
+				24ACE185262CF8280059A006 /* tutorialWebView.swift in Sources */,
 				5367878E24FED2850034F4A7 /* iconPicker.swift in Sources */,
 				531E5DD9250AB29B007B4D54 /* PreferenceSocialCell.swift in Sources */,
 				531E5DDD250ABCFD007B4D54 /* ColourAwareLabel.swift in Sources */,
@@ -1090,6 +1126,7 @@
 				5367878F24FED2850034F4A7 /* licensesViewController.swift in Sources */,
 				53823D33250948D800275D52 /* Dra1nController.swift in Sources */,
 				53F648B0250EBAEB00DFC41D /* HeaderCellButton.swift in Sources */,
+				24046758262C89DE009E3552 /* infotutViewcontroller.swift in Sources */,
 				24573E5A262635930074CDC2 /* AmyNetworkResolver.swift in Sources */,
 				5367879024FED2850034F4A7 /* Dra1nApiParser.swift in Sources */,
 				5367879124FED2850034F4A7 /* Dra1nServerController.m in Sources */,
@@ -1110,6 +1147,7 @@
 				E1D344DB25EE973D00EFAECA /* ColourScheme.swift in Sources */,
 				E1D344DC25EE973D00EFAECA /* appIconCell.swift in Sources */,
 				E1D344DD25EE973D00EFAECA /* PreferenceCell.swift in Sources */,
+				2404676D262C8B24009E3552 /* TutCell.swift in Sources */,
 				E1D344DE25EE973D00EFAECA /* CepheiController.swift in Sources */,
 				E1D344DF25EE973D00EFAECA /* searchViewController.swift in Sources */,
 				E1D344E025EE973D00EFAECA /* privacyPolicyViewController.swift in Sources */,
@@ -1122,6 +1160,7 @@
 				E1D344E725EE973D00EFAECA /* tabViewController.swift in Sources */,
 				E1D344E825EE973D00EFAECA /* GlobalResources.swift in Sources */,
 				E1D344E925EE973D00EFAECA /* ParcilityParser.swift in Sources */,
+				24ACE186262CF8280059A006 /* tutorialWebView.swift in Sources */,
 				E1D344EA25EE973D00EFAECA /* iconPicker.swift in Sources */,
 				E1D344EB25EE973D00EFAECA /* PreferenceSocialCell.swift in Sources */,
 				E1D344EC25EE973D00EFAECA /* ColourAwareLabel.swift in Sources */,
@@ -1129,6 +1168,7 @@
 				E1D344EE25EE973D00EFAECA /* licensesViewController.swift in Sources */,
 				E1D344EF25EE973D00EFAECA /* Dra1nController.swift in Sources */,
 				E1D344F025EE973D00EFAECA /* HeaderCellButton.swift in Sources */,
+				24046759262C89DE009E3552 /* infotutViewcontroller.swift in Sources */,
 				24573E5B262635930074CDC2 /* AmyNetworkResolver.swift in Sources */,
 				E1D344F125EE973D00EFAECA /* Dra1nApiParser.swift in Sources */,
 				E1D344F225EE973D00EFAECA /* Dra1nServerController.m in Sources */,

@@ -185,12 +185,90 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WDq-uL-U4Z"/>
                         <segue destination="qlL-z1-v05" kind="relationship" relationship="viewControllers" id="BeZ-hE-Y5n"/>
                         <segue destination="ZkZ-UD-ns5" kind="relationship" relationship="viewControllers" id="0fb-Zg-cgi"/>
+                        <segue destination="mzp-La-pWT" kind="relationship" relationship="viewControllers" id="BBH-Mv-dyj"/>
                         <segue destination="oVc-0f-ObP" kind="relationship" relationship="viewControllers" id="dxJ-Z8-HQC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rw2-qg-o2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2194" y="-1873"/>
+        </scene>
+        <!--Info & tutorial-->
+        <scene sceneID="WZs-4X-xVp">
+            <objects>
+                <viewController id="7pp-Lu-Yk5" customClass="InfotutViewController" customModule="Staff" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="285-Og-ris">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dPz-qF-wLk">
+                                <rect key="frame" x="20" y="118" width="374" height="678"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TsD-c6-ozP">
+                                        <rect key="frame" x="0.0" y="55.5" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TsD-c6-ozP" id="yWZ-OH-vae">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uwV-at-o0O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uwV-at-o0O" firstAttribute="bottom" secondItem="dPz-qF-wLk" secondAttribute="bottom" constant="17" id="Lgp-sy-EdR"/>
+                            <constraint firstItem="uwV-at-o0O" firstAttribute="trailing" secondItem="dPz-qF-wLk" secondAttribute="trailing" constant="20" id="YUQ-Wj-gym"/>
+                            <constraint firstItem="dPz-qF-wLk" firstAttribute="top" secondItem="uwV-at-o0O" secondAttribute="top" constant="30" id="b4M-mx-z8s"/>
+                            <constraint firstItem="dPz-qF-wLk" firstAttribute="leading" secondItem="uwV-at-o0O" secondAttribute="leading" constant="20" id="xaE-5v-4ki"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info &amp; tutorial" largeTitleDisplayMode="always" id="ukb-5g-Kx7"/>
+                    <connections>
+                        <outlet property="tableView" destination="dPz-qF-wLk" id="9KK-R0-T1G"/>
+                        <segue destination="fLh-nE-JgX" kind="presentation" identifier="ShowVerse" id="CA9-0d-0Jk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFV-jn-F1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4776.811594202899" y="-1922.5446428571427"/>
+        </scene>
+        <!--Tutorial Web View-->
+        <scene sceneID="c6g-lN-Iu3">
+            <objects>
+                <viewController id="fLh-nE-JgX" customClass="tutorialWebView" customModule="Staff" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="30c-YH-BgT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cN-7s-i7n">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="780"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fvA-VL-wGz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fvA-VL-wGz" firstAttribute="bottom" secondItem="3cN-7s-i7n" secondAttribute="bottom" constant="28" id="XhM-7f-zJP"/>
+                            <constraint firstItem="3cN-7s-i7n" firstAttribute="top" secondItem="fvA-VL-wGz" secondAttribute="top" id="onL-OI-SM8"/>
+                            <constraint firstItem="3cN-7s-i7n" firstAttribute="leading" secondItem="fvA-VL-wGz" secondAttribute="leading" id="ulE-19-0Ib"/>
+                            <constraint firstItem="3cN-7s-i7n" firstAttribute="trailing" secondItem="fvA-VL-wGz" secondAttribute="trailing" id="ux2-lp-RgB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ka2-6n-vU9"/>
+                    <connections>
+                        <outlet property="wkwebview" destination="3cN-7s-i7n" id="lUQ-DM-0IJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gL2-aa-gTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5981" y="-1890"/>
         </scene>
         <!--Analyse View Controller-->
         <scene sceneID="8SK-Gr-mGY">
@@ -1248,6 +1326,28 @@
             </objects>
             <point key="canvasLocation" x="3974" y="-999"/>
         </scene>
+        <!--Info-->
+        <scene sceneID="uX1-sG-HXz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mzp-La-pWT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" catalog="system" selectedImage="info" id="Jmf-Ur-ghl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="oBn-J8-j1f">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cob-zT-jPa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="7pp-Lu-Yk5" kind="relationship" relationship="rootViewController" id="WGa-Yg-9hs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUk-1W-9vk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3866.666666666667" y="-1922.5446428571427"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="RDw-vu-Mrh"/>
@@ -1258,11 +1358,15 @@
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="icloud.and.arrow.down" catalog="system" width="128" height="112"/>
+        <image name="info" catalog="system" width="93" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="paypal" width="512" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
