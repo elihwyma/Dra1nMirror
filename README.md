@@ -6,7 +6,7 @@
 ----
 
 ### Current Version
-1.4
+1.4.3
 
 To run/build this yourself, you will need IOKit in your SDK (SDK's with IOKit can be found [here](https://github.com/CharlieWhile13/iOS-SDK-With-Passion)), Xcode and Theos installed.
 Run the commands:
@@ -20,7 +20,5 @@ make package install
 ## Credits
 - [Myself, app/tweak developer](https://github.com/elihwyma)
 - [MegaDeviOS, tweak/backend developer](https://github.com/MegaDevIOS)
-- [Cephei](https://github.com/hbang/libcephei)
 - [Macaw](https://github.com/exyte/Macaw)
 - [SwiftyMarkdown](https://github.com/SimonFairbairn/SwiftyMarkdown)
-- [SwiftyOnboard](https://github.com/juanpablofernandez/SwiftyOnboard)
